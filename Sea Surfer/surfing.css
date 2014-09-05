@@ -1,0 +1,57 @@
+body{
+
+	background-image: url("landing.svg");
+
+	
+}
+
+  #surfer{
+
+	background: transparent;
+	/*opacity: 1;*/
+	position: relative;
+	top:-305px;
+	 
+
+	
+
+}
+
+
+#obstacle{
+	background: transparent;
+	/*opacity: 0.4;*/
+	top:242px;
+	position: relative;
+
+
+
+
+}
+#bat{
+	position:relative;
+	top:-650px;
+	left:70%;
+}
+
+#sea{
+	position: relative;
+
+    top: -325px;
+	margin-top: -560px;
+	z-index: -1;
+	border-style: solid;
+	border-width: medium;
+	border-color: orange;
+	width: 1000px;
+	height:550px;
+	background:transparent;
+	
+}
+#score{
+	color:orange;
+	position: absolute;
+	right:5%;
+	font-family: monospace;
+	font-size: 20px;
+}
