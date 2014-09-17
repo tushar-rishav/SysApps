@@ -9,6 +9,8 @@
      canvasFlappy = document.getElementById('flappy_canvas');
      ctxFlappy = canvasFlappy.getContext('2d');
 
+     gOvCanv=document.getElementById("gOver");
+     ctxgOvCanv=gOvCanv.getContext('2d');
    
      skore=document.getElementById("score");
         
@@ -26,6 +28,11 @@
 
     sHeight=screen.availHeight;
     sWidth=screen.availWidth;
+    
+    gOv=document.getElementById("gOverWrapper");
+    gOv.style.width=sHeight/2;
+    gOv.style.width=sWidth/2;
+
     canvy=document.getElementsByTagName("canvas");
     for(canv=0;canv<3;canv++)
   { 
@@ -117,15 +124,17 @@
 
         if(isPlaying)
         {
-          ctxGame.drawImage(bigS,292,57,97,27,gameWidth/3,gameHeight/3,gameWidth/4,gameHeight/4);
-          setTimeout(playGame,3000);
+          ctxGame.drawImage(bigS,292,57,97,27,gameWidth/2.5,gameHeight/3,gameWidth/4,gameHeight/4);
+          setTimeout(playGame,2000);
         }
         
         else
            {
             ctxPipes.clearRect(0,0,gameWidth,gameHeight);
             drawPipes();        
-            ctxPipes.drawImage(bigS,394,57,97,25,gameWidth/3,gameHeight/3,gameWidth/4,gameHeight/4);
+           // ctxPipes.drawImage(bigS,394,57,97,25,gameWidth/3,gameHeight/3,gameWidth/4,gameHeight/4);
+           gOv.style.display="block";
+            ctxgOvCanv.drawImage(bigS,394,57,97,25,60,45,(sWidth/1366)*gameWidth/8,(sHeight/744)*gameHeight/8);
 
            skore.innerHTML=flappy.playerName+" Score: " + score;  // for adding score at the end
           }
@@ -154,10 +163,7 @@
             flappy.isSpacebar = true;
             e.preventDefault();
         }
-        if(keyID==27){
-          flappy.isesc=true;
-          e.preventDefault();
-        }
+        
     }
      
     function checkKeyUp(e)
@@ -168,10 +174,7 @@
        {    flappy.isSpacebar = false;
             e.preventDefault();
         }
-        if(keyID==27){
-          flappy.isesc=false;
-          e.preventDefault();
-        }
+       
     }
      
      
@@ -225,8 +228,7 @@
             flappy.wipe();
             flappy.draw();
            
-            if(!flappy.isesc)
-            checkHit();
+             checkHit();
 
             animationControl=requestAnimFrame(loop);
             
@@ -381,9 +383,9 @@
        
       this.radius=15*sHeight/744;           // inittial value of radius was 10
       this.score=0;
-      this.playerName="Tushar";
+      this.playerName="";
       this.isSpacebar=false;
-      this.isesc=false;
+     
      
     }
 
@@ -586,7 +588,7 @@
                 if(flappy.drawY+flappy.radius+(25*sHeight/744)<=obstacle[i].height||flappy.drawY>=obstacle[i].height+(35*sHeight/744))  
                   {
                     
-                    flappy.playerName="Game Over "+flappy.playerName+". Your ";
+                    flappy.playerName="Game Over "+flappy.playerName+"Your ";
                     moveBg();
                     drawPipes();
                     drawBg();  //adding game over message before exiting

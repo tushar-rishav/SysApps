@@ -32,7 +32,7 @@
 				<li id="l3" onclick="birdType(3)" onmouseover="changeFlappyPos(3)" >Lill berry</li>
 				<li id="l4" onclick="birdType(4)" onmouseover="changeFlappyPos(4)" >Red berry</li>
 			</ul>
-			<img src="images/flappy.png" width="35%" height="110%" id="guide"></img>
+			<img src="images/2.png" width="15%" height="40%" id="guide"></img>
 
 		</div>	
 		 <section>
@@ -46,18 +46,26 @@
 		 	Play again
 		 </div>
 		 <span id="score"></span>
+
+		 <div id="gOverWrapper">
+		 	<canvas id="gOver"></canvas>
+		 </div>
 		 
 		 <script>
 			 		 	im=document.getElementById("guide");
-
+			 		 	
 		 function changeFlappyPos(pos){
 		 	switch(pos)
 		 	{
 		 		case 2: im.style.top="15%";
+		 				document.getElementById("guide").src="images/"+pos+".png";
 		 				break;
 		 		case 3: im.style.top="34%";
+		 				document.getElementById("guide").src="images/"+pos+".png";
 		 				break;
 		 		case 4:im.style.top="55%";
+		 				document.getElementById("guide").src="images/"+pos+".png";
+		 				
 		 				break;
 		 	}
 		 }

@@ -67,7 +67,7 @@ hgroup{
 	font-size: 75%;
 }
 #pAgain{
-	background-color: orange;
+	background-color: skyblue;
 	border-style: none;
 	box-shadow: 0px 5px 3px 3px gray;
 	border-radius: 4px;
@@ -75,8 +75,8 @@ hgroup{
 	z-index: 5;
 	width:40%;
 	position: absolute;
-	top:10%;
-	left:45%;
+	top:66%;
+	left:44%;
 	display: block;
 	cursor: pointer;
 	width: 10%;
@@ -89,7 +89,7 @@ hgroup{
 
 }
 #pAgain:hover{
-	background-color:green;
+	background-color:lightgreen;
 
 }
 #score{
@@ -107,4 +107,24 @@ margin: 0px;
 	display: inline;
 	left: 17%;
 	z-index: -1;
+}
+#gOverWrapper{
+	background-color:rgba(179, 211, 221, 0);
+	display: none;
+	position: absolute;
+	top: 2%;
+left: 24%;
+z-index: 4;
+width:50%;
+height:50%;
+text-align: center;
+border-style: none;
+border-radius: 2px;
+
+}
+#gOver{
+	width: 100%;
+	height:100%;
+	opacity: 1;
+
 }
