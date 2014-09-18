@@ -61,9 +61,14 @@
         }
     );
 }();
-    function birdType(choice){
+    
+     
 
-      switch(choice){
+    
+    function start(choice)
+    {
+
+         switch(choice){
         case 1:{
            bird=new Image();
            bird.src="images/phoenix.png";                                                   
@@ -102,15 +107,6 @@
       }
       birdChoosen=true;
 
-      start();
-     
-
-    }
-     
-
-    
-    function start()
-    {
           if(birdChoosen)
         {
          
@@ -132,11 +128,9 @@
            {
             ctxPipes.clearRect(0,0,gameWidth,gameHeight);
             drawPipes();        
-           // ctxPipes.drawImage(bigS,394,57,97,25,gameWidth/3,gameHeight/3,gameWidth/4,gameHeight/4);
            gOv.style.display="block";
             ctxgOvCanv.drawImage(bigS,394,57,97,25,60,45,(sWidth/1366)*gameWidth/8,(sHeight/744)*gameHeight/8);
 
-           skore.innerHTML=flappy.playerName+" Score: " + score;  // for adding score at the end
           }
            
 
@@ -150,7 +144,6 @@
     {
        // drawBg();                    //creating a backg
         startLoop();
-         skore.innerHTML=flappy.playerName+" Score: " + score;            
         document.addEventListener('keydown', checkKeyDown);  //game controls
         document.addEventListener('keyup', checkKeyUp);
     }
@@ -206,9 +199,7 @@
            else
            bgFlag++; 
        
-        
-       skore.innerHTML=flappy.playerName+" Score: " + score;
-
+     
     }
    var bflc=0,bgFlag=1;
     function startLoop()
@@ -259,7 +250,7 @@
      
       else
       {
-        definePipes();   //or give message that game is over
+        definePipes(); 
       }
      
     }
@@ -274,14 +265,14 @@
         bg2X-=bg_speed/2;
 
        
-        if (bg1X <=-2400) {           //if backg 1 moves to extreme left shift it to extreme right
+        if (bg1X <=-2400) {      
             bg1X = 2400;
         } else if (bg2X<=-2400) {
             bg2X = 2400;
 
         }
 
-        if (bgDrawX1 <=-2300) {           //if backg 1 moves to extreme left shift it to extreme right
+        if (bgDrawX1 <=-2300) {          
             bgDrawX1 = 2300;
         } else if (bgDrawX2<=-2300) {
             bgDrawX2 =2300;
@@ -299,14 +290,14 @@
     function createObstacle(X,H){
      this.index=c++;
      this.x_init=X;
-     this.height=H;           //height of top pipe
+     this.height=H;          
      this.width=(sWidth*80)/1366;
-     this.hole=(100*sHeight)/744;          //hole in between them
-     this.gap=(250*sHeight)/744;           //gap between two obstacles
+     this.hole=(100*sHeight)/744;         
+     this.gap=(250*sHeight)/744;          
      this.totalHeight=sHeight; 
 
     
-     //console.log(arguments);      //height of toppipe+bottompipe+hole
+    
     }
      
      
@@ -326,7 +317,7 @@
                       h1=Math.floor(Math.random()*(365*sHeight/744) );           
                       h2=Math.floor(Math.random()*(365*sHeight/744) );                
                         
-                      while( !( ( Math.abs(h1-h2)< (200*sHeight/744) )&&(h1<365*sHeight/744)&&(h2<365*sHeight/744)&&h1>40*sHeight/744) ) // for making it playable
+                      while( !( ( Math.abs(h1-h2)< (200*sHeight/744) )&&(h1<365*sHeight/744)&&(h2<365*sHeight/744)&&h1>40*sHeight/744) ) 
                       {
                          h1=Math.floor(Math.random()*365*sHeight/744);
                          h2=Math.floor(Math.random()*365*sHeight/744);
@@ -381,8 +372,8 @@
       this.drawX=50*sWidth/1366;
       this.drawY=100*sHeight/744;
        
-      this.radius=15*sHeight/744;           // inittial value of radius was 10
-      this.score=0;
+      this.radius=15*sHeight/744;         
+    
       this.playerName="";
       this.isSpacebar=false;
      
@@ -421,7 +412,7 @@
              
                 if(this.srcX>=76)
                   this.srcX=3;
-               // console.log(this.srcX);
+              
                 break;
               }
 
@@ -542,7 +533,7 @@
       if(!(this.isSpacebar))
       {
         this.drawY+=6*sHeight/744;
-        if( (this.drawY+this.radius)>=(sHeight*0.635))         //flappy falls down
+        if( (this.drawY+this.radius)>=(sHeight*0.635))         
           {  
             isPlaying=false;
             welcomeMsg();
@@ -558,7 +549,7 @@
       else 
       {  
         if(this.drawY<0)
-          this.drawY=0;              //for upper limit of motion of flappy
+          this.drawY=0;              
         else  
         this.drawY-=(3.4*sHeight/744);
       }
@@ -591,7 +582,7 @@
                     flappy.playerName="Game Over "+flappy.playerName+"Your ";
                     moveBg();
                     drawPipes();
-                    drawBg();  //adding game over message before exiting
+                    drawBg(); 
                     
                     
 
@@ -606,8 +597,8 @@
 
                   else
                   { 
-
-                    score=obstacle[i].index/2+1;
+                    sbSk(obstacle[i].index/2+1)
+                    
 
                   }
 
@@ -617,12 +608,44 @@
         }        
     }
 
-    var score=0;
+  
 
     function screwAgain(){
       document.getElementById("pAgain").style.display="none";
       document.getElementById("top").style.display="block";
       location.reload();
     }
+
+  
+
+
+      var xmlhttp;
+        function sbSk(sky)
+        {    
+          if (window.XMLHttpRequest)
+            xmlhttp=new XMLHttpRequest();
+            
+          else
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); //for older IEs
+
+
+
+           xmlhttp.onreadystatechange=function()
+              {
+              if (xmlhttp.readyState==4 && xmlhttp.status==200) //requst finished nd response is ready
+                   document.getElementById("score").innerHTML="Score: "+xmlhttp.responseText;
+                        
+               
+              
+
+              }
+
+            xmlhttp.open("POST","sky.php",true);
+            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xmlhttp.send("submitData="+sky);
+              
+
+
+          }
 
    

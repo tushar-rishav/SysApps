@@ -28,9 +28,9 @@
 			
 			<ul>
 				
-				<li id="l2" onclick="birdType(2)" onmouseover="changeFlappyPos(2)" >Blue berry</li>
-				<li id="l3" onclick="birdType(3)" onmouseover="changeFlappyPos(3)" >Lill berry</li>
-				<li id="l4" onclick="birdType(4)" onmouseover="changeFlappyPos(4)" >Red berry</li>
+				<li id="l2" onclick="start(2)" onmouseover="changeFlappyPos(2)" >Blue berry</li>
+				<li id="l3" onclick="start(3)" onmouseover="changeFlappyPos(3)" >Lill berry</li>
+				<li id="l4" onclick="start(4)" onmouseover="changeFlappyPos(4)" >Red berry</li>
 			</ul>
 			<img src="images/2.png" width="15%" height="40%" id="guide"></img>
 
@@ -66,9 +66,14 @@
 		 		case 4:im.style.top="55%";
 		 				document.getElementById("guide").src="images/"+pos+".png";
 		 				
+		 		
 		 				break;
 		 	}
+
+		 	
+
 		 }
+
 
 
 		 </script>
