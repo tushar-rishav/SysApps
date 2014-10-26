@@ -1,0 +1,81 @@
+/*#firstname,#rollnumber,#email,#password,
+#retypepassword,#number{
+width:50%;
+height:8%;
+background-color:transparent;
+color:white;
+font-weight:800;	
+margin:10px;
+border-radius: 15px;
+border-style: groove;
+border-color:white;
+text-align: center;
+border-width: 3;
+padding-top: 4px;
+padding-bottom: 4px;
+width:100%;
+}*/
+
+#firstname:focus,#rollnumber:focus,#email:focus,#password:focus,
+#retypepassword:focus,#number:focus
+{
+ border-color:blue;
+ border-width: medium;
+ border-style: solid;	
+ color:black;
+
+}
+
+	body{
+			background-color:black;
+			text-align:center;	
+            }
+	form{
+                      text-align: -moz-center;
+              }
+              span{
+              	color:orange;
+              }
+	input[type="submit"]
+		{
+			margin-top:30px;
+			margin-bottom: 20px;
+			color:white;
+			background:orange;
+			border-radius: 7px;
+			box-shadow:3px 3px 3px orange offset;
+			padding: 5px;
+			height: 30px;
+			width:18%;
+			border-style: solid;
+			border-color: orange;
+			position:relative;
+			left:80px;
+			-webkit-transition: box-shadow 2s,background-color 2s;
+			-moz-transition: box-shadow 2s,background-color 2s;	
+			}
+	input[type=submit]:hover{
+		color:white;
+	        cursor: pointer;
+		box-shadow:5px 5px 5px #55aa77 inset;
+		border-style: none;
+		background-color: green;
+  
+	
+	}
+ 
+ 
+  #main
+  {  background-color:transparent;
+  
+  width: 60%;
+  position: relative;
+  top:  10px;
+  margin-left:250px;
+  border:2px solid #9df394;
+  box-shadow: 0px 10px 30px 15px #f7d6bd;
+  border-top-right-radius: 45px;  
+  border-bottom-left-radius: 45px;
+  height:100%;
+
+}
