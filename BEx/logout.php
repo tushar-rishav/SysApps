@@ -11,6 +11,6 @@
     session_destroy();
   }
 echo 'you have succesfully logged out :)' . '<br>';
-header('Location:/securimage/mlogin.php');
+header('Location:mlogin.php');
 exit();
 ?>

@@ -7,8 +7,21 @@ if($_SESSION['username']){
 <head>
 <script>
 </script>
+<script src="script.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="dist/jquery.min.js"></script>
+	<script src="dist/js/bootstrap.min.js"></script>
+
 <style>
+#sbmt{
+position:relative;top:90%;cursor:pointer;color:white;background-color:#0e91a1;border-color:gray;border-style:solid;border-width:thin;
+}
+
+#sbmt:hover{
+border-color:white;
+border-width:medium;
+}
 .dis
 {
 	position:fixed;
@@ -220,11 +233,9 @@ ajaxRequest.send(null);
 <body >
 
 <div style="position:absolute;top:20%;left:40%;">
-				<table align="center" color="white" border=1 frame="box">
-				  <thead>
-					<tr>
-					</tr>
-				  </thead>
+				<table align="center" color="white" border=1 frame="box" class="table table-hover table-responsive" >
+					<caption>Personal Details</caption>				 
+				
 				  <tbody>
 			<?php
 			$dbc=mysqli_connect($host,$user,$pass,$db);
@@ -258,7 +269,7 @@ ajaxRequest.send(null);
 <div class="pbar" id="pbar"  style="z-index:9;visibility:hidden;height:20%;width:20%;left:81%;position:absolute;top:12.5%"><ul style="margin-left:-16%;list-style: none;"><li onclick="window.location.href='profile.php'" onmouseover="this.style.background='#e6e6e6';" onmouseout="this.style.background='#ffffff';" style="cursor:pointer;border-style: solid;    border-width: 1px;position:relative;padding-top:7%;left:0;width:100%;height:30%;background:#fff;font-size:90%;"><center>Account Settings</li><li onmouseover="this.style.background='#e6e6e6';" onmouseout="this.style.background='#ffffff';" style="cursor:pointer;border-style: solid;    border-width: 1px;position:relative;padding-top:7%;text-align-center;left:0;width:100%;height:30%;background:#fff;font-size:90%;" onclick="window.location.href='logout.php'"><center>Logout</li></ul></div>
 <div class="mbar">
 <div class="bbtn" id="hprof" style="position:absolute;top:20%;z-index:10;left:60%;background:#0e91a1;" onclick="window.location.href='home.php'"  onmouseover="this.style.background='#146c78'" onmouseout="this.style.background='#0e91a1'"><center>  Home</div>
-<div class="bbtn" id="bprof" style="width:20%;left:80%;height:100%;line-height: 500%;background:#0e91a1;" onclick="if(flag==1){ document.getElementById('pbar').style.visibility='hidden';flag=0;}else{document.getElementById('pbar').style.visibility='visible';flag=1;}"  onmouseover="this.style.background='#146c78'" onmouseout="this.style.background='#0e91a1'"><center><img src="avatar.png" style="position:absolute;top:33%;left:5%;">  Hi, <?php echo $_SESSION['username']?> &#187;</div><div class="bbtn"  style="width:60%;cursor:default;background:#0e91a1;left:5%;top:-75%"><span ><img onclick="window.location.href='pings.php'" id="noticon" src="images/notif.png" style="cursor:pointer;background:#ff7519;background:none;top:12%;position:absolute;left:120%" width="3.5%" height="70%"><div id="ncnt" style="z-index:7;position:absolute;left:123%;top:-15px;color:black;font-size:10px">0</div><div id="notdiv" style="position:absolute;width:2%;height:30%;background:#ff0000;font-size:10px;left:122.3%;"></div><img style="cursor:pointer;width:4.5%;height:80%;" onclick="sshow(0)" onmouseover="this.style.opacity=0.5" onmouseout="this.style.opacity=1" src="images/user_search.png" alt=""><form style="display:inline-block;" method="get" action="sprof.php"><input  placeholder="Profile Search..."  type="text" id="ps" name="roll" style="font-size:120%;position:absolute;top:-10%;left:4.3%;line-height:250%;height:100%;width:60%;display:none;"></form> <img id="bsimg" onclick="sshow(1)" style="position:absolute;cursor:pointer;width:4.5%;height:80%;" onmouseover="this.style.opacity=0.5" onmouseout="this.style.opacity=1" src="images/search.png" alt=""><form method="POST" action="search_handler.php" >  <input name="bs" placeholder="Book Search..." id="bs" type="text" style="font-size:120%;position:absolute;top:-10%;left:10%;line-height:250%;height:100%;width:60%;display:none;"></form></span></div></div>
+<div class="bbtn" id="bprof" style="width:20%;left:80%;height:100%;line-height: 500%;background:#0e91a1;" onclick="if(flag==1){ document.getElementById('pbar').style.visibility='hidden';flag=0;}else{document.getElementById('pbar').style.visibility='visible';flag=1;}"  onmouseover="this.style.background='#146c78'" onmouseout="this.style.background='#0e91a1'"><center><img src="avatar.png" style="position:absolute;top:33%;left:5%;">  Hi, <?php echo $_SESSION['username']?> &#187;</div><div class="bbtn"  style="width:60%;cursor:default;background:#0e91a1;left:5%;top:-75%"><span ><img onclick="window.location.href='pings.php'" id="noticon" src="images/notif.png" style="cursor:pointer;background:#ff7519;background:none;top:12%;position:absolute;left:120%" width="3.5%" height="70%"><div id="ncnt" style="z-index:7;position:absolute;left:123%;top:-15px;color:black;font-size:10px">0</div><div id="notdiv" style="position:absolute;width:2%;height:30%;background:#ff0000;font-size:10px;left:122.3%;"></div><img style="cursor:pointer;width:4.5%;height:80%;" onclick="sshow(0)" onmouseover="this.style.opacity=0.5" onmouseout="this.style.opacity=1" src="images/user_search.png" alt=""><form style="display:inline-block;" method="get" action="sprof.php"><input  placeholder="Profile Search..."  type="text" id="ps" name="roll" style="font-size:120%;position:absolute;top:-10%;left:4.3%;line-height:250%;height:100%;width:60%;display:none;"></form> <img id="bsimg" onclick="sshow(1)" style="position:absolute;cursor:pointer;width:4.5%;height:80%;" onmouseover="this.style.opacity=0.5" onmouseout="this.style.opacity=1" src="images/search.png" alt=""><form method="POST" action="search_handler.php" >  <input name="bs" placeholder="Book Search..." id="bs" type="text" style="font-size:120%;position:absolute;top:-10%;left:10%;line-height:250%;height:100%;width:60%;"></form></span></div></div>
 <div class="nside">
 <br><br><br><br><br>
 <?php
@@ -280,23 +291,24 @@ while($row = mysqli_fetch_array($result))
 	setInterval(function(){setnotif();},30000);
 	
 </script>
-<div class="abtn" style="position:absolute;top:57%;left:353%;" onclick="document.getElementById('dis').style.display='block';document.getElementById('abook').style.display='block';"><center>change password</div>
+<div class="abtn" style="position:relative;top:57%;left:353%;" onclick="document.getElementById('dis').style.display='block';document.getElementById('abook').style.display='block';"><center>change password</div>
 </div>
 <div class="abook" id="abook" style="color:#fff;height:60%;">
 <form method="post" action="change.php" >
 <center><h2>CHANGE PASSWORD</h2></center>
 <hr></hr>
 <center>
-<table style="position:relative;width:100%;" cellpadding="20%">
+<table style="position:relative;width:100%;" cellpadding="40%" class="table table-responsive table-hover" >
+	
 <tr>
-<td>OLD PASSWORD:</td><td><input type="text" placeholder="old password" name="oldpassword" style="position:absolute;width:50%;height:15%;left:40%;top:10%"/></td>
+<td>OLD PASSWORD:</td><td><input type="password" placeholder="old password" name="oldpassword" style="position:relative;width:60%;height:120%;left:40%;top:10%"/></td>
 </tr>
-<tr><td>NEW PASSWORD</td><td><input type="text" placeholder="new password" name="newpassword" style="position:absolute;width:50%;height:15%;left:40%;top:43%"/></td>
+<tr><td>NEW PASSWORD</td><td><input type="password" placeholder="new password" name="newpassword" style="position:relative;width:60%;height:120%;left:40%;top:43%"/></td>
 </tr>
-<tr><td>RE-ENTER NEW PASSWORD:</td><td><input type="text" placeholder="re-enter new password" name="newpassword1" style="position:absolute;width:50%;height:15%;left:40%;top:75%"/></td></tr><tr>
+<tr><td>RE-ENTER NEW PASSWORD:</td><td><input type="password" placeholder="re-enter new password" name="newpassword1" style="position:relative;width:60%;height:120%;left:40%;top:75%"/></td></tr><tr>
 
 </table>
-<center><input type="submit"  value="change password" name="changepassword" style='position:absolute;top:90%;cursor:pointer;' />
+<center><input type="submit"  id="sbmt" value="change password" name="changepassword" />
 </form>
 </div>
 <table style="width:100%;top:60%;left:70%">

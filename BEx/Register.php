@@ -1,8 +1,9 @@
 <?php 
 error_reporting(~E_WARNING);
-include_once $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
+require_once 'securimage.php';
+       
 include "database.php";
-require 'class.phpmailer.php';
+require_once 'class.phpmailer.php';
 session_start();
 if(isset($_SESSION['username']))
   header("Location:/securimage/home.php");
@@ -22,7 +23,8 @@ var m,n;
 
 <?php
 // define variables and set to empty values
-$nameErr = $rollErr = $genderErr = $capt=$captErr=$mob=$mobErr=$maile=$mailErr=$addr=$addrErr=$uname=$unameErr=$passErr = $cpassErr = "";
+$dbpass=$pass;
+$nameErr = $rollErr = $genderErr = $tcapt=$captErr=$mob=$mobErr=$maile=$mailErr=$addr=$addrErr=$uname=$unameErr=$passErr = $cpassErr = "";
 $name = $roll = $gender = $pass = $cpass = $dept= $checkroll = "";
 $err=0;
 
@@ -40,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $dept=$_POST["dept"];
    if (empty($_POST["name"])) {
      $nameErr = "Name is required";
-	$err=1;
+  $err=1;
    } else {
      $name = test_input($_POST["name"]);
 $err=0;
@@ -66,7 +68,7 @@ $rollErr="Enter Valid RollNo.";
 $err=1;
 $roll="";
 }
-$con=mysqli_connect($host,$user,$pass,$db);
+$con=mysqli_connect($host,$user,$dbpass,$db);
 $res=mysqli_query($con,"select * from signup ");
 while($row=mysqli_fetch_array($res))
 {
@@ -125,7 +127,7 @@ $err=1;
 $uname = test_input($_POST["uname"]);
 if($err!=1)
 $err=0;
-$con=mysqli_connect($host,$user,$pass,$db);
+$con=mysqli_connect($host,$user,$dbpass,$db);
 $res=mysqli_query($con,"select * from signup ");
 while($row=mysqli_fetch_array($res))
 {
@@ -173,22 +175,28 @@ $err=1;
 }
 
 
-if(empty($_POST["capt"]))
+if(empty($_POST["tcaptcha"]))
 {
 $captErr="Enter the Captcha";
 $err=1;
 }else
 {
-$capt = test_input($_POST["capt"]);
+
+$tcapt = test_input($_POST["tcaptha"]);
 if($err!=1)
 $err=0;
+
 $securimage = new Securimage();
-if ($securimage->check(@$_POST['capt']) == false) {
+
+if ($securimage->check(@$_POST['tcaptcha']) == false) {
 $capt="";
 $captErr="Incorrect Captcha";
 $err=1;
+
 }
+
 }
+
 
 if(empty($_POST["cpass"]))
 {
@@ -257,18 +265,14 @@ $mail->addAddress("$maile","User 1");
 
 
 $mail->Subject = "Book-kart verification link";
-$link="localhost/securimage/verify.php?r=".$uname."&cc=".$cc."";
+$link="http://delta.nitt.edu/~ash/securimage/verify.php?r=".$uname."&cc=".$cc."";
 $mail->Body = "Hi".$name.",<br /><br />This is from Book-kart.Thank you for registering .To verify your account please <a href=".$link.">Click here to verify your account </a>";
 
 if(!$mail->Send())
-    echo "Message was not sent <br />PHPMailer Error: " . $mail->ErrorInfo;
+	echo "Message was not sent     <br> Error ".$mail->ErrorInfo." <br/> <a target='_blank' href='rmail.php?code=".$cc."&user1=".$uname."&email=".$maile."'>Resend mail</a>";
 else
     echo "Verification message has been mailed";
   
-
-
-
- 
 }
 }
 
@@ -367,16 +371,16 @@ Confirm Password:</td><td>
 <input type="password" name="cpass" value="<?php echo $cpass;?>">
 <span class="error">* <?php echo $cpassErr;?></span></td></tr>
 <tr><td>
-  <a href="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false"><font color="blue">[ Show Another Image ]</font></a>
+  <a href="#" onclick="document.getElementById('captcha').src = 'securimage_show.php?' + Math.random(); return false"><font color="blue">[ Show Another Image ]</font></a>
  </td>
  <td>
- <img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" />
+ <img id="captcha" src="securimage_show.php" alt="CAPTCHA Image" />
  </td>
  </tr>
  <tr>
  <td></td>
  <td>
- <input type="text" name="capt" size="20" maxlength="6" /><span class="error">* <?php echo $captErr;?></span>
+ <input type="text" name="tcaptcha" size="20" maxlength="6" /><span class="error">* <?php echo $captErr;?></span>
  </td>
  </tr>
 </table>

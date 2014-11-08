@@ -5,7 +5,7 @@
 session_start();
 include('database.php');
 if(!isset($_GET['roll']))
-header('Location:/securimage/home.php');
+header('Location:home.php');
 $con=mysqli_connect($host,$user,$pass,$db);
 $prof=mysqli_real_escape_string($con,$_GET['roll']);
 

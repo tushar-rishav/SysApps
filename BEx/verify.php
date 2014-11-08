@@ -14,5 +14,5 @@ $result=mysqli_query($dbc,$query);
 }
 
 }	
-header('Location:/securimage/mlogin.php');
+header('Location:mlogin.php');
 ?>

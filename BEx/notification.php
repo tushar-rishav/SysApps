@@ -23,7 +23,7 @@ function timeSort( $a, $b )
     return $a->time == $b->time ? 0 : ( $a->time > $b->time ) ? 1 : -1;
 }
 
-$db=mysqli_connect($host,$user,"",$db);
+$db=mysqli_connect($host,$user,$pass,$db);
 $query="SELECT * FROM notification WHERE receiver='".$_SESSION['username']."'";
 $result=mysqli_query($db,$query);
 

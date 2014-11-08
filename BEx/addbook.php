@@ -119,6 +119,6 @@ $img=$img.$owner."/".$owner.$bookid.$i.".".$extension.",";
 		mysqli_query($db,$query);
 	
 		}
-			header("Location:/securimage/home.php");
+			header("Location:home.php");
 		
 ?>

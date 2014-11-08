@@ -18,7 +18,7 @@ session_start();
 	setcookie('username', $fetchdata['username'], time() + (60 * 60 * 24 * 3)); //three days
 	echo 'Logged in';
   
-	header('Location:/securimage/home.php');
+	//header('Location:/securimage/home.php');
 	}
 	else echo 'please verify your account.Login failed :(';	
 	}

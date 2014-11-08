@@ -1,8 +1,8 @@
 <?php
 $host="localhost";
-$user="root";
-$pass="";
-$db="delta";
+$user="ash";
+$pass="P4ssss";
+$db="ash_deltabook";
 $owne="";
 $bke="*";
 $aute="*";

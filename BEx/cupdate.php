@@ -23,6 +23,6 @@ if(!empty($cost))
 $query2="UPDATE bookdetails SET cost='".$cost."' where book_id='".$bkid."'";
 $result2=mysqli_query($db,$query2); 
 }
-header('Location:/securimage/home.php');
+header('Location:home.php');
 }
 ?>
