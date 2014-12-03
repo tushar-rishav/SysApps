@@ -10,7 +10,7 @@
      ctxFlappy = canvasFlappy.getContext('2d');
 
      gOvCanv=document.getElementById("gOver");
-     ctxgOvCanv=gOvCanv.getContext('2d');
+    ctxgOvCanv =gOvCanv.getContext('2d');
    
      skore=document.getElementById("score");
         
@@ -23,7 +23,7 @@
     bg2=new Image();
     bg2.src='images/game2.png';
     bg3=new Image();
-    bg3.src='images/game3.png';
+    bg3.src ='images/game3.png';
     bg=bg3;
 
     sHeight=screen.availHeight;

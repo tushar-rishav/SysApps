@@ -1,0 +1,38 @@
+
+.banner--clone {
+
+
+    position: fixed;
+    top: -10;
+    left: 0;
+
+  
+    background: rgba(35, 58, 78, 0.46);
+    opacity: 0.8;
+
+  
+    -webkit-transform: translateY(-140%);
+        -ms-transform: translateY(-140%);
+            transform: translateY(-140%);
+
+    -webkit-transition: all 600ms ease-in-out;
+       -moz-transition: all 600ms ease-in-out;
+            transition: all 600ms ease-in-out;
+
+}
+
+
+
+.banner--stick {
+
+   
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+}
+
+
+
+.banner--unstick {
+    
+}
