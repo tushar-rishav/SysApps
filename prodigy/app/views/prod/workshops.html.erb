@@ -1,6 +1,29 @@
+<%= content_for :style do%>
+  <%= render partial:"prod/partials/index/navStyle" %>
+<%end%>
+
 <%= content_for :page_wrapper do%>
+  <div id="page_wrapper" style="background-color:black;">
+      <%= render partial: "prod/partials/index/header" %>
+      <div id="s2" data-sr="enter top and scale up 20% over 2s">
+        <p  style="font-size:40px;">Hello</p>
+      </div>
+      <div id="s3" data-sr="enter bottom and scale up 20% over 2s">
+        <p  style="font-size:40px;">Hello</p>
+      </div>
+      <div id="s4" data-sr="enter bottom and scale up 20% over 2s">
+        <p>Hello</p>
+      </div>
+      <div id="s5" data-sr >
+        <p>Hello</p>
+      </div>
 
-  <h1>Prod#workshops</h1>
-  <p>Find me in app/views/prod/workshops.html.erb</p>
+  </div>
+<%end%>
 
+<%= content_for :script do %>
+  <%= render partial: "prod/partials/index/indexScript" %>
+<%end%>
+<%= content_for :InitScript do %>
+  <%= render partial: "prod/partials/index/indexInitScript" %>
 <%end%>

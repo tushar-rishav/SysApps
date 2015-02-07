@@ -1,0 +1,88 @@
+<header class="banner" >
+  <nav style="position:relative;text-align:center;" class="container" >
+    <ul class="lavaLamp" style="clear:both;">
+      <li><%= link_to :controller=>'prod', :action=>'index' do%>
+        Home
+        <% end %>
+      </li>
+      <li><%= link_to :controller=>'prod', :action=>'events' do%>
+        Events
+        <% end %>
+      </li>
+      <li>
+        <%= link_to :controller=>'prod', :action=>'workshops' do%>
+        Workshops
+        <% end %>
+      </li>
+      <li>
+        <%= link_to :controller=>'prod', :action=>'workshops' do%>
+        Dum
+        <% end %>
+      </li>
+      <li>
+        <%= link_to :controller=>'prod', :action=>'workshops' do%>
+        Diga
+        <% end %>
+      </li>
+      <li>
+        <%= link_to :controller=>'prod', :action=>'workshops' do%>
+        Dah
+        <% end %>
+      </li>
+
+    </ul>
+  </nav>
+  <% if 1 #if user is logged in then hide the login/register button else show
+        # if user_signed_in?
+       %>
+      <button class="loginBtn" data-toggle="modal" data-target="#login">
+        Login
+      </button>
+
+
+  <% end %>
+
+  <!-- Modal -->
+
+
+</header>
+
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close"
+        data-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+
+    </div>
+    <div class="modal-body">
+
+      <%= form_tag("index",method:"get") do %>
+
+      <div class="form-group">
+        <div class="col-sm-4">
+          <span class="input-group-addon">Email</span>
+          <%= text_field_tag(:email) %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-4">
+          <span class="input-group-addon">Password</span>
+          <%= password_field_tag(:password) %>
+        </div>
+      </div>
+      <%= submit_tag("GO") %>
+      <% end %>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default"data-dismiss="modal">
+        Close
+      </button>
+    </div>
+  </div><!-- /.modal-content -->
+</div><!-- /.modal -->
+
+</div>

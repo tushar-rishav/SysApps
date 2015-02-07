@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'coderay'
 
-gem 'vider', :git =>'https://github.com/wazery/vider.git'
-
-gem 'better_errors', group: :development
+# mail sending gem
+gem 'mail'
+#easily add Growl-like notifications to your application
+gem 'gritter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record

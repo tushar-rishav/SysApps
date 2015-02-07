@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require alphabet
-//= require jquery.easing.min.js
-//= require jquery.lavalamp.min.js
-//= scrollReveal.min
+//= require jquery.easing.min
+//= require jquery.lavalamp.min
+//= require scrollReveal.min
+//= require bootstrap.min
 //= require_tree .

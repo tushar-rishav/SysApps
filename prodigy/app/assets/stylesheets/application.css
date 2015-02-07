@@ -14,5 +14,6 @@
  *= require_self
  *= require headhesive
  *= require main
+ *= require bootstrap
  *= require normalize
  */
