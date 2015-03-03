@@ -1,0 +1,97 @@
+
+.hotspot {
+
+  -webkit-transform: translateZ(90);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  position: absolute;
+  z-index: 0;
+  width: 1px;
+  height: 120px;
+  left: 23%;
+top: 58%; }
+
+
+/* hotspot shape */
+.hotspot span{
+  display: block;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  margin-left: -20px;
+  height: 0px;
+  width: 0px;
+  border: 15px solid rgba(219, 94, 85, 1);
+  border-radius: 35px;
+  left: -14px;
+  opacity: 0;
+  transform: scale(0.5); }
+
+
+
+.hotspot .h0, .hotspot .h1,{
+  margin-left: -25px; }
+
+
+
+@-webkit-keyframes hotspotL {
+  0% {
+    -webkit-transform: scale(1.5) translate(0, 0);
+    -moz-transform: scale(1.5) translate(0, 0);
+    -o-transform: scale(1.5) translate(0, 0);
+    transform: scale(1.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, 0px);
+    -moz-transform: scale(0.5) translate(0, 0px);
+    -o-transform: scale(0.5) translate(0, 0px);
+    transform: scale(0.5) translate(0, 0px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2) translate(0, 0px);
+    -moz-transform: scale(2) translate(0, 0px);
+    -o-transform: scale(2) translate(0, 0px);
+    transform: scale(2) translate(0, 0px); } }
+
+
+@-webkit-keyframes hotspotR {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(1) translate(0, 0px);
+    -moz-transform: scale(1) translate(0, 0px);
+    -o-transform: scale(1) translate(0, 0px);
+    transform: scale(1) translate(0, 0px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, 0px);
+    -moz-transform: scale(0.5) translate(0, 0px);
+    -o-transform: scale(0.5) translate(0, 0px);
+    transform: scale(0.5) translate(0, 0px); } }
+
+
+
+.hotspot .h0{
+  -webkit-animation: hotspotL 1s 0s infinite;
+  -moz-animation: hotspotL 1s 0s infinite;
+  -o-animation: hotspotL 1s 0s infinite;
+  animation: hotspotL 1s 0s infinite; }
+
+.hotspot .h1{
+  -webkit-animation: hotspotR 5s 0s infinite;
+  -moz-animation: hotspotR 5s 0s infinite;
+  -o-animation: hotspotR 5s 0s infinite;
+  animation: hotspotR 5s 0s infinite; }
+
+
