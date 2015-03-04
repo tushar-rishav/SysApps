@@ -5,6 +5,13 @@
 
 }
 
+@font-face{
+	font-family: "myfont1";
+	src: url("../fonts/talldark.ttf") format('ttf');
+	font-weight: bold;
+
+}
+
 body{
 	cursor:url('css/images/cursor.png');
 }
@@ -23,6 +30,14 @@ margin-left: 89%;
 width: 85px;
 height:85px;
 transition: height 0.5s, width 0.5s;
+}
+.effect{
+	transition: height 0.5s, width 0.5s;
+}
+.effect:hover{
+	height:24%;
+	width:14%;
+	cursor:pointer;
 }
 
 #login:hover {
@@ -45,9 +60,18 @@ cursor:pointer;
     height: 100%
 }
 
+ ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 60%;
+	display:inline;
+}
 
-.workshop_wrap{
-	margin:5%;width:20%;height:30%;display:inline-block;border:solid;border-radius:30px;
+
+.event_wrap{
+	margin:1%;width:20%;height:30%;display:inline-block;border:solid;
 	cursor:pointer;box-shadow:1px 1px gray;
 
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -55,7 +79,7 @@ cursor:pointer;
 
 }
 
-.workshop_wrap:hover{
+.event_wrap:hover{
 	top: 5px;
 	height: 33%;
 	width: 23%;

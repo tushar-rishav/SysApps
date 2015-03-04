@@ -65,6 +65,7 @@ else
       <thead>
         <tr>
           <th>Name</th>
+          <th>PID</th>
           <th>Email</th>
           <th>Mobile No</th>
 
@@ -85,6 +86,7 @@ else
       </thead>
       <tbody>
         <tr>
+          <td><?php echo $detail["pid"] ?></td>
           <td><?php echo $detail["name"] ?></td>
           <td><?php echo $detail["email"] ?></td><
           <td><?php echo $detail["mob"] ?></td>

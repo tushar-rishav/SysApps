@@ -47,9 +47,10 @@ function autocomplete($name)
   }
   </style>
 </head>
-<body style="background:url('css/images/bg1.jpg');" >
+<body style="background:url('css/images/bg1.jpg');background-attachment:fixed;" >
 
   <div class="container" style="text-align:center;">
+
 
     <form role="form" method="post" class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" name="registration" id="registration" onsubmit="return checkContents()"  />
       <div class="form-group">
@@ -86,11 +87,14 @@ function autocomplete($name)
           <option>Electronics and Communication</option>
           <option>Electrical and Electronics</option>
           <option>Civil</option>
-          <option>Producton</option>
+          <option selected >Production</option>
           <option>Mechanical</option>
           <option>Chemical</option>
           <option>Instrumentation and Control</option>
           <option>Metallurgical and Materials</option>
+          <option>Industrial</option>
+          <option>Electrical</option>
+          <option>Other</option>
         </select><span id="s9"><?php echo $deptErr; ?></span>
       </div>
 
@@ -111,11 +115,13 @@ function autocomplete($name)
         <span >Enter the code</span>
         <input type="text" id="captcha" style="width:10%;" name="captcha"/><span id='s7'><?php echo $captcha_error; ?></span>
       </div>
-
+      <input type="hidden" value='<?php echo mt_rand(1000,5000); ?>' name="pid">
       <input type="submit" class="btn btn-success" value="Register"></input>
 
     </form>
-
+    <header style="position:absolute;top:2%;left:1%;text-align:center;">
+      <a href="index.php" ><i class="fa fa-2x fa-home" style="color:orange;">Home</i></a>
+    </header>
 
   </div>
 

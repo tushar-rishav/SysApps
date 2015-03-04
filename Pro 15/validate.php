@@ -3,11 +3,11 @@ session_start();
 
 // define global variables and set to empty values
 global $nameErr,$password,$passwordConfirm,$college,$email,$pin,$sex,$dept;
-global $name,$passwordErr,$passwordConfirmErr,$collegeErr,$mobErr,$emailErr,$pinErr,$sexErr,$deptErr;
+global $name,$passwordErr,$passwordConfirmErr,$collegeErr,$mobErr,$emailErr,$pinErr,$sexErr,$deptErr,$pid;
 global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
 
  if ($_SERVER["REQUEST_METHOD"] == "POST")
- {  $s1=0;$s2=0;$s3=0;$s4=0;$s5=0;$s6=0;$s7=0,$s8=0;$s9=0;$s10=0;
+ {  $s1=0;$s2=0;$s3=0;$s4=0;$s5=0;$s6=0;$s7=0;$s8=0;$s9=0;$s10=0;
    if (empty($_POST["name"]))
     {
      $nameErr = "Name is required";
@@ -28,7 +28,7 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
 
    if (empty($_POST["email"]))
    {  $s2=0;
-     $emailErr = "email is required";
+     $emailErr = "Please fill up your Email";
 
    }
 	 else
@@ -44,7 +44,7 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
 
    if (empty($_POST["sex"]))
    {  $s9=0;
-     $sexErr = "Sex is required";
+     $sexErr = "Please fill up your Gender";
 
    }
    else
@@ -52,7 +52,7 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
 
    if (empty($_POST["dept"]))
    {  $s10=0;
-     $deptErr = "Department is required";
+     $deptErr = "Please fill up your Department";
 
    }
    else
@@ -69,7 +69,7 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
     if (empty($_POST["confirmpwd"]))
 	{
 	 		$s4=0;
-     	$passwordConfirmErr = "please confirm password";
+     	$passwordConfirmErr = "Please confirm your Password";
     }
     else
 	{
@@ -78,7 +78,7 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
      if ($_POST["password"]!=$_POST["confirmpwd"])
 	 		{
        $s4=0;
-	   		$passwordConfirmErr = "password mismatched";
+	   		$passwordConfirmErr = "Oops! Password mismatched.Try again!";
      }
 	 else
 	 $s4=1;
@@ -92,7 +92,7 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
 
   if (empty($_POST["mob"]))
      {
-     $mobErr = "Mobile number is required";
+     $mobErr = "Please fill up your Mobile No.";
      $s7=0;
 	 }
    else
@@ -101,7 +101,7 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
    if (empty($_POST["college"]))
    {
      $s6=0;
-      $collegeErr = "College is required";
+      $collegeErr = "Please fill up your College";
    }
    else {
      $college = test_input($_POST["college"]);
@@ -136,7 +136,7 @@ $con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
 			$fetchdata=mysqli_fetch_array($result,MYSQLI_NUM);
 			if($fetchdata[0]>0) // check if email already exists
 			{
-				echo "invalid registration...the email already exists";
+				echo "Invalid Registration.The email has already been registered.";
 				exit;
 			}
 
@@ -148,13 +148,18 @@ $con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
      $pin=mysql_escape_string($_POST["pin"]);
      $dept=mysql_escape_string($_POST["dept"]);
      $sex=mysql_escape_string($_POST["sex"]);
+     /******************************************MAKING PID UNIQUE*********************/
+    /* $checkPid="SELECT pid FROM detail WHERE pid IS NOT NULL";
+     $result=mysqli_query($con,$checkPid);
+     $fetchdata=mysqli_fetch_array($result,MYSQLI_NUM);
 
+     $pid=mysql_escape_string($_POST["pid"]);
 
+/*****************************************************************/
 
-
-		$result=mysqli_query($con,"INSERT INTO detail (pincode,sex,dept,name,email,password,college,
+		$result=mysqli_query($con,"INSERT INTO detail (pid,pincode,sex,dept,name,email,password,college,
 		mob,event1,event2,event3,event4,event5,event6,wrk1,wrk2,wrk3)
-		VALUES ('$pin','$sex','$dept','$name','$email','$password','$college','$mob','','','','','','','','','')");
+		VALUES ('$pid','$pin','$sex','$dept','$name','$email','$password','$college','$mob','','','','','','','','','')");
 		$_SESSION["user"]=$name;
     $_SESSION["email"]=$email;
 		mysqli_close($con);

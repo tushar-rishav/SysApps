@@ -42,7 +42,7 @@ $con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
   $_SESSION["authenticated"]=true;
   $_SESSION["name"]=$read['name'];
   $_SESSION["email"]=$read['email'];
-
+  $_SESSION["pid"]=$read['pid'];
 
 
   $host=$_SERVER["HTTP_HOST"];
