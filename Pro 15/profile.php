@@ -68,10 +68,12 @@ else
           <th>PID</th>
           <th>Email</th>
           <th>Mobile No</th>
+          <th>Accomodation</th>
+          <th>Address</th>
 
           <th>Sex</th>
           <th>Dept</th>
-          <th>Pin Code</th>
+         
 
           <th>College</th>
           <th>Paper presentation</th>
@@ -86,15 +88,18 @@ else
       </thead>
       <tbody>
         <tr>
-          <td><?php echo $detail["pid"] ?></td>
-          <td><?php echo $detail["name"] ?></td>
-          <td><?php echo $detail["email"] ?></td><
-          <td><?php echo $detail["mob"] ?></td>
-          <td><?php echo $detail["sex"] ?></td>
-          <td><?php echo $detail["dept"] ?></td>
-          <td><?php echo $detail["pincode"] ?></td>
+          
+          <td><?php echo $detail["name"] ;?></td>
+<td><?php echo $detail["pid"] ;?></td>
+          <td><?php echo $detail["email"]; ?></td>
+          <td><?php echo $detail["mob"] ;?></td>
+<td><?php echo $detail["accomodation"] ;?></td>
+<td><?php echo $detail["address"] ?></td>
+          <td><?php echo $detail["sex"]; ?></td>
+          <td><?php echo $detail["dept"]; ?></td>
+          
 
-          <td><?php echo $detail["college"] ?></td>
+          <td><?php echo $detail["college"]; ?></td>
           <td><?php if($detail["event1"])
           echo "<i class='fa fa-check' style='color:green;' ></i>";
           else

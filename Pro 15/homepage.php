@@ -112,12 +112,33 @@ else
 
 
 
-
-
-
-
-
-
+  }
+  
+  
+  if(isset($_POST['work'])){
+    $wrk1=0;$wrk2=0;$wrk3=0;
+    $wrk=$_POST['work'];
+    if(!empty($wrk)){
+      switch($wrk){
+        case 1:$wrk1=1;
+        $result=mysqli_query($con,"UPDATE detail SET wrk1='".$wrk1."' WHERE(email='".$_SESSION["email"]."')");
+        mysqli_close($con);
+        break;
+        case 2:$wrk2=1;
+        $result=mysqli_query($con,"UPDATE detail SET wrk2='".$wrk2."',wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
+        mysqli_close($con);
+        break;
+        case 3:$wrk3=1;
+        $result=mysqli_query($con,"UPDATE detail SET wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
+        mysqli_close($con);
+        break;
+      }
+    }
+    
+    
+    
+    
+    
   }
 
 
@@ -193,21 +214,21 @@ else
 
 
   <script src="css/typed.js" type="text/javascript"></script>
-  <script>
-    $(function(){
-      $("#typed").typed({
-        strings: ["Welcome To Prodigy'15 Official website", "Login to register for events and workshops", "Have fun!"],
-        typeSpeed: 30,
-        backDelay: 500,
-        loop: false,
-        contentType: 'html', // or text
-        loopCount: false,
-        showCursor: true,
-        cursorChar: "|"
-      });
+        <script>
+      $(function(){
+        $("#typed").typed({
+          strings: ["Login to register for events and workshops", "Participate and win prizes worth &#8377;40000! "],
+          typeSpeed: 30,
+          backDelay: 500,
+          loop: false,
+          contentType: 'html', // or text
+          loopCount: false,
+          showCursor: true,
+          cursorChar: "|"
+        });
 
-    });
-  </script>
+      });
+      </script>
 
   <style>
 
@@ -363,7 +384,7 @@ else
               <p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:15px;text-align:center;">
 
               A NITT Alumnus, working as <b>President – PAN India at St.John’s logistics, Chennai</b> . He was former board of director at TVS logistics, Vice President- Marketing at ISMT, Pune. He was the Head  International business /Marketing and Operation at Murugappa Group.
-               Manager- Product  and Customer Service of Royal Enfield Motors Limited  – Eicher  Group.
+               Manager- Product  and Customer Service of Royal Enfield Motors Limited �&nbsp;– Eicher  Group.
             </p>
 
           </div>
@@ -388,7 +409,7 @@ else
               <p style="width:100%;font-family:monospace;font-size:15px;text-align:center;">
 
               A Madras Institute of Technology Alumnus, he is the Associate Vice President of Product Development at T.I.Cycles of india.
-              He was the Sr Engineer, Development at Vibormech Engineers and AGM Design and Development at Sundram Fasteners. 
+              He was the Sr Engineer, Development at Vibormech Engineers and AGM Design and Development at Sundram Fasteners.�&nbsp;
             </p>
 
           </div>
@@ -997,13 +1018,14 @@ else
 
 
               <span id="typed" style="white-space:pre;font-size:20px;position:absolute;top:10px;left:40%; color:black;font-family:myfont2;"></span>
-              <header style="position:absolute; top:5%;right:15%;">
+                <img style="position:absolute;top:10px;left:5%;height:20%;width:10%;" class="effect" src='css/images/logo.png' style="width:1005;height:100%;" />
+                <header style="position:absolute; top:5%;right:15%;">
 
                 <nav class="nav nav-tabs" style="list-style-type:none;" >
 
                   <span >
                     <a href="homepage.php"><?php echo "<span style='color:black'> ".$_SESSION["name"]."</span>"; ?></a>&nbsp;
-                    <b>PID&nbsp; <?php echo $_SESSION["pid"] ?></b>
+                    <b>PID&nbsp; <?php echo $_SESSION["pid"]; ?></b>
 
                 </span>
 

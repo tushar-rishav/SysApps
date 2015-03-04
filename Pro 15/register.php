@@ -70,13 +70,23 @@ function autocomplete($name)
         <span class="help-block" id="s4"><?php echo $collegeErr; ?></span><br/>
       </div>
       <div class="form-group">
-        <input type="text" maxlength="10" value='<?php echo autocomplete("pin"); ?>'  onkeypress="return isNumber(event)" name="pin" placeholder="Pin Code of your residence"  id="inn7" ></input>
+        <textarea rows="3" cols="30" value='<?php echo autocomplete("pin"); ?>'  name="pin" placeholder="Address of your residence"  id="inn7" ></textarea>
         <span class="help-block" id="s10"><?php echo $pinErr; ?></span><br/>
-      </div>
+      </div><br/><br/>
       <div class="form-group">
         Male<input style="display:inline;margin:3px;width:4%;" type="radio" name="sex" value="male"/>&nbsp;
         Female<input style="display:inline;margin:3px;width:4%;" type="radio" name="sex" value="female"/>
         <span class="help-block" id="s8"><?php echo $sexErr ?></span>
+      </div>
+      <div class="form-group">
+        <span style="color:orange;">Accomodation</span>
+        
+        <select  name="acco" required="true">
+         
+          <option selected >no</option>
+          <option>yes</option>
+         
+        </select><span><?php echo $accoErr; ?></span>
       </div>
 
       <div class="form-group">
@@ -140,3 +150,4 @@ function autocomplete($name)
 </body>
 
 </html>
+	

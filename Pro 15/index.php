@@ -157,6 +157,32 @@ if(isset($_SESSION["email"]))
 			</style>
 
 	</head>
+<style>
+p{
+font-family: monospace !important;
+font-style: normal !important;
+}
+li{
+font-family: monospace !important;
+font-style: normal !important;
+}
+h1{
+font-family: monospace !important;
+font-style: normal !important;
+}
+h2{
+font-family: monospace !important;
+font-style: normal !important;
+}
+h3{
+font-family: monospace !important;
+font-style: normal !important;
+}
+h4{
+font-family: monospace !important;
+font-style: normal !important;
+}
+</style>
 	<body style="cursor:url('css/images/cursor.png');" >
 
 
@@ -845,7 +871,7 @@ if(isset($_SESSION["email"]))
 
 		<span id="typed" style="white-space:pre;font-size:20px;position:absolute;top:10px;left:40%; color:black;font-family:myfont2;"></span>
 
-			<img style="position:absolute;top:10px;left:5%;height:20%;width:10%;" class="effect" src='css/images/logo.png' style="width:1005;height:100%;" />
+			<img style="position:absolute;top:10px;left:5%;height:20%;width:10%;" class="effect" src='css/images/logo1.gif' style="width:1005;height:100%;" />
 
 		<span style="position:absolute;top:20%;left:6.5%;font-family:myfont1;color:black;">PRODIGY'15</span>
 
@@ -872,6 +898,9 @@ if(isset($_SESSION["email"]))
 				<span data-menuanchor="work" ><a href="#work"><span data-hover="Workshops">Workshops</span></a></span>
 				<span data-menuanchor="contact"><a href="#contact"><span data-hover="Contacts">Contacts</span></a></span>
 			</nav>
+                <footer style="color:gray;">
+                      <p style="text-align:center;">Developed by <a href="https://github.com/tushar-rishav">PEA Webteam</a></p>
+                </footer>
 		</section>
 
 	</footer>

@@ -34,7 +34,7 @@ $con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
   }
   else
   {
-    $check2="SELECT name,email FROM detail WHERE(email='".$_POST['email']."' and password='".$_POST['passwd']."')";
+    $check2="SELECT name,email,pid FROM detail WHERE(email='".$_POST['email']."' and password='".$_POST['passwd']."')";
     $result2=mysqli_query($con,$check2);
     $read=mysqli_fetch_array($result2,MYSQLI_BOTH);
 

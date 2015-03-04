@@ -3,11 +3,11 @@ session_start();
 
 // define global variables and set to empty values
 global $nameErr,$password,$passwordConfirm,$college,$email,$pin,$sex,$dept;
-global $name,$passwordErr,$passwordConfirmErr,$collegeErr,$mobErr,$emailErr,$pinErr,$sexErr,$deptErr,$pid;
-global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
+global $name,$passwordErr,$passwordConfirmErr,$collegeErr,$mobErr,$emailErr,$pinErr,$sexErr,$deptErr,$pid,$acco,$accoErr;
+global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10,$s11;
 
  if ($_SERVER["REQUEST_METHOD"] == "POST")
- {  $s1=0;$s2=0;$s3=0;$s4=0;$s5=0;$s6=0;$s7=0;$s8=0;$s9=0;$s10=0;
+ {  $s1=0;$s2=0;$s3=0;$s4=0;$s5=0;$s6=0;$s7=0;$s8=0;$s9=0;$s10=0;$s11=0;
    if (empty($_POST["name"]))
     {
      $nameErr = "Name is required";
@@ -36,11 +36,19 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
 
    if (empty($_POST["pin"]))
    {  $s8=0;
-     $pinErr = "Pin code is required";
+     $pinErr = "Address is required";
 
    }
    else
    $s8=1;
+
+if (empty($_POST["acco"]))
+   {  $s11=0;
+     $pinErr = "Accomodation detail is required";
+
+   }
+   else
+   $s11=1;
 
    if (empty($_POST["sex"]))
    {  $s9=0;
@@ -110,7 +118,7 @@ global $captcha_error,$s1,$s2,$s3,$s4,$s5,$s6,$s7,$s8,$s9,$s10;
  /*#####################  end of validation process #####################################################
 ###################### taking decisions ###############################################################*/
 
-   if($s1&&$s2&&$s3&&$s4&&$s5&&$s6&&$s7&&$s8&&$s9&&$s10)
+   if($s1&&$s2&&$s3&&$s4&&$s5&&$s6&&$s7&&$s8&&$s9&&$s10&&$s11)
    {
    	$email=$_POST["email"];
    	$password=$_POST["password1"];
@@ -148,6 +156,8 @@ $con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
      $pin=mysql_escape_string($_POST["pin"]);
      $dept=mysql_escape_string($_POST["dept"]);
      $sex=mysql_escape_string($_POST["sex"]);
+     $pid=mysql_escape_string($_POST["pid"]);
+  $acco=mysql_escape_string($_POST["acco"]);
      /******************************************MAKING PID UNIQUE*********************/
     /* $checkPid="SELECT pid FROM detail WHERE pid IS NOT NULL";
      $result=mysqli_query($con,$checkPid);
@@ -157,9 +167,9 @@ $con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
 
 /*****************************************************************/
 
-		$result=mysqli_query($con,"INSERT INTO detail (pid,pincode,sex,dept,name,email,password,college,
+		$result=mysqli_query($con,"INSERT INTO detail (accomodation,pid,address,sex,dept,name,email,password,college,
 		mob,event1,event2,event3,event4,event5,event6,wrk1,wrk2,wrk3)
-		VALUES ('$pid','$pin','$sex','$dept','$name','$email','$password','$college','$mob','','','','','','','','','')");
+		VALUES ('$acco','$pid','$pin','$sex','$dept','$name','$email','$password','$college','$mob','','','','','','','','','')");
 		$_SESSION["user"]=$name;
     $_SESSION["email"]=$email;
 		mysqli_close($con);
@@ -181,7 +191,7 @@ function test_input($data) {
 
 
 
-  function validateCaptcha()
+ function validateCaptcha()
 {
    if($_POST["captcha"]==""||$_POST["captcha"]==null)
    {
