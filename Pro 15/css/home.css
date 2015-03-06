@@ -1,0 +1,87 @@
+@font-face{
+	font-family: "myfont2";
+	src: url("../fonts/desyrel.woff") format('woff');
+	font-weight: bold;
+
+}
+
+@font-face{
+	font-family: "myfont1";
+	src: url("../fonts/talldark.ttf") format('ttf');
+	font-weight: bold;
+
+}
+
+body{
+	cursor:url('css/images/cursor.png');
+}
+
+html, body {
+	overflow:hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#login{
+position: absolute;
+margin-top: -40%;
+margin-left: 89%;
+width: 85px;
+height:85px;
+transition: height 0.5s, width 0.5s;
+}
+.effect{
+	transition: height 0.5s, width 0.5s;
+}
+.effect:hover{
+	height:24%;
+	width:14%;
+	cursor:pointer;
+}
+
+#login:hover {
+
+height:100px;
+width:100px;
+cursor:pointer;
+
+}
+
+#bgtop {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 100%    }
+#bgdown {
+    position:fixed;
+    top: 0.2%;
+    width: 100%;
+    height: 100%
+}
+
+ ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 60%;
+	display:inline;
+}
+
+
+.event_wrap{
+	margin:1%;width:20%;height:30%;display:inline-block;border:solid;
+	cursor:pointer;box-shadow:1px 1px gray;
+
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	transition: box-shadow 0.5s, left 0.5s, top 0.5s, height 0.5s, width 0.5s;
+
+}
+
+.event_wrap:hover{
+	top: 5px;
+	height: 33%;
+	width: 23%;
+	box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.8);
+}
