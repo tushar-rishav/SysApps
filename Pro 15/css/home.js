@@ -132,7 +132,7 @@ var canvas,ctx;
 			block2endx = size1*8.5/20;
 
 			block1startx = size1*7.5/20;
-			block1starty = size2*246.55/400;
+			block1starty = size2*276.55/400;
 
 			isplaying=true;
 			//draw();

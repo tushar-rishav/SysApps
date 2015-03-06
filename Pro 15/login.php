@@ -7,12 +7,11 @@ session_start();
 
 
 <?php
-
-$user='user';                          /**** establishing database connection****/
+  $user='';                          /**** establishing database connection****/
 $pwd='';
-$db='user';
+$db='';
 
-$con=mysqli_connect("localhost",$user,$pwd,$db);
+$con=mysqli_connect("",$user,$pwd,$db);
 
   // Check connection
   if (mysqli_connect_errno())

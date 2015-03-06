@@ -123,9 +123,9 @@ if (empty($_POST["acco"]))
    	$email=$_POST["email"];
    	$password=$_POST["password1"];
 
-	 $user='user';                          /**** establishing database connection****/
+	 $user='';                          /**** establishing database connection****/
 $pwd='';
-$db='user';
+$db='';
 
 $con=mysqli_connect("localhost",$user,$pwd,$db);
 

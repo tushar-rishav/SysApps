@@ -16,12 +16,12 @@ if(!isset($_SESSION["email"]))
 
 
 
-
-$user='user';                          /**** establishing database connection****/
+$user='';                          /**** establishing database connection****/
 $pwd='';
-$db='user';
+$db='';
 
 $con=mysqli_connect("localhost",$user,$pwd,$db);
+
 // Check connection
 
 if (mysqli_connect_errno())
@@ -51,116 +51,110 @@ else
   if(isset($_POST['event'])){
 
     $event1=0;$event2=0;$event3=0;$event4=0;$event5=0;$event6=0;
-
     $event=$_POST['event'];
 
-    if(!empty($event)){
 
-      switch($event){
 
-        case 1:$event1=1;
 
-        $result=mysqli_query($con,"UPDATE detail SET event1='".$event1."' WHERE(email='".$_SESSION["email"]."')");
+    switch($event){
 
-        mysqli_close($con);
+      case 1:$event1=1;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event1='".$event1."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 2:$event2=1;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event2='".$event2."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 2:$event2=1;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event2='".$event2."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 3:$event3=1;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event3='".$event3."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 3:$event3=1;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event3='".$event3."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 4:$event4=1;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event4='".$event4."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 4:$event4=1;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event4='".$event4."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 5:$event5=1;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event5='".$event5."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 5:$event5=1;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event5='".$event5."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 6:$event6=1;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 6:$event6=1;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 7:$event1=0;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 7:$event1=0;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event1='".$event1."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 8:$event2=0;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 8:$event2=0;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event2='".$event2."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 9:$event3=0;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 9:$event3=0;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event3='".$event3."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 10:$event4=0;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 10:$event4=0;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event4='".$event4."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 11:$event5=0;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 11:$event5=0;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event5='".$event5."' WHERE(email='".$_SESSION["email"]."')");
 
-        case 12:$event6=0;
+      mysqli_close($con);
 
-        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+      break;
 
-        mysqli_close($con);
+      case 12:$event6=0;
 
-        break;
+      $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
 
-      }
+      mysqli_close($con);
+
+      break;
 
     }
-
-
-
-
 
   }
 
@@ -168,35 +162,35 @@ else
   if(isset($_POST['work'])){
     $wrk1=0;$wrk2=0;$wrk3=0;
     $wrk=$_POST['work'];
-    if(!empty($wrk)){
-      switch($wrk){
-        case 1:$wrk1=1;
-        $result=mysqli_query($con,"UPDATE detail SET wrk1='".$wrk1."' WHERE(email='".$_SESSION["email"]."')");
-        mysqli_close($con);
-        break;
-        case 2:$wrk2=1;
-        $result=mysqli_query($con,"UPDATE detail SET wrk2='".$wrk2."',wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
-        mysqli_close($con);
-        break;
-        case 3:$wrk3=1;
-        $result=mysqli_query($con,"UPDATE detail SET wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
-        mysqli_close($con);
-        break;
 
-        case 4:$wrk1=0;
-        $result=mysqli_query($con,"UPDATE detail SET wrk1='".$wrk1."' WHERE(email='".$_SESSION["email"]."')");
-        mysqli_close($con);
-        break;
-        case 5:$wrk2=0;
-        $result=mysqli_query($con,"UPDATE detail SET wrk2='".$wrk2."',wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
-        mysqli_close($con);
-        break;
-        case 6:$wrk3=0;
-        $result=mysqli_query($con,"UPDATE detail SET wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
-        mysqli_close($con);
-        break;
-      }
+    switch($wrk){
+      case 1:$wrk1=1;
+      $result=mysqli_query($con,"UPDATE detail SET wrk1='".$wrk1."' WHERE(email='".$_SESSION["email"]."')");
+      mysqli_close($con);
+      break;
+      case 2:$wrk2=1;
+      $result=mysqli_query($con,"UPDATE detail SET wrk2='".$wrk2."',wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
+      mysqli_close($con);
+      break;
+      case 3:$wrk3=1;
+      $result=mysqli_query($con,"UPDATE detail SET wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
+      mysqli_close($con);
+      break;
+
+      case 4:$wrk1=0;
+      $result=mysqli_query($con,"UPDATE detail SET wrk1='".$wrk1."' WHERE(email='".$_SESSION["email"]."')");
+      mysqli_close($con);
+      break;
+      case 5:$wrk2=0;
+      $result=mysqli_query($con,"UPDATE detail SET wrk2='".$wrk2."',wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
+      mysqli_close($con);
+      break;
+      case 6:$wrk3=0;
+      $result=mysqli_query($con,"UPDATE detail SET wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
+      mysqli_close($con);
+      break;
     }
+
 
 
 
@@ -207,11 +201,6 @@ else
 
 
 }
-
-
-
-
-
 
 
 
@@ -373,7 +362,7 @@ else
 
 
         <div id="canvasesdiv" style="position:relative; left:18%;  width:300px; height:300px; ">
-          <canvas id="canvas" style="z-index: 7; position:absolute; left:0px;top:0px"></canvas>
+          <canvas id="canvas" style="z-index: 7; position:absolute; left:0px;top:-19%;"></canvas>
           <canvas id="gear1canvas" style="z-index: 2; position:absolute;left:0px;top:0px;"></canvas>
 
           <canvas id="gear2canvas" style="z-index: 3; position:absolute;left:0px;top:0px;"></canvas>
@@ -514,9 +503,9 @@ else
                     else
                     {
                       print '<button class="btn btn-success" >Registered</button>&nbsp;
-                      <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
-                      &nbsp;<input type="hidden" name="event" value="7" />&nbsp;
-                      <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                      <form style="display:inline;"  method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                        &nbsp;<input type="hidden" name="event" value="7" />&nbsp;
+                        <input type="submit" class="btn btn-warning" value="Unregister" ></input>
                       </form>
                       ';
 
@@ -626,9 +615,9 @@ else
                     else
                     {
                       print '<button class="btn btn-success" >Registered</button>&nbsp;
-                      <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
-                      &nbsp;<input type="hidden" name="event" value="8" />&nbsp;
-                      <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                      <form style="display:inline;"  method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                        &nbsp;<input  type="hidden" name="event" value="8" />&nbsp;
+                        <input type="submit" class="btn btn-warning" value="Unregister" ></input>
                       </form>';
 
                     }
@@ -719,9 +708,9 @@ else
                       else
                       {
                         print '<button class="btn btn-success" >Registered</button>&nbsp;
-                        <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
-                        &nbsp;<input type="hidden" name="event" value="9" />&nbsp;
-                        <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                        <form  style="display:inline;" method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                          &nbsp;<input type="hidden" name="event" value="9" />&nbsp;
+                          <input type="submit" class="btn btn-warning" value="Unregister" ></input>
                         </form>';
 
                       }
@@ -792,9 +781,9 @@ else
                         else
                         {
                           print '<button class="btn btn-success" >Registered</button>&nbsp;
-                          <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
-                          &nbsp;<input type="hidden" name="event" value="10" />&nbsp;
-                          <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                          <form  style="display:inline;" method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                            &nbsp;<input type="hidden" name="event" value="10" />&nbsp;
+                            <input type="submit" class="btn btn-warning" value="Unregister" ></input>
                           </form>';
 
                         }
@@ -869,9 +858,9 @@ else
                           else
                           {
                             print '<button class="btn btn-success" >Registered</button>&nbsp;
-                            <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
-                            &nbsp;<input type="hidden" name="event" value="11" />&nbsp;
-                            <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                            <form style="display:inline;"  method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                              &nbsp;<input type="hidden" name="event" value="11" />&nbsp;
+                              <input type="submit" class="btn btn-warning" value="Unregister" ></input>
                             </form>';
 
                           }
@@ -975,9 +964,9 @@ else
                               else
                               {
                                 print '<button class="btn btn-success" >Registered</button>&nbsp;
-                                <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
-                                &nbsp;<input type="hidden" name="work" value="4" />&nbsp;
-                                <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                                <form style="display:inline;"  method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                  &nbsp;<input type="hidden" name="work" value="4" />&nbsp;
+                                  <input type="submit" class="btn btn-warning" value="Unregister" ></input>
                                 </form>';
 
                               }
@@ -1032,9 +1021,9 @@ else
                                 else
                                 {
                                   print '<button class="btn btn-success" >Registered</button>&nbsp;
-                                  <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
-                                  &nbsp;<input type="hidden" name="work" value="5" />&nbsp;
-                                  <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                                  <form style="display:inline;"  method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                    &nbsp;<input type="hidden" name="work" value="5" />&nbsp;
+                                    <input type="submit" class="btn btn-warning" value="Unregister" ></input>
                                   </form>';
 
                                 }
@@ -1073,9 +1062,9 @@ else
                                   else
                                   {
                                     print '<button class="btn btn-success" >Registered</button>&nbsp;
-                                    <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
-                                    &nbsp;<input type="hidden" name="work" value="6" />&nbsp;
-                                    <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                                    <form style="display:inline;"  method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                      &nbsp;<input type="hidden" name="work" value="6" />&nbsp;
+                                      <input type="submit" class="btn btn-warning" value="Unregister" ></input>
                                     </form>';
 
                                   }
@@ -1242,7 +1231,7 @@ else
                         <span data-menuanchor="contact"><a href="#contact"><span data-hover="Contacts">Contacts</span></a></span>
                       </nav>
                     </section>
-
+                     <p style="text-align:center;color:#483F3F;">Developed by PEA Web Team</p>
                   </footer>
 
 
