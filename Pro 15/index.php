@@ -170,7 +170,11 @@ if(isset($_SESSION["email"]))
 
 
 				<div id="canvasesdiv" style="position:relative; left:18%;  width:300px; height:300px; ">
+<<<<<<< HEAD
 					<canvas id="canvas" style="z-index: 7; position:absolute; left:0px;top:-19%;"></canvas>
+=======
+					<canvas id="canvas" style="z-index: 7; position:absolute; left:0px;top:0px"></canvas>
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 					<canvas id="gear1canvas" style="z-index: 2; position:absolute;left:0px;top:0px;"></canvas>
 
 					<canvas id="gear2canvas" style="z-index: 3; position:absolute;left:0px;top:0px;"></canvas>
@@ -219,9 +223,15 @@ if(isset($_SESSION["email"]))
 							<br/><br/>
 							<p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:16px;text-align:center;">
 								An IITM alumnus, who has a three decades of experience in steel industry worked as Deputy manager SAIL, Director Operations, ISSAL, Joint managing director ISMT, Director Tridem Port& Power Co. Pvt. Ltd , Presently CEO Kalyani Carpenter Special Steel Ltd
+<<<<<<< HEAD
 								Co Author and edCo – Author and editor of Book on “HAND BOOK OF MATERIALS”
 								Published by SAIL, Rourkela Steel Plant.
 								Director of Indo – German Club.
+=======
+								Co Author and edCo â€“ Author and editor of Book on â€œHAND BOOK OF MATERIALSâ€
+								Published by SAIL, Rourkela Steel Plant.
+								Director of Indo â€“ German Club.
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 							</p>
 
 						</div>
@@ -243,7 +253,11 @@ if(isset($_SESSION["email"]))
 							<br/><br/>
 							<p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:16px;text-align:center;">
 
+<<<<<<< HEAD
 								A NITT Alumnus, working as President – PAN India at St.John’s logistics, Chennai . He was former board of director at TVS logistics, Vice President- Marketing at ISMT, Pune. He was the Head  International business /Marketing and Operation at Murugappa Group.
+=======
+								A NITT Alumnus, working as President â€“ PAN India at St.Johnâ€™s logistics, Chennai . He was former board of director at TVS logistics, Vice President- Marketing at ISMT, Pune. He was the Head  International business /Marketing and Operation at Murugappa Group.
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 								Manager- Product  and Customer Service of Royal Enfield Motors Limited - Eicher  Group.
 							</p>
 
@@ -377,7 +391,11 @@ if(isset($_SESSION["email"]))
 										</p>
 
 
+<<<<<<< HEAD
 										<h3 style="float:left;" >Event Manager’s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+=======
+										<h3 style="float:left;" >Event Managerâ€™s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 										<p>
 											Nachiappan Velappan &nbsp;<br/>
 											<i style="color:lightgreen;" class="fa fa-2x  fa-mobile"></i>&nbsp; 09677000463<br/>
@@ -455,7 +473,11 @@ if(isset($_SESSION["email"]))
 
 										</p>
 
+<<<<<<< HEAD
 										<h3 style="float:left;">Event Manager’s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+=======
+										<h3 style="float:left;">Event Managerâ€™s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 										<p >
 											R.Karthikeyan<br/>
 											<i style="color:lightgreen;" class="fa fa-2x  fa-mobile"></i>&nbsp; 9445914443<br/>
@@ -514,7 +536,11 @@ if(isset($_SESSION["email"]))
 
 											</p>
 
+<<<<<<< HEAD
 											<h3 style="float:left;">Event Manager’s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+=======
+											<h3 style="float:left;">Event Managerâ€™s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 											<p>
 												Arun Doss&nbsp;<br/>
 												<i style="color:lightgreen;" class="fa fa-2x  fa-mobile"></i>&nbsp;09786155123<br/>
@@ -648,7 +674,11 @@ if(isset($_SESSION["email"]))
 
 
 													</p>
+<<<<<<< HEAD
 													<h3 style="float:left;" >Event Manager’s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+=======
+													<h3 style="float:left;" >Event Managerâ€™s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 													<p>
 														S.Parthasarathy&nbsp;<br/>
 														<i style="color:lightgreen;" class="fa fa-2x  fa-mobile"></i>&nbsp;9445483394<br/>
@@ -698,7 +728,11 @@ if(isset($_SESSION["email"]))
 														<h3 style="float:left;">Benefits</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 2px; border-width: 0; align:center;">
 														<p style="width:100%;font-family:monospace;font-size:16px;">
 															Exposure to world class practices followed in the industry.
+<<<<<<< HEAD
 															This certificate will add value to participant’s current career prospects.
+=======
+															This certificate will add value to participantâ€™s current career prospects.
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 															Course is designed by experts in the field who have conducted this workshop at various NITTs ,NITTE and Corporates like HAL, Cognizant etc.
 
 														</p>
@@ -729,8 +763,13 @@ if(isset($_SESSION["email"]))
 															<h3 style="float:left;">Workshop Description </h3><br/><br/>
 															<hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
 															<p style="width:100%;font-family:monospace;font-size:16px;">
+<<<<<<< HEAD
 																FlexSim simulation software was built from the ground up to take advantage of today’s advanced 3D visualizations. Drag and drop objects into a virtual world. Create spatial relationships in your model to mimic your real life system. Include custom 3D shapes and CAD layouts.You’ll simulate not only the behavior of your real life system, but also the look and feel, allowing you to immediately
 																see what’s going on.FlexSim simulation software was conceived to be the most sophisticated 3D discrete event package ever created.
+=======
+																FlexSim simulation software was built from the ground up to take advantage of todayâ€™s advanced 3D visualizations. Drag and drop objects into a virtual world. Create spatial relationships in your model to mimic your real life system. Include custom 3D shapes and CAD layouts.Youâ€™ll simulate not only the behavior of your real life system, but also the look and feel, allowing you to immediately
+																see whatâ€™s going on.FlexSim simulation software was conceived to be the most sophisticated 3D discrete event package ever created.
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 															</p>
 															<hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
 															<p style="width:100%;font-family:monospace;font-size:16px;"> Registration Fee Rs 200 (On-Spot) </p>
@@ -881,7 +920,10 @@ if(isset($_SESSION["email"]))
 												<span data-menuanchor="contact"><a href="#contact"><span data-hover="Contacts">Contacts</span></a></span>
 											</nav>
 										</section>
+<<<<<<< HEAD
                                                                          <p style="text-align:center;color:#483F3F;">Developed by PEA Web Team</p>
+=======
+>>>>>>> 7a59a8ea50a554963b4aee80d5076691c4d95082
 
 									</footer>
 
