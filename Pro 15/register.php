@@ -29,8 +29,13 @@ function autocomplete($name)
   input{
     width:40%;
     text-align:center;
+    background:#C5E0E0;
+color:black;
   }
-
+textarea{
+background:#C5E0E0;
+color:black;
+}
   .form-group{
     height:40px;
   }
@@ -43,11 +48,11 @@ function autocomplete($name)
     font-size:15px;
   }
   .help-block{
-    color:yellow;
+    color:black;
   }
   </style>
 </head>
-<body style="background:url('css/images/bg1.jpg');background-attachment:fixed;" >
+<body style="background:url('css/images/bg3.jpg');background-attachment:fixed;background-repeat:no-repeat;background-size:100% 100%;" >
 
   <div class="container" style="text-align:center;">
 
@@ -74,12 +79,12 @@ function autocomplete($name)
         <span class="help-block" id="s10"><?php echo $pinErr; ?></span><br/>
       </div><br/><br/>
       <div class="form-group">
-        Male<input style="display:inline;margin:3px;width:4%;" type="radio" name="sex" value="male"/>&nbsp;
-        Female<input style="display:inline;margin:3px;width:4%;" type="radio" name="sex" value="female"/>
+        <span style="color:white;">Male</span><input style="display:inline;margin:3px;width:4%;" type="radio" name="sex" value="male"/>&nbsp;
+        <span style="color:white;">Female</span><input style="display:inline;margin:3px;width:4%;" type="radio" name="sex" value="female"/>
         <span class="help-block" id="s8"><?php echo $sexErr ?></span>
       </div>
       <div class="form-group">
-        <span style="color:orange;">Accomodation</span>
+        <span style="color:white;">Accomodation</span>
         
         <select  name="acco" required="true">
          
@@ -90,7 +95,7 @@ function autocomplete($name)
       </div>
 
       <div class="form-group">
-        <span style="color:orange;">Department</span>
+        <span style="color:white;">Department</span>
         <select id="dept" name="dept" required="true">
           <option selected>Department</option>
           <option>Computer Science</option>
@@ -125,7 +130,7 @@ function autocomplete($name)
         <span >Enter the code</span>
         <input type="text" id="captcha" style="width:10%;" name="captcha"/><span id='s7'><?php echo $captcha_error; ?></span>
       </div>
-      <input type="hidden" value='<?php echo mt_rand(1000,5000); ?>' name="pid">
+      
       <input type="submit" class="btn btn-success" value="Register"></input>
 
     </form>

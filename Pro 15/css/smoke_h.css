@@ -1,0 +1,266 @@
+/*smoke effect*/
+
+.smoke_h {
+
+  -webkit-transform: translateZ(90);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  position: absolute;
+  z-index: 8;
+  width: 1px;
+  height: 120px;
+  left: 36%;
+top: 38%; }
+
+
+/* smoke balls */
+.smoke_h span{
+  display: block;
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  margin-left: -20px;
+  height: 0px;
+  width: 0px;
+  border: 35px solid rgba(255, 255, 255, 0.6);
+  border-radius: 35px;
+  left: -14px;
+  opacity: 0;
+  transform: scale(0.5); }
+
+
+
+.smoke_h .s1_h, .smoke_h .s2_h, .smoke_h .s3_h, .smoke_h .s4_h, .smoke_h .s5_h, .smoke_h .s6_h, .smoke_h .s7_h, .smoke_h .s8_h, .smoke_h .s9_h {
+  margin-left: -25px; }
+
+/* Smoke animation */
+@-webkit-keyframes smokeL {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, -15px);
+    -moz-transform: scale(0.5) translate(0, -15px);
+    -o-transform: scale(0.5) translate(0, -15px);
+    transform: scale(0.5) translate(0, -15px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translate(0, -130px);
+    -moz-transform: scale(1) translate(0, -130px);
+    -o-transform: scale(1) translate(0, -130px);
+    transform: scale(1) translate(0, -130px); } }
+
+@-moz-keyframes smokeL {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, -15px);
+    -moz-transform: scale(0.5) translate(0, -15px);
+    -o-transform: scale(0.5) translate(0, -15px);
+    transform: scale(0.5) translate(0, -15px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translate(0, -130px);
+    -moz-transform: scale(1) translate(0, -130px);
+    -o-transform: scale(1) translate(0, -130px);
+    transform: scale(1) translate(0, -130px); } }
+
+@-o-keyframes smokeL {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, -15px);
+    -moz-transform: scale(0.5) translate(0, -15px);
+    -o-transform: scale(0.5) translate(0, -15px);
+    transform: scale(0.5) translate(0, -15px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translate(0, -130px);
+    -moz-transform: scale(1) translate(0, -130px);
+    -o-transform: scale(1) translate(0, -130px);
+    transform: scale(1) translate(0, -130px); } }
+
+@keyframes smokeL {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, -15px);
+    -moz-transform: scale(0.5) translate(0, -15px);
+    -o-transform: scale(0.5) translate(0, -15px);
+    transform: scale(0.5) translate(0, -15px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translate(0, -130px);
+    -moz-transform: scale(1) translate(0, -130px);
+    -o-transform: scale(1) translate(0, -130px);
+    transform: scale(1) translate(0, -130px); } }
+
+@-webkit-keyframes smokeR {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, -15px);
+    -moz-transform: scale(0.5) translate(0, -15px);
+    -o-transform: scale(0.5) translate(0, -15px);
+    transform: scale(0.5) translate(0, -15px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translate(5px, -130px);
+    -moz-transform: scale(1) translate(5px, -130px);
+    -o-transform: scale(1) translate(5px, -130px);
+    transform: scale(1) translate(5px, -130px); } }
+
+@-moz-keyframes smokeR {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, -15px);
+    -moz-transform: scale(0.5) translate(0, -15px);
+    -o-transform: scale(0.5) translate(0, -15px);
+    transform: scale(0.5) translate(0, -15px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translate(5px, -130px);
+    -moz-transform: scale(1) translate(5px, -130px);
+    -o-transform: scale(1) translate(5px, -130px);
+    transform: scale(1) translate(5px, -130px); } }
+
+@-o-keyframes smokeR {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, -15px);
+    -moz-transform: scale(0.5) translate(0, -15px);
+    -o-transform: scale(0.5) translate(0, -15px);
+    transform: scale(0.5) translate(0, -15px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translate(5px, -130px);
+    -moz-transform: scale(1) translate(5px, -130px);
+    -o-transform: scale(1) translate(5px, -130px);
+    transform: scale(1) translate(5px, -130px); } }
+
+@keyframes smokeR {
+  0% {
+    -webkit-transform: scale(0.5) translate(0, 0);
+    -moz-transform: scale(0.5) translate(0, 0);
+    -o-transform: scale(0.5) translate(0, 0);
+    transform: scale(0.5) translate(0, 0); }
+
+  10% {
+    opacity: 1;
+    -webkit-transform: scale(0.5) translate(0, -15px);
+    -moz-transform: scale(0.5) translate(0, -15px);
+    -o-transform: scale(0.5) translate(0, -15px);
+    transform: scale(0.5) translate(0, -15px); }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) translate(5px, -130px);
+    -moz-transform: scale(1) translate(5px, -130px);
+    -o-transform: scale(1) translate(5px, -130px);
+    transform: scale(1) translate(5px, -130px); } }
+
+.smoke_h .s0_h{
+  -webkit-animation: smokeL 10s 0s infinite;
+  -moz-animation: smokeL 10s 0s infinite;
+  -o-animation: smokeL 10s 0s infinite;
+  animation: smokeL 10s 0s infinite; }
+
+.smoke_h .s1_h{
+  -webkit-animation: smokeR 10s 1s infinite;
+  -moz-animation: smokeR 10s 1s infinite;
+  -o-animation: smokeR 10s 1s infinite;
+  animation: smokeR 10s 1s infinite; }
+
+.smoke_h .s2_h{
+  -webkit-animation: smokeL 10s 2s infinite;
+  -moz-animation: smokeL 10s 2s infinite;
+  -o-animation: smokeL 10s 2s infinite;
+  animation: smokeL 10s 2s infinite; }
+
+.smoke_h .s3_h{
+  -webkit-animation: smokeR 10s 3s infinite;
+  -moz-animation: smokeR 10s 3s infinite;
+  -o-animation: smokeR 10s 3s infinite;
+  animation: smokeR 10s 3s infinite; }
+
+.smoke_h .s4_h{
+  -webkit-animation: smokeL 10s 4s infinite;
+  -moz-animation: smokeL 10s 4s infinite;
+  -o-animation: smokeL 10s 4s infinite;
+  animation: smokeL 10s 4s infinite; }
+
+.smoke_h .s5_h{
+  -webkit-animation: smokeR 10s 5s infinite;
+  -moz-animation: smokeR 10s 5s infinite;
+  -o-animation: smokeR 10s 5s infinite;
+  animation: smokeR 10s 5s infinite; }
+
+.smoke_h .s6_h{
+  -webkit-animation: smokeL 10s 6s infinite;
+  -moz-animation: smokeL 10s 6s infinite;
+  -o-animation: smokeL 10s 6s infinite;
+  animation: smokeL 10s 6s infinite; }
+
+.smoke_h .s7_h{
+  -webkit-animation: smokeR 10s 7s infinite;
+  -moz-animation: smokeR 10s 7s infinite;
+  -o-animation: smokeR 10s 7s infinite;
+  animation: smokeR 10s 7s infinite; }
+
+.smoke_h .s8_h{
+  -webkit-animation: smokeL 10s 8s infinite;
+  -moz-animation: smokeL 10s 8s infinite;
+  -o-animation: smokeL 10s 8s infinite;
+  animation: smokeL 10s 8s infinite; }
+
+.smoke_h .s9_h{
+  -webkit-animation: smokeR 10s 9s infinite;
+  -moz-animation: smokeR 10s 9s infinite;
+  -o-animation: smokeR 10s 9s infinite;
+  animation: smokeR 10s 9s infinite; }

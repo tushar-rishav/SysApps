@@ -7,12 +7,12 @@ if(!isset($_SESSION["email"]))
 }
 
 
-$user='u460965022_user';                          /**** establishing database connection****/
-$pwd='Rum420';
 
-$db='u460965022_user';
+$user='user';                          /**** establishing database connection****/
+$pwd='';
+$db='user';
 
-$con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
+$con=mysqli_connect("localhost",$user,$pwd,$db);
 // Check connection
 if (mysqli_connect_errno())
 {
@@ -55,7 +55,7 @@ else
   <script src="css/bootstrap.min.js" ></script>
 
   </head>
-  <body style="background:url('css/images/bg1.jpg')" >
+  <body style="background:url('css/images/f-bg.png')" >
     <header >
       <a href="homepage.php" ><i class="fa fa-4x fa-home" style="color:green;z-index:99;float:left;position:absolute;top:3%;left:10%;" ></i></a>
     </header>
@@ -73,7 +73,7 @@ else
 
           <th>Sex</th>
           <th>Dept</th>
-         
+
 
           <th>College</th>
           <th>Paper presentation</th>
@@ -88,7 +88,7 @@ else
       </thead>
       <tbody>
         <tr>
-          
+
           <td><?php echo $detail["name"] ;?></td>
 <td><?php echo $detail["pid"] ;?></td>
           <td><?php echo $detail["email"]; ?></td>
@@ -97,7 +97,7 @@ else
 <td><?php echo $detail["address"] ?></td>
           <td><?php echo $detail["sex"]; ?></td>
           <td><?php echo $detail["dept"]; ?></td>
-          
+
 
           <td><?php echo $detail["college"]; ?></td>
           <td><?php if($detail["event1"])

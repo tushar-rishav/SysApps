@@ -123,11 +123,11 @@ if (empty($_POST["acco"]))
    	$email=$_POST["email"];
    	$password=$_POST["password1"];
 
-	 $user='u460965022_user';                          /**** establishing database connection****/
-$pwd='Rum420';
-$db='u460965022_user';
+	 $user='user';                          /**** establishing database connection****/
+$pwd='';
+$db='user';
 
-$con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
+$con=mysqli_connect("localhost",$user,$pwd,$db);
 
 		// Check connection
 		if (mysqli_connect_errno())
@@ -153,25 +153,28 @@ $con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
 		 $password=mysql_escape_string($_POST["password"]);
 		 $college=mysql_escape_string($_POST["college"]);
 		 $mob=mysql_escape_string($_POST["mob"]);
-     $pin=mysql_escape_string($_POST["pin"]);
+     $pin=mysql_escape_string($_POST["pin"]);              /****this is actually an address****/
      $dept=mysql_escape_string($_POST["dept"]);
      $sex=mysql_escape_string($_POST["sex"]);
-     $pid=mysql_escape_string($_POST["pid"]);
-  $acco=mysql_escape_string($_POST["acco"]);
-     /******************************************MAKING PID UNIQUE*********************/
-    /* $checkPid="SELECT pid FROM detail WHERE pid IS NOT NULL";
-     $result=mysqli_query($con,$checkPid);
-     $fetchdata=mysqli_fetch_array($result,MYSQLI_NUM);
 
-     $pid=mysql_escape_string($_POST["pid"]);
+     $acco=mysql_escape_string($_POST["acco"]);
 
-/*****************************************************************/
+
+     $countQuery="SELECT COUNT(*) FROM detail WHERE pid IS NOT NULL";
+
+
+     $countPid=mysqli_query($con,$countQuery);
+     $c=mysqli_fetch_array($countPid);
+     $pid=5015+$c[0];          /*   screw the pid    */
+
+
 
 		$result=mysqli_query($con,"INSERT INTO detail (accomodation,pid,address,sex,dept,name,email,password,college,
 		mob,event1,event2,event3,event4,event5,event6,wrk1,wrk2,wrk3)
 		VALUES ('$acco','$pid','$pin','$sex','$dept','$name','$email','$password','$college','$mob','','','','','','','','','')");
 		$_SESSION["user"]=$name;
     $_SESSION["email"]=$email;
+
 		mysqli_close($con);
 		header("Location: successSignUp.php");
 

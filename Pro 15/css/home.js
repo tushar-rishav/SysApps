@@ -1,4 +1,4 @@
-		var canvas,ctx;
+var canvas,ctx;
 		var gear1canvas,ctx1;
 		var gear2canvas,ctx2;
 		var gear3canvas,ctx3;
@@ -57,7 +57,7 @@
 
 
 			factory= new Image();
-			factory.src="css/images/f-bg2.gif";
+			factory.src="css/images/final-bg2.gif";
 
 			gear= new Image();
 			gear.src="css/images/g5.png";
@@ -85,8 +85,8 @@
 		{
 
 
-			size1=2*(window.innerWidth)/3;
-			size2=2*(window.innerHeight)/3;
+			size1=3*(window.innerWidth)/4;
+			size2=3*(window.innerHeight)/4;
 
 			canvas.width = size1;
 			canvas.height = size2;
@@ -120,8 +120,8 @@
 			size=size2;
 			}
 
-			gear1x=size1*6.625/20; gear1y =size2*345/400 ;
-			gear2x=size1*10.1/20; gear2y=size2*265/400 ;
+			gear1x=size1*7.3/20; gear1y =size2*345/400 ;
+			gear2x=size1*10.2/20; gear2y=size2*285/400 ;
 			gear3x=size1*11/20; gear3y=size2*270/400 ;
 			gear4x=size1*16.05/20; gear4y= size2*351.5/400;
 			gear5x=size1*16.70/20;  gear5y=size2*351.5/400;

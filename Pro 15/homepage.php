@@ -16,19 +16,19 @@ if(!isset($_SESSION["email"]))
 
 
 
-$user='u460965022_user';                          /**** establishing database connection****/
-$pwd='Rum420';
-$db='u460965022_user';
 
-$con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
+$user='user';                          /**** establishing database connection****/
+$pwd='';
+$db='user';
 
+$con=mysqli_connect("localhost",$user,$pwd,$db);
 // Check connection
 
 if (mysqli_connect_errno())
 
 {
 
-  echo "Failed to connect to MySQL: ".mysqli_connect_error();
+  echo "Failed to connect to Server.Please try after some time! ";
 
   exit;
 
@@ -43,6 +43,8 @@ else
 
 
 
+  $result=mysqli_query($con,"SELECT * FROM detail WHERE(email='".$_SESSION["email"]."')");
+  $detail=mysqli_fetch_assoc($result);
 
 
 
@@ -104,6 +106,54 @@ else
 
         break;
 
+        case 7:$event1=0;
+
+        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+
+        mysqli_close($con);
+
+        break;
+
+        case 8:$event2=0;
+
+        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+
+        mysqli_close($con);
+
+        break;
+
+        case 9:$event3=0;
+
+        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+
+        mysqli_close($con);
+
+        break;
+
+        case 10:$event4=0;
+
+        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+
+        mysqli_close($con);
+
+        break;
+
+        case 11:$event5=0;
+
+        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+
+        mysqli_close($con);
+
+        break;
+
+        case 12:$event6=0;
+
+        $result=mysqli_query($con,"UPDATE detail SET event6='".$event6."' WHERE(email='".$_SESSION["email"]."')");
+
+        mysqli_close($con);
+
+        break;
+
       }
 
     }
@@ -113,8 +163,8 @@ else
 
 
   }
-  
-  
+
+
   if(isset($_POST['work'])){
     $wrk1=0;$wrk2=0;$wrk3=0;
     $wrk=$_POST['work'];
@@ -132,13 +182,26 @@ else
         $result=mysqli_query($con,"UPDATE detail SET wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
         mysqli_close($con);
         break;
+
+        case 4:$wrk1=0;
+        $result=mysqli_query($con,"UPDATE detail SET wrk1='".$wrk1."' WHERE(email='".$_SESSION["email"]."')");
+        mysqli_close($con);
+        break;
+        case 5:$wrk2=0;
+        $result=mysqli_query($con,"UPDATE detail SET wrk2='".$wrk2."',wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
+        mysqli_close($con);
+        break;
+        case 6:$wrk3=0;
+        $result=mysqli_query($con,"UPDATE detail SET wrk3='".$wrk3."' WHERE(email='".$_SESSION["email"]."')");
+        mysqli_close($con);
+        break;
       }
     }
-    
-    
-    
-    
-    
+
+
+
+
+
   }
 
 
@@ -214,21 +277,21 @@ else
 
 
   <script src="css/typed.js" type="text/javascript"></script>
-        <script>
-      $(function(){
-        $("#typed").typed({
-          strings: ["Login to register for events and workshops", "Participate and win prizes worth &#8377;40000! "],
-          typeSpeed: 30,
-          backDelay: 500,
-          loop: false,
-          contentType: 'html', // or text
-          loopCount: false,
-          showCursor: true,
-          cursorChar: "|"
-        });
-
+  <script>
+    $(function(){
+      $("#typed").typed({
+        strings: ["To register for workshops and events,\n visit the corresponding pages!","Participate and win prizes worth &#8377;40000! ","To register for workshops and events,\n visit the corresponding pages!"],
+        typeSpeed: 30,
+        backDelay: 500,
+        loop: false,
+        contentType: 'html', // or text
+        loopCount: false,
+        showCursor: true,
+        cursorChar: "|"
       });
-      </script>
+
+    });
+  </script>
 
   <style>
 
@@ -306,7 +369,7 @@ else
     <div id="fullpage"  >
       <!-- isolate the mess -->
 
-      <div id="backg" class="section" data-anchor="home" style="background:#E1CA79;">
+      <div id="backg" class="section" data-anchor="home" style="background:url('css/images/f-bg.png');">
 
 
         <div id="canvasesdiv" style="position:relative; left:18%;  width:300px; height:300px; ">
@@ -327,227 +390,249 @@ else
         height: 14.2%;">
       </div>
 
-     </div>
+    </div>
 
 
 
-    <div class="section" data-anchor="about" style="background:url('css/images/bg3.jpg');background-size:100% 100%;" >
+    <div class="section" data-anchor="about" style="background:url('css/images/f-bg.png');background-size:100% 100%;color:black;" >
 
       <p style="width:60%;text-align:center;margin:20%;font-size:17px;">
         PRODIGY is the annual symposium of the Production Engineering Department of NIT Trichy. In this ever changing world of Technology, innovation is the key to success.It is required to keep learning to stay in the race.
-        At Prodigy, we provide the platform to learn and create a need to innovate , push you to your limits and bring alive the prodigy in you .
-      </p>
-
-    </div>
-
-
-    <div class="section" data-anchor="gl" style="background:url('css/images/bg1.jpg');">
-
-      <div class="slide">
-
-        <div class="media">
-          <a class="pull-left" href="#">
-            <span style="font-weight:800;color:white;font-size:16px;font-family:monospace;position:relative;" >V.Balasubramanian</span><br/>
-            <img class="img img-rounded" style="width:30%;height:30%;position:relative"  src="guestlectures/images/gl2.jpg"
-            alt="Media Object">
-
-          </a>
-          <div class="media-body" style="position:relative;left:-15%;font-family:monospace;text-align:center;">
-            <h2 class="media-heading glCustom">Advancements in Industrial Engineering</h2>
-
-
-            <br/><br/>
-            <p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:15px;text-align:center;">
-              An IITM alumnus, who has a three decades of experience in steel industry worked as Deputy manager SAIL, Director Operations, ISSAL, Joint managing director ISMT, Director Tridem Port& Power Co. Pvt. Ltd , Presently CEO Kalyani Carpenter Special Steel Ltd
-              Co Author and edCo – Author and editor of Book on “HAND BOOK OF MATERIALS”
-              Published by SAIL, Rourkela Steel Plant.
-              Director of Indo – German Club.
-            </p>
-
-          </div>
-        </div>
-
+        At Prodigy, we provide the platform to learn and create a need to innovate, push you to your limits and bring alive the prodigy in you.
+        <br><br> Follow us on <a href = "https://www.facebook.com/pages/PRODIGY-NIT-Trichy/1398887780370598"><i class="fa fa-2x fa-facebook" style="color:brown;"></i>acebook</a>
+        <br>Mail us at prodigy15.nitt@gmail.com </p>
       </div>
 
-      <div class="slide">
 
-        <div class="media">
-          <a class="pull-left" href="#">
-            <span style="font-weight:800;color:white;font-size:16px;font-family:monospace;position:relative;" >T.Chinnadurai</span><br/>
-            <img class="img img-rounded" style="width:30%;height:30%;"  src="guestlectures/images/gl1.jpg"
-            alt="Media Object">
+      <div class="section" data-anchor="gl" style="background:url('css/images/f-bg.png');background-size:100% 100%;background-repeat:no-repeat;color:black;" >
 
-          </a>
-          <div class="media-body" style="position:relative;left:-15%;font-family:monospace;text-align:center;">
-            <h2 class="media-heading glCustom">Supply Chain Management</h2>
-              <br/><br/>
-              <p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:15px;text-align:center;">
+        <div class="slide">
 
-              A NITT Alumnus, working as <b>President – PAN India at St.John’s logistics, Chennai</b> . He was former board of director at TVS logistics, Vice President- Marketing at ISMT, Pune. He was the Head  International business /Marketing and Operation at Murugappa Group.
-               Manager- Product  and Customer Service of Royal Enfield Motors Limited �&nbsp;– Eicher  Group.
-            </p>
+          <div class="media">
+            <a class="pull-left" href="#">
+              <span style="font-weight:800;color:black;font-size:16px;font-family:monospace;position:relative;" >V.Balasubramanian</span><br/>
+              <img class="img img-rounded" style="width:30%;height:30%;position:relative"  src="guestlectures/images/gl2.jpg"
+              alt="Media Object">
 
-          </div>
-        </div>
-
-      </div>
-
-      <div class="slide">
-
-        <div class="media">
-          <a class="pull-left" href="#">
-            <span style="font-weight:800;color:white;font-size:16px;font-family:monospace;position:relative;left:-10%;" >Shanmugham.M</span><br/>
-            <img class="img img-rounded" style="width:30%;height:30%;position:relative;left:-10%;"  src="guestlectures/images/gl3.jpg"
-            alt="Media Object"><br/>
-
-          </a>
-          <div class="media-body" style="position:relative;left:-25%;font-family:monospace;text-align:center;">
-            <h2 class="media-heading glCustom">Rich Product Development and Tooling</h2>
+            </a>
+            <div class="media-body" style="position:relative;left:-15%;font-family:monospace;text-align:center;">
+              <h2 class="media-heading glCustom">Advancements in Industrial Engineering</h2>
 
 
               <br/><br/>
-              <p style="width:100%;font-family:monospace;font-size:15px;text-align:center;">
+              <p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:16px;text-align:center;">
+                An IITM alumnus, who has a three decades of experience in steel industry worked as Deputy manager SAIL, Director Operations, ISSAL, Joint managing director ISMT, Director Tridem Port& Power Co. Pvt. Ltd , Presently CEO Kalyani Carpenter Special Steel Ltd
+                Co Author and edCo – Author and editor of Book on “HAND BOOK OF MATERIALS”
+                Published by SAIL, Rourkela Steel Plant.
+                Director of Indo – German Club.
+              </p>
 
-              A Madras Institute of Technology Alumnus, he is the Associate Vice President of Product Development at T.I.Cycles of india.
-              He was the Sr Engineer, Development at Vibormech Engineers and AGM Design and Development at Sundram Fasteners.�&nbsp;
-            </p>
-
-          </div>
-        </div>
-
-      </div>
-
-
-
-    </div>
-
-    <div class="section" data-anchor="event" style="background:url('css/images/bg2.jpg');" >
-
-      <div class="slide">
-        <p style="position:relative;top:4%;"> <b style="position:relative;left:-14%;font-size:18px;font-family:monospace;">CAD Modeling</b><b style="position:relative;left:-3%;font-size:18px;font-family:monospace;">Paper Presentation</b>
-          <b style="position:relative;left:9%;font-size:18px;font-family:monospace;">Tech Quiz</b> </p>
-          <div class="event_wrap"  style="background:url('css/images/cad.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
-          <div class="event_wrap"  style="background:url('css/images/paper.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
-          <div class="event_wrap"  style="background:url('css/images/quiz.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div><br/>
-          <p  style="position:relative;top:4%;" > <b style="position:relative;left:-7%;font-size:18px;font-family:monospace;">Da Vinci</b><b style="position:relative;left:7%;font-size:18px;font-family:monospace;">Crack the case</b>
-          </p>
-          <div class="event_wrap"  style="background:url('css/images/dav.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
-          <div class="event_wrap"  style="background:url('css/images/case.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
-
-        </div>
-
-      <div class="slide" >
-        <div class="media" style="line-height:-20px;overflow-y:scroll;height:70%;" >
-
-          <div class="media-body" style="position:relative;left:5%;text-align:center;width:80%;">
-            <h1 class="media-heading glCustom" style="font-family:monospace;" >Paper Presentation</h3>
-              <div class="content1" >
-                <form   method="post"  class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" role="form" name="wrkreg" >
-                  &nbsp;<input type="checkbox" name="event" value="1" />&nbsp;
-                  <input type="submit" class="btn btn-success" value="register" ></input>
-                </form>
-                <h3 style="float:left;">Event Description</h3><br/><br/>
-
-                <br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
-                <p>Prodigy invites papers from students on topics from the following streams:</p>
-                <ol>
-                  <li>Design and Product Development</li>
-                  <li>Precision Engineering and Manufacturing</li>
-                  <li>Advances in Manufacturing Processes</li>
-                  <li>New Tools/Techniques for Manufacturing</li>
-                  <li>Robotics and Manufacturing Automation</li>
-                  <li>Additive Manufacturing</li>
-                  <li>Advances in Materials Forming</li>
-                  <li>Micro-machining and Laser Processing</li>
-                  <li>Surface Engineering</li>
-                  <li>Materials Processing Technology</li>
-                  <li>Engineering Optimization</li>
-                  <li>Modeling of Manufacturing Processes</li>
-                  <li>Rapid Prototyping</li>
-                  <li>High Speed Machining</li>
-                  <li>Total Productive Maintenance</li>
-                  <li>Training and Implementation</li>
-                  <li>Analysis and Simulation of Manufacturing</li>
-                  <li>Operations Management</li>
-                  <li>Supply Chain Management & Logistics</li>
-                  <li>Sustainable Manufacturing</li>
-                  <li>Smart Manufacturing</li>
-                  <li>Lean Manufacturing</li>
-                  <li>Responsive Manufacturing</li>
-                  <li>Human Factors Engineering</li>
-                  <li>Advanced Data Analytics</li>
-                  <li>Multi-Criteria Decision Making</li>
-                  <li>Operations Research</li>
-                  <li>Human Factors and ergonomics</li>
-                  <li>Industrial Robotics</li>
-                  <li>Flexible Manufacturing Systems</li>
-                  <li>Quality Engineering and Taguchi Methods</li>
-                  <li>Applications of Operation Research</li>
-                  <li>Evolutionary Algorithms and Heuristics</li>
-                  <li>Systems Modelling and Simulation</li>
-                  <li>Safety Engineering and Management</li>
-                  <li>Six Sigma and TQM</li>
-                  <li>Enterprise Resource Planning</li>
-                </ol>
-                <p>At Prodigy, we are looking for freshness in ideas. Ingenuity, imagination and originality are the factors by which your papers will be judged - not by technicality or jargon. Present your work before renowned professors in the field and walk away with prizes!<br><br>
-                  Shortlisted participants will be called to give an oral presentation of their paper at NIT Trichy during Prodigy 2015
-                </p>
-                <h3 style="float:left;" >Format:</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
-                <p>
-                  The event consists of 2 rounds.</p>
-                  <p>
-                    <b>Round 1<b/>: The abstract of your papers has to be sent to mail id: <b>prodigy15.nitt@gmail.com</b> before <b>18th March, 2015</b>. Those who have been selected will receive a mail and are expected to come to NIT, Trichy for the Round 2.
-                  </p><br>
-                  <p>
-                    <b>Round 2</b>: Paper should be presented in terms of a presentation (ppt) in front of leading professionals in the respective field in our college.
-                  </p>
-                </p>
-                <h3 style="float:left;" >Rules: </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
-                <p>
-                  1.Event manager&#39;s decisions are final
-                  2.Round 1: Abstracts mailed after the deadline won&#39;t be taken into consideration.
-                  3.Round 2: The participants have to be in NIT, Trichy in formals.<br/>
-                  4.Bring three printouts of the paper.
-                  5.The participants have 10 mins for presenting their paper and the presentation should
-                  6.be in form of points and not in terms of sentences.
-
-                </p>
-                <h3 style="float:left;" >Judging Criteria:</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
-                <p>Ingenuity, imagination and originality are the factors by which your papers will be judged - not by technicality or jargon. </p>
-
-                <h3 style="float:left;" >Prize Money: </h3><br><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
-                <p>
-
-                  1st&nbsp;&#8377;3000 <br><br>
-                  2nd&nbsp;&#8377;1500 <br><br>
-                </p>
-
-
-                <h3 style="float:left;" >Event Manager’s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
-                <p>
-                  Nachiappan Velappan &nbsp;<br/>
-                  <i style="color:lightgreen;" class="fa fa-2x  fa-mobile"></i>&nbsp; 09677000463<br/>
-                  <i style="color:lightgreen;" class="fa fa-2x  fa-envelope"></i>&nbsp;vnachi93@gmail.com<br/>
-                </p>
-
-
-                </div>
-
-              </div>
             </div>
           </div>
 
-          <div class="slide">
+        </div>
+
+        <div class="slide">
+
+          <div class="media">
+            <a class="pull-left" href="#">
+              <span style="font-weight:800;color:black;font-size:16px;font-family:monospace;position:relative;" >T.Chinnadurai</span><br/>
+              <img class="img img-rounded" style="width:30%;height:30%;"  src="guestlectures/images/gl1.jpg"
+              alt="Media Object">
+
+            </a>
+            <div class="media-body" style="position:relative;left:-15%;font-family:monospace;text-align:center;">
+              <h2 class="media-heading glCustom">Supply Chain Management</h2>
+              <br/><br/>
+              <p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:16px;text-align:center;">
+
+                A NITT Alumnus, working as President – PAN India at St.John’s logistics, Chennai . He was former board of director at TVS logistics, Vice President- Marketing at ISMT, Pune. He was the Head  International business /Marketing and Operation at Murugappa Group.
+                Manager- Product  and Customer Service of Royal Enfield Motors Limited - Eicher  Group.
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="slide">
+
+          <div class="media">
+            <a class="pull-left" href="#">
+              <span style="font-weight:800;color:black;font-size:16px;font-family:monospace;position:relative;left:-10%;" >Shanmugham.M</span><br/>
+              <img class="img img-rounded" style="width:30%;height:30%;position:relative;left:-10%;"  src="guestlectures/images/gl3.jpg"
+              alt="Media Object"><br/>
+
+            </a>
+            <div class="media-body" style="position:relative;left:-25%;font-family:monospace;text-align:center;">
+              <h2 class="media-heading glCustom">Rich Product Development and Tooling</h2>
+
+
+              <br/><br/>
+              <p style="width:100%;font-family:monospace;font-size:16px;text-align:center;">
+
+                A Madras Institute of Technology Alumnus, he is the Associate Vice President of Product Development at T.I.Cycles of india.
+                He was the Sr Engineer, Development at Vibormech Engineers and AGM Design and Development at Sundram Fasteners.;
+              </p>
+
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="section" data-anchor="event" style="background:url('css/images/f-bg.png');color:black;" >
+
+        <div class="slide">
+          <p style="position:relative;top:4%;"> <b style="position:relative;left:-14%;font-size:18px;font-family:monospace;">CAD Modeling</b><b style="position:relative;left:-3%;font-size:18px;font-family:monospace;">Paper Presentation</b>
+            <b style="position:relative;left:9%;font-size:18px;font-family:monospace;">Tech Quiz</b> </p>
+            <div class="event_wrap"  style="background:url('css/images/cad.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
+            <div class="event_wrap"  style="background:url('css/images/paper.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
+            <div class="event_wrap"  style="background:url('css/images/quiz.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div><br/>
+            <p  style="position:relative;top:4%;" > <b style="position:relative;left:-7%;font-size:18px;font-family:monospace;">Da Vinci</b><b style="position:relative;left:7%;font-size:18px;font-family:monospace;">Industrial Problem Solving</b>
+            </p>
+            <div class="event_wrap"  style="background:url('css/images/dav.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
+            <div class="event_wrap"  style="background:url('css/images/case.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
+
+          </div>
+
+          <div class="slide" >
             <div class="media" style="line-height:-20px;overflow-y:scroll;height:70%;" >
 
               <div class="media-body" style="position:relative;left:5%;text-align:center;width:80%;">
-                <h1 class="media-heading glCustom" style="font-family:monospace;" >Da Vinci</h1>
+                <h1 class="media-heading glCustom" style="font-family:monospace;" >Paper Presentation</h3>
+                  <div class="content1" >
+                    <?php if(!$detail["event1"])
+                    print ' <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                      &nbsp;<input type="checkbox" name="event" value="1" />&nbsp;
+                      <input type="submit" class="btn btn-primary" value="register" ></input>
+                    </form>
+                    ';
+                    else
+                    {
+                      print '<button class="btn btn-success" >Registered</button>&nbsp;
+                      <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                      &nbsp;<input type="hidden" name="event" value="7" />&nbsp;
+                      <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                      </form>
+                      ';
+
+                    }
+                    ?>
+                    <h3 style="float:left;">Event Description</h3><br/><br/>
+
+                    <br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+                    <p>Prodigy invites papers from students on topics from the following streams:</p>
+                    <ol>
+                      <li>Design and Product Development</li>
+                      <li>Precision Engineering and Manufacturing</li>
+                      <li>Advances in Manufacturing Processes</li>
+                      <li>New Tools/Techniques for Manufacturing</li>
+                      <li>Robotics and Manufacturing Automation</li>
+                      <li>Additive Manufacturing</li>
+                      <li>Advances in Materials Forming</li>
+                      <li>Micro-machining and Laser Processing</li>
+                      <li>Surface Engineering</li>
+                      <li>Materials Processing Technology</li>
+                      <li>Engineering Optimization</li>
+                      <li>Modeling of Manufacturing Processes</li>
+                      <li>Rapid Prototyping</li>
+                      <li>High Speed Machining</li>
+                      <li>Total Productive Maintenance</li>
+                      <li>Analysis and Simulation of Manufacturing Systems</li>
+                      <li>Operations Management</li>
+                      <li>Supply Chain Management & Logistics</li>
+                      <li>Sustainable Manufacturing</li>
+                      <li>Smart Manufacturing</li>
+                      <li>Lean Manufacturing</li>
+                      <li>Responsive Manufacturing</li>
+                      <li>Human Factors Engineering</li>
+                      <li>Advanced Data Analytics</li>
+                      <li>Multi-Criteria Decision Making</li>
+                      <li>Operations Research</li>
+                      <li>Human Factors and ergonomics</li>
+                      <li>Industrial Robotics</li>
+                      <li>Flexible Manufacturing Systems</li>
+                      <li>Quality Engineering and Taguchi Methods</li>
+                      <li>Evolutionary Algorithms and Heuristics</li>
+                      <li>Safety Engineering and Management</li>
+                      <li>Six Sigma and TQM</li>
+                      <li>Enterprise Resource Planning</li>
+                    </ol>
+                    <p>At Prodigy, we are looking for freshness in ideas. Ingenuity, imagination and originality are the factors by which your papers will be judged - not by technicality or jargon. Present your work before renowned professors in the field and walk away with prizes!<br><br>
+                      Shortlisted participants will be called to give an oral presentation of their paper at NIT Trichy during Prodigy'15
+                    </p>
+                    <h3 style="float:left;" >Format:</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+                    <p>
+                      The event consists of 2 rounds.</p>
+                      <p>
+                        <b>Round 1</b>: The paper has to be sent to mail id: <b>prodigy15.nitt@gmail.com</b> before <b>15th March, 2015</b> by </b>5:00 PM </b> in the <b><a href="IEEE_format.doc" target="_blank">IEEE format</a></b>. Those who have been selected will receive a mail and are expected to come to NIT, Trichy for the Round 2.
+                      </p><br>
+                      <p>
+                        <b>Round 2</b>: Paper should be presented in terms of a presentation (ppt) in front of leading professionals in the respective field in our college.
+                      </p>
+                    </p>
+                    <h3 style="float:left;" >Rules: </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+                    <p>
+                      1.Event manager&#39;s decisions are final<br/>
+                      2.Round 1: Abstracts mailed after the deadline won&#39;t be taken into consideration.<br/>
+                      3.Round 2: The participants have to be in NIT, Trichy in formals.<br/>
+                      4.Bring three printouts of the paper.<br/>
+                      5.The participants have 10 mins for presenting their paper and the presentation should be in form of points and not in terms of sentences.
+
+                    </p>
+                    <h3 style="float:left;" >Judging Criteria:</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+                    <p>Ingenuity, imagination and originality are the factors by which your papers will be judged - not by technicality or jargon. </p>
+
+                    <h3 style="float:left;" >Prize Money: </h3><br><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                    <p> prizes will be given separately under three categories-general,industrial and manufacturing </p>
+                    <p>
+
+                      1st&nbsp;&#8377;3000 <br><br>
+                      2nd&nbsp;&#8377;1500 <br><br>
+                    </p>
+
+
+                    <h3 style="float:left;" >Event Manager’s Contact </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
+                    <p>
+                      Nachiappan Velappan &nbsp;<br/>
+                      <i style="color:lightgreen;" class="fa fa-2x  fa-mobile"></i>&nbsp; 09677000463<br/>
+                      <i style="color:lightgreen;" class="fa fa-2x  fa-envelope"></i>&nbsp;vnachi93@gmail.com<br/>
+                    </p>
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="media" style="line-height:-20px;overflow-y:scroll;height:70%;" >
+
+                <div class="media-body" style="position:relative;left:5%;text-align:center;width:80%;">
+                  <h1 class="media-heading glCustom" style="font-family:monospace;" >Da Vinci</h1>
                   <div class="content1" >
 
-                    <form   method="post"  class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" role="form" name="wrkreg" >
+                    <?php if(!$detail["event2"])
+                    print ' <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
                       &nbsp;<input type="checkbox" name="event" value="2" />&nbsp;
-                      <input type="submit" class="btn btn-success" value="register" ></input>
+                      <input type="submit" class="btn btn-primary" value="register" ></input>
                     </form>
+                    ';
+                    else
+                    {
+                      print '<button class="btn btn-success" >Registered</button>&nbsp;
+                      <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                      &nbsp;<input type="hidden" name="event" value="8" />&nbsp;
+                      <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                      </form>';
+
+                    }
+                    ?>
                     <h3 style="float:left;">Event Description</h3><br/><br/>
 
                     <br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
@@ -625,21 +710,33 @@ else
                 <div class="media-body" style="position:relative;left:5%;text-align:center;width:80%;">
                   <h1 class="media-heading glCustom" style="font-family:monospace;" >Tech Quiz</h3>
                     <div class="content1" >
-                      <form   method="post"  class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" role="form" name="wrkreg" >
+                      <?php if(!$detail["event3"])
+                      print ' <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
                         &nbsp;<input type="checkbox" name="event" value="3" />&nbsp;
-                        <input type="submit" class="btn btn-success" value="register" ></input>
+                        <input type="submit" class="btn btn-primary" value="register" ></input>
                       </form>
+                      ';
+                      else
+                      {
+                        print '<button class="btn btn-success" >Registered</button>&nbsp;
+                        <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                        &nbsp;<input type="hidden" name="event" value="9" />&nbsp;
+                        <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                        </form>';
+
+                      }
+                      ?>
                       <h3 style="float:left;">Event Desciption </h3><br/><br>
 
                       <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
                       <p>
-                        A technical quiz involving concepts of science and engineering funda concepts and general knowledge. Brain memory and Common sense, walk away with the prizes
+                        A technical quiz involving concepts of science and engineering. A platform to put to use what you have learnt and walk away with prizes.
 
                       </p><br><br>
 
                       <h3 style="float:left;">Format</h3><br/><br><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
                       <p>
-                        A preliminary written round from which the to participants will be selected for the finals which may involve multiple rounds which will be revealed on the spot
+                        A preliminary written round from which the participants will be selected for the finals which may involve multiple rounds which will be revealed on the spot
 
                         <br><br>
 
@@ -684,12 +781,24 @@ else
                 <div class="media" style="line-height:-20px;overflow-y:scroll;height:70%;" >
 
                   <div class="media-body" style="position:relative;left:5%;text-align:center;width:80%;">
-                    <h1 class="media-heading glCustom" style="font-family:monospace;" >Crack the case</h3>
+                    <h1 class="media-heading glCustom" style="font-family:monospace;" >Industrial Problem Solving</h3>
                       <div class="content1" >
-                        <form   method="post"  class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" role="form" name="wrkreg" >
+                        <?php if(!$detail["event4"])
+                        print ' <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
                           &nbsp;<input type="checkbox" name="event" value="4" />&nbsp;
-                          <input type="submit" class="btn btn-success" value="register" ></input>
+                          <input type="submit" class="btn btn-primary" value="register" ></input>
                         </form>
+                        ';
+                        else
+                        {
+                          print '<button class="btn btn-success" >Registered</button>&nbsp;
+                          <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                          &nbsp;<input type="hidden" name="event" value="10" />&nbsp;
+                          <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                          </form>';
+
+                        }
+                        ?>
                         <h3 style="float:left;">Event Desciption </h3><br/><br>
 
                         <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
@@ -700,7 +809,7 @@ else
 
                         <h3 style="float:left;" >Format:</h3><br/><br><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
                         <p>
-                          All the rounds of this event will be held during Prodigyâ€™15 at NIT-Trichy.
+                          All the rounds of this event will be held during Prodigy'15 at NIT-Trichy.
                           <li>	Round 1: Written round (will test general aptitude, logic, problem solving and response to situations)</li><br>
                           <li>	Round 2: Case study/Problem statement </li><br>
                           <li>	Round 3: Presentation and marketing of solution</li><br>
@@ -712,7 +821,7 @@ else
                         <p>
                           <li>	A team of maximum 3 participants can participate</li><br>
                           <li>	All rounds are eliminative</li><br>
-                          <li>	Event managerâ€™s decision is always final</li><br>
+                          <li>	Event manager's decision is always final</li><br>
 
 
 
@@ -751,10 +860,22 @@ else
                     <div class="media-body" style="position:relative;left:5%;text-align:center;width:80%;">
                       <h1 class="media-heading glCustom" style="font-family:monospace;" >CAD Modeling</h3>
                         <div class="content1" >
-                          <form   method="post"  class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" role="form" name="wrkreg" >
+                          <?php if(!$detail["event5"])
+                          print ' <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
                             &nbsp;<input type="checkbox" name="event" value="5" />&nbsp;
-                            <input type="submit" class="btn btn-success" value="register" ></input>
+                            <input type="submit" class="btn btn-primary" value="register" ></input>
                           </form>
+                          ';
+                          else
+                          {
+                            print '<button class="btn btn-success" >Registered</button>&nbsp;
+                            <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                            &nbsp;<input type="hidden" name="event" value="11" />&nbsp;
+                            <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                            </form>';
+
+                          }
+                          ?>
                           <h3 style="float:left;">Event Desciption </h3><br/><br/>
 
                           <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
@@ -827,344 +948,320 @@ else
 
 
 
-<div class="section" data-anchor="work">
+                <div class="section" data-anchor="work" style="background:url('css/images/f-bg.png');background-size:100% 100%;background-repeat:no-repeat;color:black;" >
 
-  <div class="slide">
+                  <div class="slide">
 
-    <div class="event_wrap"  style="background:url('css/images/fluid.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
-    <div class="event_wrap"  style="background:url('css/images/flexsim.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
-    <div class="event_wrap"  style="background:url('css/images/sixsigma.png');background-size:100% 100%;background-repeat:no-repeat;" ></div><br/>
+                    <div class="event_wrap"  style="background:url('css/images/fluid.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
+                    <div class="event_wrap"  style="background:url('css/images/flexsim.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
+                    <div class="event_wrap"  style="background:url('css/images/sixsigma.png');background-size:100% 100%;background-repeat:no-repeat;" ></div><br/>
 
-  </div>
-
-    <div class="slide">
-
-      <div class="media" style="overflow-y:scroll;height:70%;" >
-
-        <div class="media-body"  style="width:80%;margin-left:10%;">
-          <h1 class="media-heading glCustom" style="font-family:monospace;" >Six Sigma</h3>
-            <div class="content1" >
-              <aside >
-                <form   method="post"  class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" role="form" name="wrkreg" >
-                  <input type="checkbox" name="work" value="1" />&nbsp;
-                  <input type="submit" class="btn btn-success" value="register" ></input>
-                </form>
-              </aside>
-
-              <h3 style="float:left;">Workshop Description </h3><br/><br/>
-              <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
-              <p>
-                Lean Six Sigma Yellow Belt is an introductory course in Six Sigma Certification.<br/>
-                It is designed to give knowledge of Six Sigma methodology along with concepts, tools & techniques.<br/>
-                You will be introduced to DMAIC (Define, Measure, Analyze,
-                Improve and Control) & how Six Sigma concepts is applied for the process improvement or solving specific problems.
-              </p>
-              <h3 style="float:left;">Benefits</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 2px; border-width: 0; align:center;">
-              <p>
-                Exposure to world class practices followed in the industry.
-                This certificate will add value to participant’s current career prospects.
-                Course is designed by experts in the field who have conducted this workshop at various NITTs ,NITTE and Corporates like HAL, Cognizant etc.
-
-              </p>
-
-            </div>
-          </div>
-        </div>
-     </div>
-
-
-      <div class="slide">
-
-        <div class="media" style="overflow-y:scroll;height:70%;" >
-
-          <div class="media-body"  style="width:80%;margin-left:10%;">
-            <h1 class="media-heading glCustom" style="font-family:monospace;" >FlexSim</h3>
-              <div class="content1" >
-
-                <aside >
-                  <form   method="post"  class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" role="form" name="wrkreg" >
-                    <input type="checkbox" name="work" value="2" />&nbsp;
-                    <input type="submit" class="btn btn-success" value="register" ></input>
-                  </form>
-                </aside>
-                <h3 style="float:left;">Workshop Description </h3><br/><br/>
-                <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
-                <p>
-                  FlexSim simulation software was built from the ground up to take advantage of today’s advanced 3D visualizations. Drag and drop objects into a virtual world. Create spatial relationships in your model to mimic your real life system. Include custom 3D shapes and CAD layouts.You’ll simulate not only the behavior of your real life system, but also the look and feel, allowing you to immediately
-                  see what’s going on.FlexSim simulation software was conceived to be the most sophisticated 3D discrete event package ever created.
-                </p>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="slide">
-
-          <div class="media" style="overflow-y:scroll;height:70%;" >
-
-            <div class="media-body" style="width:80%;margin-left:10%;">
-              <h1 class="media-heading glCustom" style="font-family:monospace;" >FluidSIm</h3>
-                <div class="content1" >
-
-                  <aside >
-                    <form   method="post"  class="form-horizontal" action="<?php $_SERVER['PHP_SELF']?>" role="form" name="wrkreg" >
-                      <input type="checkbox" name="work" value="3" />&nbsp;
-                      <input type="submit" class="btn btn-success" value="register" ></input>
-                    </form>
-                  </aside>
-                  <h3 style="float:left;">Workshop Description </h3><br/><br/>
-                  <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
-                  <p>
-                    FluidSiM 5 is a comprehensive software for the creation, simulation, instruction and study of electropneumatic, electrohydraulic, digital and electronic circuits.FluidSIM unites an intuitive circuit diagram editor with detailed descriptions of all components, component photos, sectional view animations and video sequences. As a result FluidSIM is perfect not only for use in lessons but also for the preparation thereof and as a self-study programme.A major feature of FluidSIM is its close connection with CAD functionality and simulation. FluidSIM allows DIN-compliant drawing of electro-pneumatic circuit diagrams and can perform realistic simulations of the drawing based on physical models of the components.
-                    Simply stated, this eliminates the gap between the drawing of a circuit diagram and the simulation of the related pneumatic system.
-
-                  </p>
-
-
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-</div>
-
-
-
-                <div class="section" data-anchor="contact"  >
-
-                  <!-- contacts goes here -->
-
-                  <div class="main_c" style="width:90%;margin:15%;position:relative;top:-14%;" >
-
-                    <div class="view_c view-ninth_c" style="background:url('contacts/images/chairman.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-                      <div class="mask_c mask-1_c"></div>
-                      <div class="mask_c mask-2_c"></div>
-                      <div class="content_c">
-                        <h2>Chairman</h2>
-                        <p>Subramaniam<br/>
-                          <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9677052097</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="view_c view-ninth_c" style="background:url('contacts/images/Over-all-Co-Ordinator.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-                      <div class="mask_c mask-1_c"></div>
-                      <div class="mask_c mask-2_c"></div>
-                      <div class="content_c">
-                        <h2>Overall-Co Ordinator</h2>
-                        <p>Sakthi Sanghvi<br/>
-                          <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9629463046</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="view_c view-ninth_c" style="background:url('contacts/images/Treasurer.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-                      <div class="mask_c mask-1_c"></div>
-                      <div class="mask_c mask-2_c"></div>
-                      <div class="content_c">
-                        <h2>Treasurer</h2>
-                        <p>Venkatesh<br/>
-                          <span><i style="color:aqua;" class="fa  fa-2x fa-mobile"></i>&nbsp;9444707475</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="view_c view-ninth_c" style="background:url('contacts/images/pr&hospi.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-                      <div class="mask_c mask-1_c"></div>
-                      <div class="mask_c mask-2_c"></div>
-                      <div class="content_c">
-                        <h2>Head-PR and Hospitality</h2>
-                        <p>Parthasarathy<br/>
-                          <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9445483394</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="view_c view-ninth_c" style="background:url('contacts/images/events.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-                      <div class="mask_c mask-1_c"></div>
-                      <div class="mask_c mask-2_c"></div>
-                      <div class="content_c">
-                        <h2>Head-Events</h2>
-                        <p>Adhi<br/>
-                          <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9952443448</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="view_c view-ninth_c" style="background:url('contacts/images/workshops.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-                      <div class="mask_c mask-1_c"></div>
-                      <div class="mask_c mask-2_c"></div>
-                      <div class="content_c">
-                        <h2>Head-Workshops</h2>
-                        <p>Balajee<br/>
-                          <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9176690504</span>
-                        </p>
-                      </div>
-                    </div>
                   </div>
 
+                  <div class="slide">
 
-                </div>
-              </div>
+                    <div class="media" style="overflow-y:scroll;height:70%;" >
 
+                      <div class="media-body"  style="width:80%;margin-left:10%;">
+                        <h1 class="media-heading glCustom" style="font-family:monospace;" >Six Sigma</h3>
+                          <div class="content1" >
+                            <aside >
+                              <?php if(!$detail["wrk1"])
+                              print ' <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                &nbsp;<input type="checkbox" name="work" value="1" />&nbsp;
+                                <input type="submit" class="btn btn-primary" value="register" ></input>
+                              </form>
+                              ';
+                              else
+                              {
+                                print '<button class="btn btn-success" >Registered</button>&nbsp;
+                                <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                &nbsp;<input type="hidden" name="work" value="4" />&nbsp;
+                                <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                                </form>';
 
+                              }
+                              ?>
+                            </aside>
 
+                            <h3 style="float:left;">Workshop Description </h3><br/><br/>
+                            <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                            <p style="width:100%;font-family:monospace;font-size:16px;">
+                              Lean Six Sigma Yellow Belt is an introductory course in Six Sigma Certification.<br/>
+                              It is designed to give knowledge of Six Sigma methodology along with concepts, tools & techniques.<br/>
+                              You will be introduced to DMAIC (Define, Measure, Analyze,
+                              Improve and Control) & how Six Sigma concepts is applied for the process improvement or solving specific problems.
+                            </p>
+                            <h3 style="float:left;">Benefits</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 2px; border-width: 0; align:center;">
+                            <p style="width:100%;font-family:monospace;font-size:16px;">
+                              Exposure to world class practices followed in the industry.
+                              This certificate will add value to participant’s current career prospects.
+                              Course is designed by experts in the field who have conducted this workshop at various NITTs ,NITTE and Corporates like HAL, Cognizant etc.
 
-              <span id="typed" style="white-space:pre;font-size:20px;position:absolute;top:10px;left:40%; color:black;font-family:myfont2;"></span>
-                <img style="position:absolute;top:10px;left:5%;height:20%;width:10%;" class="effect" src='css/images/logo.png' style="width:1005;height:100%;" />
-                <header style="position:absolute; top:5%;right:15%;">
+                            </p>
+                            <p style="width:100%;font-family:monospace;font-size:16px;">
+                              Certificate will be provided by MSME(Ministry of Micro, Small & Medium Enterprises)
+                            </p>
 
-                <nav class="nav nav-tabs" style="list-style-type:none;" >
+                            <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                            <p style="width:100%;font-family:monospace;font-size:16px;">
+                              Registration Fee Rs 400 (On-Spot)
+                            </p>
 
-                  <span >
-                    <a href="homepage.php"><?php echo "<span style='color:black'> ".$_SESSION["name"]."</span>"; ?></a>&nbsp;
-                    <b>PID&nbsp; <?php echo $_SESSION["pid"]; ?></b>
-
-                </span>
-
-                <span class="dropdown">
-
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-
-                    <i class="fa fa-1.5x fa-angle-down" style="color:blue;" ></i>
-
-                  </a>
-
-                  <ul class="dropdown-menu">
-
-                    <li><a href="profile.php">Profile</a></li>
-
-                    <li class="divider"></li>
-
-                    <li><a href="signout.php">Sign Out</a></li>
-
-                  </ul>
-
-                </span>
-
-
-
-              </nav>
-
-
-
-            </header>
-            <footer class="container" style="z-index: 99;
-            position: fixed;
-            top: 87%;
-            background: transparent;
-            width: 100%;
-            height: 13%;">
-
-
-
-            <section class="color-1 " >
-              <nav  class="cl-effect-1" style="align:center;">
-                <span data-menuanchor="home" ><a href="#home"><span data-hover="Home">Home</span></a></span>
-                <span data-menuanchor="about"><a href="#about"><span data-hover="About">About</span></a></span>
-                <span data-menuanchor="gl"><a href="#gl"><span data-hover="Guestlectures">Guestlectures</span></a></span>
-                <span data-menuanchor="event"><a href="#event"><span data-hover="Events">Events</span></a></span>
-                <span data-menuanchor="work" ><a href="#work"><span data-hover="Workshops">Workshops</span></a></span>
-                <span data-menuanchor="contact"><a href="#contact"><span data-hover="Contacts">Contacts</span></a></span>
-              </nav>
-            </section>
-
-          </footer>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
 
+                    <div class="slide">
 
-          <div style="background:black; opacity:0.9;" class="modal fade" id="options" tabindex="-1" role="dialog"
-          aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog" style="background:black; opacity:1;" >
-            <div class="modal-content" style="background:black; opacity:1;">
-              <div class="modal-header" style="background:black; opacity:1;">
-                <button type="button" class="close"
-                data-dismiss="modal" aria-hidden="true">
-                &times;
-              </button>
-              <h3 style="color:white;">Login</h3>
+                      <div class="media" style="overflow-y:scroll;height:70%;" >
 
-            </div>
-            <div class="modal-body" style="background:black; opacity:1;color:black;">
+                        <div class="media-body"  style="width:80%;margin-left:10%;">
+                          <h1 class="media-heading glCustom" style="font-family:monospace;" >FlexSim</h3>
+                            <div class="content1" >
 
-              <form   action="login.php" method="post" onsubmit="return validlogin()" role="form" />
-              <div class="form-group">
-                <input name="email" required id="email" type="email" placeholder="Email"></input>
-              </br><span class="error" id="s1" style="display: none;"></span><br>
-            </div>
+                              <aside >
+                                <?php if(!$detail["wrk2"])
+                                print ' <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                  &nbsp;<input type="checkbox" name="work" value="2" />&nbsp;
+                                  <input type="submit" class="btn btn-primary" value="register" ></input>
+                                </form>
+                                ';
+                                else
+                                {
+                                  print '<button class="btn btn-success" >Registered</button>&nbsp;
+                                  <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                  &nbsp;<input type="hidden" name="work" value="5" />&nbsp;
+                                  <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                                  </form>';
 
-            <div class="form-group">
-              <input name="passwd" required id="pwd" type="password" placeholder="Password"></input><br />
-              <span class="error" id="s2" style="display: none;"></span><br>
-            </div>
-
-            <input id="signupbtn" class="btn btn-success" style="width:50%;" type="submit" value="Sign In"></input>
-
-          </form><br/>
-          <a href="register.php"><input type="button" class="btn btn-primary" style="width:50%;" value="Register" ></input></a>
-
-
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
+                                }
+                                ?>
+                              </aside>
+                              <h3 style="float:left;">Workshop Description </h3><br/><br/>
+                              <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                              <p style="width:100%;font-family:monospace;font-size:16px;">
+                                FlexSim simulation software was built from the ground up to take advantage of today’s advanced 3D visualizations. Drag and drop objects into a virtual world. Create spatial relationships in your model to mimic your real life system. Include custom 3D shapes and CAD layouts.You’ll simulate not only the behavior of your real life system, but also the look and feel, allowing you to immediately
+                                see what’s going on.FlexSim simulation software was conceived to be the most sophisticated 3D discrete event package ever created.
+                              </p>
+                              <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                              <p style="width:100%;font-family:monospace;font-size:16px;"> Registration Fee Rs 200 (On-Spot) </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
 
-  <!-- login ends -->
-  <script>
 
-    var backg=document.getElementById("backg");
-    backg.style.backgroundSize= window.innerWidth+"px"+" "+ window.innerHeight+"px";
+                      <div class="slide">
 
-    function validlogin()
-    {
-      if(!(document.getElementById("email").value&&document.getElementById("password").value))
-      {
-        if(!document.getElementById("email").value)
-        {  document.getElementById("s1").style.display="block";
-        document.getElementById("s1").innerHTML="Email required";
-        document.getElementById("email").style.borderColor="red";
-      }
+                        <div class="media" style="overflow-y:scroll;height:70%;" >
 
-      if(!document.getElementById("password").value)
-      {
-        document.getElementById("s2").style.display="block";
-        document.getElementById("s2").innerHTML="Fill password";
-        document.getElementById("password").style.borderColor="red";
-      }
+                          <div class="media-body" style="width:80%;margin-left:10%;">
+                            <h1 class="media-heading glCustom" style="font-family:monospace;" >FluidSim</h3>
+                              <div class="content1" >
 
+                                <aside >
+                                  <?php if(!$detail["wrk3"])
+                                  print ' <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                    &nbsp;<input type="checkbox" name="work" value="3" />&nbsp;
+                                    <input type="submit" class="btn btn-primary" value="register" ></input>
+                                  </form>
+                                  ';
+                                  else
+                                  {
+                                    print '<button class="btn btn-success" >Registered</button>&nbsp;
+                                    <form   method="post"  class="form-horizontal" action="'.$_SERVER["PHP_SELF"].'" role="form" name="wrkreg" >
+                                    &nbsp;<input type="hidden" name="work" value="6" />&nbsp;
+                                    <input type="submit" class="btn btn-warning" value="Unregister" ></input>
+                                    </form>';
 
-      return false;
-    }
-    else
-    {
-      document.getElementById("s1").style.display="none";
-      document.getElementById("s2").style.display="none";
-      document.getElementById("s1").innerHTML="";
-      document.getElementById("s2").innerHTML="";
-      document.getElementById("password").style.borderColor="hidden";
-      document.getElementById("email").style.borderStyle="hidden";
-      return true;
-    }
-  }
+                                  }
+                                  ?>
+                                </aside>
+                                <h3 style="float:left;">Workshop Description </h3><br/><br/>
+                                <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                                <p style="width:100%;font-family:monospace;font-size:16px;">
+                                  FluidSiM 5 is a comprehensive software for the creation, simulation, instruction and study of electropneumatic, electrohydraulic, digital and electronic circuits.FluidSIM unites an intuitive circuit diagram editor with detailed descriptions of all components, component photos, sectional view animations and video sequences. As a result FluidSIM is perfect not only for use in lessons but also for the preparation thereof and as a self-study programme.A major feature of FluidSIM is its close connection with CAD functionality and simulation. FluidSIM allows DIN-compliant drawing of electro-pneumatic circuit diagrams and can perform realistic simulations of the drawing based on physical models of the components.
+                                  Simply stated, this eliminates the gap between the drawing of a circuit diagram and the simulation of the related pneumatic system.
 
-</script>
+                                </p>
+                                <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                                <p style="width:100%;font-family:monospace;font-size:16px;"> Registration Fee Rs 200 (On-Spot) </p>
 
 
-<script src="css/home.js" type="text/javascript" ></script>
 
-</body>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
-</html>
+
+                      </div>
+
+
+
+                      <div class="section" data-anchor="contact" style="background:url('css/images/f-bg.png');background-size:100% 100%;background-repeat:no-repeat;color:black;" >
+
+                        <!-- contacts goes here -->
+
+                        <div class="main_c" style="width:90%;margin:15%;position:relative;top:-14%;" >
+
+                          <div class="view_c view-ninth_c" style="background:url('contacts/images/chairman.png');background-size:100% 100%;background-repeat:no-repeat;" >
+
+                            <div class="mask_c mask-1_c"></div>
+                            <div class="mask_c mask-2_c"></div>
+                            <div class="content_c">
+                              <h2>Chairman</h2>
+                              <p>Subramaniam<br/>
+                                <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9677052097</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="view_c view-ninth_c" style="background:url('contacts/images/Over-all-Co-Ordinator.png');background-size:100% 100%;background-repeat:no-repeat;" >
+
+                            <div class="mask_c mask-1_c"></div>
+                            <div class="mask_c mask-2_c"></div>
+                            <div class="content_c">
+                              <h2>Overall-Co Ordinator</h2>
+                              <p>Sakthi Sanghvi<br/>
+                                <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;8608277406</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="view_c view-ninth_c" style="background:url('contacts/images/Treasurer.png');background-size:100% 100%;background-repeat:no-repeat;" >
+
+                            <div class="mask_c mask-1_c"></div>
+                            <div class="mask_c mask-2_c"></div>
+                            <div class="content_c">
+                              <h2>Treasurer</h2>
+                              <p>Venkatesh<br/>
+                                <span><i style="color:aqua;" class="fa  fa-2x fa-mobile"></i>&nbsp;9444707475</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="view_c view-ninth_c" style="background:url('contacts/images/pr&hospi.png');background-size:100% 100%;background-repeat:no-repeat;" >
+
+                            <div class="mask_c mask-1_c"></div>
+                            <div class="mask_c mask-2_c"></div>
+                            <div class="content_c">
+                              <h2>Head-PR and Hospitality</h2>
+                              <p>Parthasarathy<br/>
+                                <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9445483394</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="view_c view-ninth_c" style="background:url('contacts/images/events.png');background-size:100% 100%;background-repeat:no-repeat;" >
+
+                            <div class="mask_c mask-1_c"></div>
+                            <div class="mask_c mask-2_c"></div>
+                            <div class="content_c">
+                              <h2>Head-Events</h2>
+                              <p>Adhi<br/>
+                                <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9952443448</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="view_c view-ninth_c" style="background:url('contacts/images/workshops.png');background-size:100% 100%;background-repeat:no-repeat;" >
+
+                            <div class="mask_c mask-1_c"></div>
+                            <div class="mask_c mask-2_c"></div>
+                            <div class="content_c">
+                              <h2>Head-Workshops</h2>
+                              <p>Balajee<br/>
+                                <span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9176690504</span>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+
+
+
+
+                    <span id="typed" style="white-space:pre;font-size:20px;position:absolute;top:10px;left:40%; color:black;font-family:myfont2;"></span>
+                    <img style="position:absolute;top:10px;left:5%;height:20%;width:10%;" class="effect" src='css/images/logo.png' style="width:100%;height:100%;" />
+                    <header style="position:absolute; top:5%;right:15%;">
+
+                      <nav class="nav nav-tabs" style="list-style-type:none;" >
+
+                        <span >
+                          <a href="homepage.php"><?php echo "<span style='color:black'> ".$_SESSION["name"]."</span>"; ?></a>&nbsp;
+                          <b>PID&nbsp; <?php echo $_SESSION["pid"]; ?></b>
+
+                        </span>
+
+                        <span class="dropdown">
+
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+
+                            <i class="fa fa-1.5x fa-angle-down" style="color:blue;" ></i>
+
+                          </a>
+
+                          <ul class="dropdown-menu">
+
+                            <li><a href="profile.php">Profile</a></li>
+
+                            <li class="divider"></li>
+
+                            <li><a href="signout.php">Sign Out</a></li>
+
+                          </ul>
+
+                        </span>
+
+
+
+                      </nav>
+
+
+
+                    </header>
+                    <footer class="container" style="z-index: 99;
+                    position: fixed;
+                    top: 87%;
+                    background: transparent;
+                    width: 100%;
+                    height: 13%;">
+
+
+
+                    <section class="color-1 " >
+                      <nav  class="cl-effect-1" style="align:center;">
+                        <span data-menuanchor="home" ><a href="#home"><span data-hover="Home">Home</span></a></span>
+                        <span data-menuanchor="about"><a href="#about"><span data-hover="About">About</span></a></span>
+                        <span data-menuanchor="gl"><a href="#gl"><span data-hover="Guestlectures">Guestlectures</span></a></span>
+                        <span data-menuanchor="event"><a href="#event"><span data-hover="Events">Events</span></a></span>
+                        <span data-menuanchor="work" ><a href="#work"><span data-hover="Workshops">Workshops</span></a></span>
+                        <span data-menuanchor="contact"><a href="#contact"><span data-hover="Contacts">Contacts</span></a></span>
+                      </nav>
+                    </section>
+
+                  </footer>
+
+
+
+
+
+                  <!-- login ends -->
+                  <script>
+
+                    var backg=document.getElementById("backg");
+                    backg.style.backgroundSize= window.innerWidth+"px"+" "+ window.innerHeight+"px";
+
+
+
+                  </script>
+
+
+                  <script src="css/home.js" type="text/javascript" ></script>
+
+                </body>
+
+                </html>

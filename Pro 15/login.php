@@ -7,11 +7,12 @@ session_start();
 
 
 <?php
-  $user='u460965022_user';                          /**** establishing database connection****/
-$pwd='Rum420';
-$db='u460965022_user';
 
-$con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
+$user='user';                          /**** establishing database connection****/
+$pwd='';
+$db='user';
+
+$con=mysqli_connect("localhost",$user,$pwd,$db);
 
   // Check connection
   if (mysqli_connect_errno())

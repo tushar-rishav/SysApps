@@ -45,9 +45,17 @@ if(isset($_SESSION["email"]))
 
 
 			<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+<link rel="stylesheet" type="text/css" href="css/smoke_h.css" />
+
 
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 			<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 
 
 			<script src="css/jquery.min.js" ></script>
@@ -61,7 +69,7 @@ if(isset($_SESSION["email"]))
 
 			$(document).ready(function() {
 				$('#fullpage').fullpage({
-					sectionsColor: ['#79D6E1', '#4BBFC3', '#7BAABE', '#7BAABE', '#4BBFC3','#7BAABE'],
+					
 					anchors: ['home', 'about','gl','event','work', 'contact'],
 					menu: '#menu',
 					scrollingSpeed: 800
@@ -128,7 +136,7 @@ if(isset($_SESSION["email"]))
 				.section{
 					height:100%;
 					width:100%;
-					background-color:skyblue;
+					
 				}
 				.slide{
 					height:30%;
@@ -182,18 +190,50 @@ h4{
 font-family: monospace !important;
 font-style: normal !important;
 }
+.section{
+background-image: url("css/images/f-bg.png");
+background-repeat: repeat;
+}
 </style>
+
 	<body style="cursor:url('css/images/cursor.png');" >
 
+<!--smoke-->
+<style>
+.wrapper { float: left; clear: left; display: table; table-layout: fixed; }
+.smoke_h { display: table-cell;  max-width: 100%;  margin-top: 0%; padding-top: 0%; margin-left: 4%; padding-left: 0%; z-index:8;}
+</style>
+<!--/smoke-->
 
 
-		<div id="fullpage"  >
+		<div id="fullpage">
 			<!-- isolate the mess -->
 
-			<div id="backg" class="section" data-anchor="home" style="background:#E1CA79;">
+			<div id="backg" class="section" data-anchor="home">
+
+<!--smoke-->
+<div class="wrapper col-md-18">
+    
+
+<div class="smoke_h">
+			  <span class="s0_h"></span>
+			  <span class="s1_h"></span>
+			  <span class="s2_h"></span>
+			  <span class="s3_h"></span>
+			  <span class="s4_h"></span>
+			  <span class="s5_h"></span>
+			  <span class="s6_h"></span>
+			  <span class="s7_h"></span>
+			  <span class="s8_h"></span>
+			  <span class="s9_h"></span>  
+</div>
+</div>
+
+<!--/smoke-->
 
 
-				<div id="canvasesdiv" style="position:relative; left:18%;  width:300px; height:300px; ">
+				<div id="canvasesdiv" style="position:relative; top:1%;left:16%;  width:300px; height:500px; ">
+
 					<canvas id="canvas" style="z-index: 7; position:absolute; left:0px;top:0px"></canvas>
 					<canvas id="gear1canvas" style="z-index: 2; position:absolute;left:0px;top:0px;"></canvas>
 
@@ -215,23 +255,23 @@ font-style: normal !important;
 
 
 
-		<div class="section" data-anchor="about" style="background:url('css/images/bg3.jpg');background-size:100% 100%;" >
+		<div class="section" data-anchor="about" background-size:100% 100%;" >
 
 			<p style="width:60%;text-align:center;margin:20%;font-size:17px;">
 				PRODIGY is the annual symposium of the Production Engineering Department of NIT Trichy. In this ever changing world of Technology, innovation is the key to success.It is required to keep learning to stay in the race.
-				At Prodigy, we provide the platform to learn and create a need to innovate , push you to your limits and bring alive the prodigy in you .
-			</p>
-
+				At Prodigy, we provide the platform to learn and create a need to innovate, push you to your limits and bring alive the prodigy in you.
+			<br><br> Follow us on <a href = "https://www.facebook.com/pages/PRODIGY-NIT-Trichy/1398887780370598"><i class="fa fa-2x fa-facebook" style="color:brown;"></i>acebook</a>
+                        <br>Mail us at prodigy15.nitt@gmail.com </p>
 		</div>
 
 
-		<div class="section" data-anchor="gl" style="background:url('css/images/bg1.jpg');">
+		<div class="section" data-anchor="gl">
 
 			<div class="slide">
 
 				<div class="media">
 					<a class="pull-left" href="#">
-						<span style="font-weight:800;color:white;font-size:16px;font-family:monospace;position:relative;" >V.Balasubramanian</span><br/>
+						<span style="font-weight:800;color:black;font-size:16px;font-family:monospace;position:relative;" >V.Balasubramanian</span><br/>
 						<img class="img img-rounded" style="width:30%;height:30%;position:relative"  src="guestlectures/images/gl2.jpg"
 						alt="Media Object">
 
@@ -241,7 +281,7 @@ font-style: normal !important;
 
 
 						<br/><br/>
-						<p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:15px;text-align:center;">
+						<p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:16px;text-align:center;">
 							An IITM alumnus, who has a three decades of experience in steel industry worked as Deputy manager SAIL, Director Operations, ISSAL, Joint managing director ISMT, Director Tridem Port& Power Co. Pvt. Ltd ,
 							Presently CEO Kalyani Carpenter Special Steel Ltd
 							Co Author and edCo – Author and editor of Book on “HAND BOOK OF MATERIALS”
@@ -258,7 +298,7 @@ font-style: normal !important;
 
 				<div class="media">
 					<a class="pull-left" href="#">
-						<span style="font-weight:800;color:white;font-size:16px;font-family:monospace;position:relative;" >T.Chinnadurai</span><br/>
+						<span style="font-weight:800;color:black;font-size:16px;font-family:monospace;position:relative;" >T.Chinnadurai</span><br/>
 						<img class="img img-rounded" style="width:30%;height:30%;"  src="guestlectures/images/gl1.jpg"
 						alt="Media Object">
 
@@ -266,10 +306,10 @@ font-style: normal !important;
 					<div class="media-body" style="position:relative;left:-15%;font-family:monospace;text-align:center;">
 						<h2 class="media-heading glCustom">Supply Chain Management</h2>
 						<br/><br/>
-						<p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:15px;text-align:center;">
+						<p style="width:70%;position:relative;left:15%;font-family:monospace;font-size:16px;text-align:center;">
 
-							A NITT Alumnus, working as <b>President – PAN India at St.John’s logistics, Chennai</b> . He was former board of director at TVS logistics, Vice President- Marketing at ISMT, Pune. He was the Head  International business /Marketing and Operation at Murugappa Group.
-							Manager- Product  and Customer Service of Royal Enfield Motors Limited  – Eicher  Group.
+							A NITT Alumnus, working as President – PAN India at St.John’s logistics, Chennai . He was former board of director at TVS logistics, Vice President- Marketing at ISMT, Pune. He was the Head  International business /Marketing and Operation at Murugappa Group.
+							Manager- Product  and Customer Service of Royal Enfield Motors Limited - Eicher  Group.
 						</p>
 
 					</div>
@@ -281,7 +321,7 @@ font-style: normal !important;
 
 				<div class="media">
 					<a class="pull-left" href="#">
-						<span style="font-weight:800;color:white;font-size:16px;font-family:monospace;position:relative;left:-10%;" >Shanmugham.M</span><br/>
+						<span style="font-weight:800;color:black;font-size:16px;font-family:monospace;position:relative;left:-10%;" >Shanmugham.M</span><br/>
 						<img class="img img-rounded" style="width:30%;height:30%;position:relative;left:-10%;"  src="guestlectures/images/gl3.jpg"
 						alt="Media Object"><br/>
 
@@ -291,10 +331,10 @@ font-style: normal !important;
 
 
 						<br/><br/>
-						<p style="width:100%;font-family:monospace;font-size:15px;text-align:center;">
+						<p style="width:100%;font-family:monospace;font-size:16px;text-align:center;">
 
 							A Madras Institute of Technology Alumnus, he is the Associate Vice President of Product Development at T.I.Cycles of india.
-							He was the Sr Engineer, Development at Vibormech Engineers and AGM Design and Development at Sundram Fasteners. 
+							He was the Sr Engineer, Development at Vibormech Engineers and AGM Design and Development at Sundram Fasteners.;
 						</p>
 
 					</div>
@@ -306,7 +346,7 @@ font-style: normal !important;
 
 		</div>
 
-		<div class="section" data-anchor="event" style="background:url('css/images/bg2.jpg');" >
+		<div class="section" data-anchor="event">
 
 			<div class="slide">
 				<p style="position:relative;top:4%;"> <b style="position:relative;left:-14%;font-size:18px;font-family:monospace;">CAD Modeling</b><b style="position:relative;left:-3%;font-size:18px;font-family:monospace;">Paper Presentation</b>
@@ -314,7 +354,7 @@ font-style: normal !important;
 					<div class="event_wrap"  style="background:url('css/images/cad.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
 					<div class="event_wrap"  style="background:url('css/images/paper.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
 					<div class="event_wrap"  style="background:url('css/images/quiz.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div><br/>
-					<p  style="position:relative;top:4%;" > <b style="position:relative;left:-7%;font-size:18px;font-family:monospace;">Da Vinci</b><b style="position:relative;left:7%;font-size:18px;font-family:monospace;">Crack the case</b>
+					<p  style="position:relative;top:4%;" > <b style="position:relative;left:-7%;font-size:18px;font-family:monospace;">Da Vinci</b><b style="position:relative;left:7%;font-size:18px;font-family:monospace;">Industrial problem solving</b>
 					</p>
 					<div class="event_wrap"  style="background:url('css/images/dav.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
 					<div class="event_wrap"  style="background:url('css/images/case.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
@@ -348,8 +388,7 @@ font-style: normal !important;
 										<li>Rapid Prototyping</li>
 										<li>High Speed Machining</li>
 										<li>Total Productive Maintenance</li>
-										<li>Training and Implementation</li>
-										<li>Analysis and Simulation of Manufacturing</li>
+										<li>Analysis and Simulation of Manufacturing Systems</li>
 										<li>Operations Management</li>
 										<li>Supply Chain Management & Logistics</li>
 										<li>Sustainable Manufacturing</li>
@@ -364,21 +403,19 @@ font-style: normal !important;
 										<li>Industrial Robotics</li>
 										<li>Flexible Manufacturing Systems</li>
 										<li>Quality Engineering and Taguchi Methods</li>
-										<li>Applications of Operation Research</li>
 										<li>Evolutionary Algorithms and Heuristics</li>
-										<li>Systems Modelling and Simulation</li>
 										<li>Safety Engineering and Management</li>
 										<li>Six Sigma and TQM</li>
 										<li>Enterprise Resource Planning</li>
 									</ol>
 									<p>At Prodigy, we are looking for freshness in ideas. Ingenuity, imagination and originality are the factors by which your papers will be judged - not by technicality or jargon. Present your work before renowned professors in the field and walk away with prizes!<br><br>
-										Shortlisted participants will be called to give an oral presentation of their paper at NIT Trichy during Prodigy 2015
+										Shortlisted participants will be called to give an oral presentation of their paper at NIT Trichy during Prodigy'15
 									</p>
 									<h3 style="float:left;" >Format:</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
 									<p>
 										The event consists of 2 rounds.</p>
 										<p>
-											<b>Round 1<b/>: The abstract of your papers has to be sent to mail id: <b>prodigy15.nitt@gmail.com</b> before <b>18th March, 2015</b>. Those who have been selected will receive a mail and are expected to come to NIT, Trichy for the Round 2.
+											<b>Round 1</b>: The paper has to be sent to mail id: <b>prodigy15.nitt@gmail.com</b> before <b>15th March, 2015</b> by </b>5:00 PM </b> in the <b><a href="IEEE_format.doc" target="_blank">IEEE format</a></b>. Those who have been selected will receive a mail and are expected to come to NIT, Trichy for the Round 2.
 										</p><br>
 										<p>
 											<b>Round 2</b>: Paper should be presented in terms of a presentation (ppt) in front of leading professionals in the respective field in our college.
@@ -386,18 +423,18 @@ font-style: normal !important;
 									</p>
 									<h3 style="float:left;" >Rules: </h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
 									<p>
-										1.Event manager&#39;s decisions are final
-										2.Round 1: Abstracts mailed after the deadline won&#39;t be taken into consideration.
+										1.Event manager&#39;s decisions are final<br>
+										2.Round 1: Abstracts mailed after the deadline won&#39;t be taken into consideration.<br>
 										3.Round 2: The participants have to be in NIT, Trichy in formals.<br/>
-										4.Bring three printouts of the paper.
-										5.The participants have 10 mins for presenting their paper and the presentation should
-										6.be in form of points and not in terms of sentences.
+										4.Bring three printouts of the paper.<br>
+										5.The participants have 10 mins for presenting their paper and the presentation should be in form of points and not in terms of sentences.<br>
 
 									</p>
 									<h3 style="float:left;" >Judging Criteria:</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;" />
 									<p>Ingenuity, imagination and originality are the factors by which your papers will be judged - not by technicality or jargon. </p>
 
 									<h3 style="float:left;" >Prize Money: </h3><br><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                                                                        <p> prizes will be given separately under three categories-general,industrial and manufacturing </p>
 									<p>
 
 										1st&nbsp;&#8377;3000 <br><br>
@@ -509,13 +546,13 @@ font-style: normal !important;
 
 										<hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
 										<p>
-											A technical quiz involving concepts of science and engineering funda concepts and general knowledge. Brain memory and Common sense, walk away with the prizes
+											A technical quiz involving concepts of science and engineering. A platform to put to use what you have learnt and walk away with prizes. 
 
 										</p><br><br>
 
 										<h3 style="float:left;">Format</h3><br/><br><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
 										<p>
-											A preliminary written round from which the to participants will be selected for the finals which may involve multiple rounds which will be revealed on the spot
+											A preliminary written round from which the participants will be selected for the finals which may involve multiple rounds which will be revealed on the spot
 
 											<br><br>
 
@@ -560,7 +597,7 @@ font-style: normal !important;
 							<div class="media" style="line-height:-20px;overflow-y:scroll;height:70%;" >
 
 								<div class="media-body" style="position:relative;left:5%;text-align:center;width:80%;">
-									<h1 class="media-heading glCustom" style="font-family:monospace;" >Crack the case</h3>
+									<h1 class="media-heading glCustom" style="font-family:monospace;" >Industrial problem solving</h3>
 										<div class="content1" >
 
 											<h3 style="float:left;">Event Desciption </h3><br/><br>
@@ -573,7 +610,7 @@ font-style: normal !important;
 
 											<h3 style="float:left;" >Format:</h3><br/><br><hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
 											<p>
-												All the rounds of this event will be held during Prodigyâ€™15 at NIT-Trichy.
+												All the rounds of this event will be held during Prodigy'15 at NIT-Trichy.
 												<li>	Round 1: Written round (will test general aptitude, logic, problem solving and response to situations)</li><br>
 												<li>	Round 2: Case study/Problem statement </li><br>
 												<li>	Round 3: Presentation and marketing of solution</li><br>
@@ -585,7 +622,7 @@ font-style: normal !important;
 											<p>
 												<li>	A team of maximum 3 participants can participate</li><br>
 												<li>	All rounds are eliminative</li><br>
-												<li>	Event managerâ€™s decision is always final</li><br>
+												<li>	Event manager's decision is always final</li><br>
 
 
 
@@ -697,9 +734,10 @@ font-style: normal !important;
 
 
 
-						<div class="section" data-anchor="work">
+						<div class="section" data-anchor="work"  style="background:url('css/images/f-bg.png');background-size:100% 100%;background-repeat:no-repeat;" >
 
-							<div class="slide">
+							<div class="slide" style="background-image: url("css/images/f-bg.png");
+background-repeat: repeat;">
 
 									<div class="event_wrap"  style="background:url('css/images/fluid.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
 									<div class="event_wrap"  style="background:url('css/images/flexsim.jpg');background-size:100% 100%;background-repeat:no-repeat;" ></div>
@@ -717,19 +755,27 @@ font-style: normal !important;
 											<div class="content1" >
 												<h3 style="float:left;">Workshop Description </h3><br/><br/>
 												<hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
-												<p>
+												<p style="width:100%;font-family:monospace;font-size:16px;">
 													Lean Six Sigma Yellow Belt is an introductory course in Six Sigma Certification.<br/>
 													It is designed to give knowledge of Six Sigma methodology along with concepts, tools & techniques.<br/>
 													You will be introduced to DMAIC (Define, Measure, Analyze,
 													Improve and Control) & how Six Sigma concepts is applied for the process improvement or solving specific problems.
 												</p>
 												<h3 style="float:left;">Benefits</h3><br/><br/><hr style=" width: 40%; color: red; background-color: #fc0; height: 2px; border-width: 0; align:center;">
-												<p>
+												<p style="width:100%;font-family:monospace;font-size:16px;">
 													Exposure to world class practices followed in the industry.
 													This certificate will add value to participant’s current career prospects.
 													Course is designed by experts in the field who have conducted this workshop at various NITTs ,NITTE and Corporates like HAL, Cognizant etc.
 
 												</p>
+                                                                                                 <p style="width:100%;font-family:monospace;font-size:16px;">
+                                                                                                   Certificate will be provided by MSME(Ministry of Micro, Small & Medium Enterprises)
+                                                                                                 </p>
+
+                                                                                                  <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                                                                                                  <p style="width:100%;font-family:monospace;font-size:16px;">
+                                                                                                     Registration Fee Rs 400 (On-Spot)
+                                                                                                   </p>
 
 											</div>
 										</div>
@@ -746,10 +792,12 @@ font-style: normal !important;
 												<div class="content1" >
 													<h3 style="float:left;">Workshop Description </h3><br/><br/>
 													<hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
-													<p>
+													<p style="width:100%;font-family:monospace;font-size:16px;">
 														FlexSim simulation software was built from the ground up to take advantage of today’s advanced 3D visualizations. Drag and drop objects into a virtual world. Create spatial relationships in your model to mimic your real life system. Include custom 3D shapes and CAD layouts.You’ll simulate not only the behavior of your real life system, but also the look and feel, allowing you to immediately
 														see what’s going on.FlexSim simulation software was conceived to be the most sophisticated 3D discrete event package ever created.
 													</p>
+                                                                                                        <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                                                                                                        <p style="width:100%;font-family:monospace;font-size:16px;"> Registration Fee Rs 200 (On-Spot) </p>
 
 												</div>
 											</div>
@@ -763,15 +811,17 @@ font-style: normal !important;
 										<div class="media" style="overflow-y:scroll;height:70%;" >
 
 											<div class="media-body" style="width:80%;margin-left:10%;">
-												<h1 class="media-heading glCustom" style="font-family:monospace;" >FluidSIm</h3>
+												<h1 class="media-heading glCustom" style="font-family:monospace;" >FluidSim</h3>
 													<div class="content1" >
 														<h3 style="float:left;">Workshop Description </h3><br/><br/>
 														<hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
-														<p>
+														<p style="width:100%;font-family:monospace;font-size:16px;">
 															FluidSiM 5 is a comprehensive software for the creation, simulation, instruction and study of electropneumatic, electrohydraulic, digital and electronic circuits.FluidSIM unites an intuitive circuit diagram editor with detailed descriptions of all components, component photos, sectional view animations and video sequences. As a result FluidSIM is perfect not only for use in lessons but also for the preparation thereof and as a self-study programme.A major feature of FluidSIM is its close connection with CAD functionality and simulation. FluidSIM allows DIN-compliant drawing of electro-pneumatic circuit diagrams and can perform realistic simulations of the drawing based on physical models of the components.
 															Simply stated, this eliminates the gap between the drawing of a circuit diagram and the simulation of the related pneumatic system.
 
 														</p>
+                                                                                                                <hr style=" width: 40%; color: red; background-color: #fc0; height: 1px; border-width: 0;">
+                                                                                                                <p style="width:100%;font-family:monospace;font-size:16px;"> Registration Fee Rs 200 (On-Spot) </p>
 
 
 
@@ -786,212 +836,10 @@ font-style: normal !important;
 
 
 
-									<div class="section" data-anchor="contact"  >
+									<div class="section" data-anchor="contact" style="background:url('css/images/f-bg.png');background-size:100% 100%;background-repeat:no-repeat;" >
 
 										<!-- contacts goes here -->
 
-										<div class="main_c" style="width:90%;margin:15%;position:relative;top:-14%;" >
+										<div class="main_c" style="width:90%; height:auto;margin:15%;position:relative;top:-14%;" >
 
-											<div class="view_c view-ninth_c" style="background:url('contacts/images/chairman.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-												<div class="mask_c mask-1_c"></div>
-												<div class="mask_c mask-2_c"></div>
-												<div class="content_c">
-													<h2>Chairman</h2>
-													<p>Subramaniam<br/>
-														<span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9677052097</span>
-													</p>
-												</div>
-											</div>
-											<div class="view_c view-ninth_c" style="background:url('contacts/images/Over-all-Co-Ordinator.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-												<div class="mask_c mask-1_c"></div>
-												<div class="mask_c mask-2_c"></div>
-												<div class="content_c">
-													<h2>Overall-Co Ordinator</h2>
-													<p>Sakthi Sanghvi<br/>
-														<span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9629463046</span>
-													</p>
-												</div>
-											</div>
-											<div class="view_c view-ninth_c" style="background:url('contacts/images/Treasurer.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-												<div class="mask_c mask-1_c"></div>
-												<div class="mask_c mask-2_c"></div>
-												<div class="content_c">
-													<h2>Treasurer</h2>
-													<p>Venkatesh<br/>
-														<span><i style="color:aqua;" class="fa  fa-2x fa-mobile"></i>&nbsp;9444707475</span>
-													</p>
-												</div>
-											</div>
-											<div class="view_c view-ninth_c" style="background:url('contacts/images/pr&hospi.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-												<div class="mask_c mask-1_c"></div>
-												<div class="mask_c mask-2_c"></div>
-												<div class="content_c">
-													<h2>Head-PR and Hospitality</h2>
-													<p>Parthasarathy<br/>
-														<span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9445483394</span>
-													</p>
-												</div>
-											</div>
-											<div class="view_c view-ninth_c" style="background:url('contacts/images/events.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-												<div class="mask_c mask-1_c"></div>
-												<div class="mask_c mask-2_c"></div>
-												<div class="content_c">
-													<h2>Head-Events</h2>
-													<p>Adhi<br/>
-														<span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9952443448</span>
-													</p>
-												</div>
-											</div>
-											<div class="view_c view-ninth_c" style="background:url('contacts/images/workshops.png');background-size:100% 100%;background-repeat:no-repeat;" >
-
-												<div class="mask_c mask-1_c"></div>
-												<div class="mask_c mask-2_c"></div>
-												<div class="content_c">
-													<h2>Head-Workshops</h2>
-													<p>Balajee<br/>
-														<span><i style="color:aqua;" class="fa fa-2x  fa-mobile"></i>&nbsp;9176690504</span>
-													</p>
-												</div>
-											</div>
-										</div>
-
-
-									</div>
-								</div>
-
-
-
-
-
-
-		<span id="typed" style="white-space:pre;font-size:20px;position:absolute;top:10px;left:40%; color:black;font-family:myfont2;"></span>
-
-			<img style="position:absolute;top:10px;left:5%;height:20%;width:10%;" class="effect" src='css/images/logo1.gif' style="width:1005;height:100%;" />
-
-		<span style="position:absolute;top:20%;left:6.5%;font-family:myfont1;color:black;">PRODIGY'15</span>
-
-		<header style="position:absolute; top:7.9%;right:10%;">
-
-			<img data-toggle="modal" data-target="#options" id="login" title="Login/Register" src="css/images/worker.png" />
-			<span style="color:black;font-family:monospace;">Login/Register</span>
-		</header>
-		<footer class="container" style="z-index: 99;
-		position: fixed;
-		top: 87%;
-		background: transparent;
-		width: 100%;
-		height: 13%;">
-
-
-
-		<section class="color-1 " >
-			<nav  class="cl-effect-1" style="align:center;">
-				<span data-menuanchor="home" ><a href="#home"><span data-hover="Home">Home</span></a></span>
-				<span data-menuanchor="about"><a href="#about"><span data-hover="About">About</span></a></span>
-				<span data-menuanchor="gl"><a href="#gl"><span data-hover="Guestlectures">Guestlectures</span></a></span>
-				<span data-menuanchor="event"><a href="#event"><span data-hover="Events">Events</span></a></span>
-				<span data-menuanchor="work" ><a href="#work"><span data-hover="Workshops">Workshops</span></a></span>
-				<span data-menuanchor="contact"><a href="#contact"><span data-hover="Contacts">Contacts</span></a></span>
-			</nav>
-                <footer style="color:gray;">
-                      <p style="text-align:center;">Developed by <a href="https://github.com/tushar-rishav">PEA Webteam</a></p>
-                </footer>
-		</section>
-
-	</footer>
-
-
-
-	<div style="background:black; opacity:0.9;" class="modal fade" id="options" tabindex="-1" role="dialog"
-	aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog" style="background:black; opacity:1;" >
-		<div class="modal-content" style="background:black; opacity:1;">
-			<div class="modal-header" style="background:black; opacity:1;">
-				<button type="button" class="close"
-				data-dismiss="modal" aria-hidden="true">
-				&times;
-			</button>
-			<h3 style="color:white;">Login</h3>
-
-		</div>
-	<div class="modal-body" style="background:black; opacity:1;color:black;">
-
-		<form   action="login.php" method="post" onsubmit="return validlogin()" role="form" />
-			<div class="form-group">
-				<input name="email" required id="email" type="email" placeholder="Email"></input>
-			</br><span class="error" id="s1" style="display: none;"></span><br>
-		</div>
-
-		<div class="form-group">
-			<input name="passwd" required id="pwd" type="password" placeholder="Password"></input><br />
-			<span class="error" id="s2" style="display: none;"></span><br>
-		</div>
-
-		<input id="signupbtn" class="btn btn-success" style="width:50%;" type="submit" value="Sign In"></input>
-
-	</form><br/>
-	<a href="register.php"><input type="button" class="btn btn-primary" style="width:50%;" value="Register" ></input></a>
-
-
-	</div>
-
-<div class="modal-footer">
-	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-</div>
-
-</div>
-</div>
-</div>
-
-
-<!-- login ends -->
-			<script>
-
-			var backg=document.getElementById("backg");
-			backg.style.backgroundSize= window.innerWidth+"px"+" "+ window.innerHeight+"px";
-
-			function validlogin()
-			{
-				if(!(document.getElementById("email").value&&document.getElementById("password").value))
-				{
-					if(!document.getElementById("email").value)
-					{  document.getElementById("s1").style.display="block";
-					document.getElementById("s1").innerHTML="Email required";
-					document.getElementById("email").style.borderColor="red";
-				}
-
-				if(!document.getElementById("password").value)
-				{
-					document.getElementById("s2").style.display="block";
-					document.getElementById("s2").innerHTML="Fill password";
-					document.getElementById("password").style.borderColor="red";
-				}
-
-
-				return false;
-			}
-			else
-			{
-				document.getElementById("s1").style.display="none";
-				document.getElementById("s2").style.display="none";
-				document.getElementById("s1").innerHTML="";
-				document.getElementById("s2").innerHTML="";
-				document.getElementById("password").style.borderColor="hidden";
-				document.getElementById("email").style.borderStyle="hidden";
-				return true;
-			}
-			}
-
-			</script>
-
-
-			<script src="css/home.js" type="text/javascript" ></script>
-
-	</body>
-
-</html>
+											<div class="v
