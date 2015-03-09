@@ -15,10 +15,9 @@ if(!isset($_SESSION["email"]))
 
 
 
-
-$user='';                          /**** establishing database connection****/
+$user='root';                          /**** establishing database connection****/
 $pwd='';
-$db='';
+$db='user';
 
 $con=mysqli_connect("localhost",$user,$pwd,$db);
 
@@ -238,6 +237,7 @@ else
 
 
   <link rel="stylesheet" type="text/css" href="css/navigation.css" />
+  <link rel="stylesheet" type="text/css" href="css/smoke_h.css" />
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
@@ -269,7 +269,7 @@ else
   <script>
     $(function(){
       $("#typed").typed({
-        strings: ["To register for workshops and events,\n visit the corresponding pages!","Participate and win prizes worth &#8377;40000! ","To register for workshops and events,\n visit the corresponding pages!"],
+        strings: ["To register for workshops and events,\n visit the corresponding pages!","Participate and win prizes worth &#8377;40000! ", "Prodigy&#39;15&#8212;March 21, 22, 23","To register for workshops and events,\n visit the corresponding pages!"],
         typeSpeed: 30,
         backDelay: 500,
         loop: false,
@@ -352,6 +352,12 @@ else
 
   </head>
   <body style="cursor:url('css/images/cursor.png');" >
+<!--smoke-->
+<style>
+.wrapper { float: left; clear: left; display: table; table-layout: fixed; }
+.smoke_h { display: table-cell;  max-width: 100%;  margin-top: 2%; padding-top: 0%; margin-left: 6%; padding-left: 0%; z-index:8;}
+</style>
+<!--/smoke-->
 
 
 
@@ -360,6 +366,25 @@ else
 
       <div id="backg" class="section" data-anchor="home" style="background:url('css/images/f-bg.png');">
 
+        <!--smoke-->
+<div class="wrapper col-md-18">
+
+
+<div class="smoke_h">
+			  <span class="s0_h"></span>
+			  <span class="s1_h"></span>
+			  <span class="s2_h"></span>
+			  <span class="s3_h"></span>
+			  <span class="s4_h"></span>
+			  <span class="s5_h"></span>
+			  <span class="s6_h"></span>
+			  <span class="s7_h"></span>
+			  <span class="s8_h"></span>
+			  <span class="s9_h"></span>
+</div>
+</div>
+
+<!--/smoke-->
 
         <div id="canvasesdiv" style="position:relative; left:18%;  width:300px; height:300px; ">
           <canvas id="canvas" style="z-index: 7; position:absolute; left:0px;top:-19%;"></canvas>
@@ -1215,7 +1240,7 @@ else
                     <footer class="container" style="z-index: 99;
                     position: fixed;
                     top: 87%;
-                    background: transparent;
+                    background:#3D2215;
                     width: 100%;
                     height: 13%;">
 

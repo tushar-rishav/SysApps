@@ -7,12 +7,11 @@ if(!isset($_SESSION["email"]))
 }
 
 
-$user='';                          /**** establishing database connection****/
+$user='root';                          /**** establishing database connection****/
 $pwd='';
+$db='user';
 
-$db='';
-
-$con=mysqli_connect("mysql.hostinger.in",$user,$pwd,$db);
+$con=mysqli_connect("localhost",$user,$pwd,$db);
 // Check connection
 if (mysqli_connect_errno())
 {

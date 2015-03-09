@@ -8,7 +8,7 @@ body {
 	background:#174455;
 	text-align:center;
 	color:#fff;
-	font-family:Arial, Helvetica, sans-serif;
+	
 	overflow:hidden;
 }
 img.gl1_gl {
@@ -38,7 +38,7 @@ ul.fp_galleryList li{
 	margin:0px 30px;
 	text-transform:uppercase;
 	cursor:pointer;
-	font-size:14px;
+	
 	text-shadow:0px 0px 1px #fff;
 }
 ul.fp_galleryList li.current{
@@ -69,13 +69,13 @@ ol.c{
 	list-style-type: upper-roman;
 	text-align:justify;
     text-justify:inter-word;
-    font-style : bold;
+    
     line-height : 0.7em;
-    font-weight: 20px;
+    
     margin-left : 9%;
     margin-right : 1.3em;
-    font-family: cursive;
-    font-size: 17px;
+   
+   
     padding : 0em;
     border-color: #c06565;
     line-height: 1
@@ -85,9 +85,9 @@ ol.d{
 	list-style-type: lower-alpha;
 	text-align:justify;
     text-justify:inter-word;
-    font-style : bold;
+   
     line-height : 0.7em;
-    font-weight: 20px;
+   
     margin-left : 9%;
     margin-right : 1.3em;
     
@@ -99,12 +99,12 @@ ol.d{
 li {
 	text-align:justify;
     text-justify:inter-word;
-    font-style : bold;
+    
     line-height : 0.7em;
-    font-weight: 20px;
+   
     margin-left : 9%;
     margin-right : 1.3em;
-    font-family: cursive;
+   
     font-size: 17px;
     padding : 0em;
     border-color: #c06565;
@@ -113,20 +113,20 @@ li {
 .content1 h1{
 	text-align:justify;
     text-justify:inter-word;
-    font-style : bold;
+    
     line-height : 0.7em;
-    font-weight: 20px;
+   
     margin-left : .58em;
     margin-right : 1.3em;
-    font-family: monospace;
-    font-size: 32px;
+    
+    
     padding : 0em;
     border-color: #c06565;
 }
 .content1 p{
 	text-align:justify;
     text-justify:inter-word;
-    font-style : italic;
+    
     line-height : 1.58em;
     margin-bottom : .75em;
     margin-left : .58em;
@@ -134,15 +134,15 @@ li {
     margin-top : .75em;
     padding : .3em;
     border-color: #c06565;
-    font-family: cursive;
+   
     font-size: 17px;
 }
 .content2 h1{
 	text-align:justify;
     text-justify:inter-word;
-    font-style : bold;
+   
     line-height : 0.7em;
-    font-weight: 20px;
+   
     margin-left : .58em;
     margin-right : 1.3em;
     
@@ -152,7 +152,7 @@ li {
 .content2 p{
 	text-align:justify;
     text-justify:inter-word;
-    font-style : italic;
+   
     line-height : 1.58em;
     margin-bottom : .75em;
     margin-left : .58em;
@@ -164,7 +164,7 @@ li {
 .content2 p1{
 	text-align:justify;
     text-justify:inter-word;
-    font-style : bold;
+    
     line-height : 1.58em;
     margin-bottom : .75em;
     margin-left : .58em;
