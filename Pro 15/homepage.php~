@@ -17,7 +17,7 @@ if(!isset($_SESSION["email"]))
 
 
 $user='root';                          /**** establishing database connection****/
-$pwd='';
+$pwd='Prodigy123';
 $db='user';
 
 $con=mysqli_connect("localhost",$user,$pwd,$db);
