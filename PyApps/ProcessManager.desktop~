@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Process Manager
+Comment=Play with Processes
+Keywords=folder;manager;explore;disk;filesystem;
+Exec=/home/tushar/Desktop/PyApps/processmanager.py
+Icon=utilities-system-monitor
+Terminal=false
+Type=Application
+
+Categories=Utility;Process Manager;
+MimeType=inode/directory;application/x-gnome-saved-search;
+
+

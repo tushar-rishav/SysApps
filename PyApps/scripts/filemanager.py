@@ -48,7 +48,7 @@ class DirList(object):
     def setDirAndGo(self,ev=None):
         self.last=self.cwd.get()
         self.dirs.config(selectbackground='red')
-        check=self.dire.get(self.dirs.curselection())
+        check=self.dirs.get(self.dirs.curselection())
         if not check:
             check=os.curdir
         self.cwd.set(check)
