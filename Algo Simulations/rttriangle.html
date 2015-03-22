@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sri Bhattacharya Rule</title>
+    <style>
+      .numbers{
+        position:absolute;
+        top:20%;
+        left:5%;
+        width:30%;
+        height:50%;
+        background:gray;
+        text-align:center;
+      }
+      .output{
+        position:absolute;
+        top:20%;
+        right:5%;
+        width:40%;
+        height:70%;
+        background:black;
+      }
+      #oCanvas{
+        height:600;
+        width:600;
+      }
+      body{
+        background:gray;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>Check for Pythagoras triplets!</header>
+    <div class="numbers" >
+      <input type="text" onkeypress="return isNumber(event)" placeholder="Number 1" id="n1" /><br/>
+      <input type="text" onkeypress="return isNumber(event)" placeholder="Number 2" id="n2" /><br/>
+      <input type="text" onkeypress="return isNumber(event)" placeholder="Number 3" id="n3" /><br/>
+      <input type="submit" value="check" onclick="hypo()" />
+    </div>
+    <div class="output">
+      <canvas id="oCanvas" ></canvas>
+    </div>
+
+
+    <script>
+      function hypo()
+      {
+        var n1= document.getElementById("n1").value,n2= document.getElementById("n2").value,n3= document.getElementById("n3").value
+
+
+
+
+      }
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    var isNumber= function(evt) {
+      evt = (evt) ? evt : window.event;
+      var charCode = (evt.which) ? evt.which : evt.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+      }
+      return true;
+    };
+    </script>
+  </body>
+</html>
