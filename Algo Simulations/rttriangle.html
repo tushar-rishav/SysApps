@@ -16,13 +16,12 @@
         position:absolute;
         top:20%;
         right:5%;
-        width:40%;
-        height:70%;
+        width:500px;
+        height:400px;
         background:black;
       }
       #oCanvas{
-        height:600;
-        width:600;
+
       }
       body{
         background:gray;
@@ -40,7 +39,9 @@
       <input type="submit" value="check" onclick="hypo();" />
     </div>
     <div class="output">
-      <canvas id="oCanvas" ></canvas>
+      <canvas id="oCanvas" width="500px;" height="400px" >
+        Your browser does not support the HTML5 canvas tag.
+      </canvas>
     </div>
 
 
@@ -60,15 +61,13 @@
           if(chk)
           {
             pytha=true;
+            drawTriangle(i,num); // num[i] is hypotenuse
             break;
           }
         }
 
-        if(pytha)
-          alert("Pythagoras Triplet");
-        else
-          alert("Not Pythagoras Triplet");
-
+        if(!pytha)
+        drawTriangle(false,num);
 
 
       }
@@ -107,6 +106,47 @@
 
         return false;
 
+
+      }
+
+      function drawTriangle(pos,num){
+        var c = document.getElementById("oCanvas");
+        var ctx = c.getContext("2d");
+
+        var b,h;
+
+        if(pos){
+            switch(pos){
+              case 0:
+                      b=num[1];h=num[2];break;
+              case 1:
+                      b=num[0];h=num[2];break;
+              case 2:
+                      b=num[0];h=num[1];break;
+            }
+
+            ctx.clearRect(0,0,500,400);
+            ctx.beginPath();
+            ctx.moveTo(100,200);
+            ctx.lineTo(240,200);
+            ctx.lineTo(240,50);
+            ctx.strokeStyle = "blue";
+            ctx.closePath();
+            ctx.stroke();
+
+            alert("Triplets");
+
+          }
+
+          else{
+            ctx.clearRect(0,0,500,400);
+            ctx.font = "30px Arial";
+            ctx.fillStyle="red";
+            ctx.textAlign="center";
+            ctx.fillText("Not Pythagoras triplets!Try again!",250,200);
+
+
+          }
 
       }
 
