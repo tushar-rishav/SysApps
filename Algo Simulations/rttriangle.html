@@ -37,52 +37,80 @@
       <input type="text" onkeypress="return isNumber(event)" placeholder="Number 1" id="n1" /><br/>
       <input type="text" onkeypress="return isNumber(event)" placeholder="Number 2" id="n2" /><br/>
       <input type="text" onkeypress="return isNumber(event)" placeholder="Number 3" id="n3" /><br/>
-      <input type="submit" value="check" onclick="hypo()" />
+      <input type="submit" value="check" onclick="hypo();" />
     </div>
     <div class="output">
       <canvas id="oCanvas" ></canvas>
     </div>
 
 
-    <script>
-      function hypo()
-      {
-        var n1= document.getElementById("n1").value,n2= document.getElementById("n2").value,n3= document.getElementById("n3").value
+    <script type="text/javascript">
 
+      function hypo(){
+
+        var n1= document.getElementById("n1").value;
+        var n2= document.getElementById("n2").value;
+        var n3= document.getElementById("n3").value;
+        var i;var num=[n1,n2,n3]; var pytha=false; var chk;
+
+        for (i=0;i< num.length;i++){
+
+          chk=check(num,i);
+
+          if(chk)
+          {
+            pytha=true;
+            break;
+          }
+        }
+
+        if(pytha)
+          alert("Pythagoras Triplet");
+        else
+          alert("Not Pythagoras Triplet");
 
 
 
       }
 
+
+
+      function check(num,n){
+        var res;
+        switch(n){
+          case 0:
+              res=Math.sqrt(Math.pow(num[1],2)+Math.pow(num[2],2 ))
+              if(res==num[n]){
+                return true;
+
+              }
+
+          break;
+
+          case 1:
+              res=Math.sqrt(Math.pow(num[0],2)+Math.pow(num[2],2 ))
+              if(res==num[n]){
+                return true;
+
+              }
+          break;
+
+          case 2:
+                res=Math.sqrt(Math.pow(num[0],2)+Math.pow(num[1],2 ))
+              if(res==num[n]){
+                return true;
+
+              }
+          break;
+
+        }
+
+        return false;
+
+
+      }
+
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
