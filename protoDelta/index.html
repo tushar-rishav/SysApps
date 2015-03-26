@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>Home</title>
+		<title>Delta</title>
 		<link rel="icon" href="images/favicon.ico">
 		<link rel="shortcut icon" href="images/favicon.ico" />
 		<link rel="stylesheet" href="css/style.css">
@@ -103,6 +103,21 @@
 				stroke: #00aeef;
 			}
 		}
+		@-webkit-keyframes spin {
+			0% {
+				stroke: #00aeef
+			}
+			37.5% {
+				stroke: #ed1c24;
+			}
+			67.5% {
+				stroke: #f69f37;
+			}
+			100% {
+				stroke-dashoffset: -240;
+				stroke: #00aeef;
+			}
+		}
 
 		svg {
 			width: 100%;
@@ -116,6 +131,10 @@
 			stroke-dasharray: 0, 0, 50, 190;
 			stroke-dashoffset: 0;
 			stroke-linejoin: round;
+
+			-webkit-animation: spin 6.5s infinite linear;
+			-webkit-animation-delay:0.5s;
+			-webkit-animation-duration:3s;
 			animation: spin 6.5s infinite linear;
 			animation-delay:0.5s;
 			animation-duration:3s;
@@ -285,7 +304,7 @@
 				<div data-sr="move 16px scale up 20%, over 0.8s,mobile true,reset true "  class="col-1-4">
 					<div class="wrap-col">
 						<div class="box maxheight1">
-							<a href="https://github.com/delta/NotesSharing"><img src="images/notesharing" style="width:143px;height:143px;" alt="Note SHaring"></a>
+							<a href="https://github.com/delta/NotesSharing"><img src="images/notesharing.jpeg" style="width:143px;height:143px;" alt="Note SHaring"></a>
 							<div class="text1"><a href="https://github.com/delta/NotesSharing">Note Sharing App</a></div>
 							<ol>
 								<li>1.Upload and download notes.</li>
@@ -322,7 +341,7 @@
 				<div class="col-full">
 					<div class="wrap-col" style="overflow-y:auto;" >
 
-						<div data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true "  class="col-1-4">
+						<div data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true "  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/prasan.jpg" alt="Prasanna Mouli" style="width:100px;height:100px;">
@@ -334,7 +353,7 @@
 								</div>
 							</div>
 						</div>
-						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-1-4">
+						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/mangu.jpg" alt="Sriram Sundarraj" style="width:100px;height:100px;">
@@ -346,7 +365,7 @@
 								</div>
 							</div>
 						</div>
-						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-1-4">
+						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/nirvik.jpg" alt="Nirvik Ghosh"  style="width:100px;height:100px;">
@@ -358,7 +377,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/ananth.jpg" alt="Ananth Natarajan" style="width:100px;height:100px;">
@@ -371,7 +390,7 @@
 							</div>
 						</div>
 						<!-- -->
-						<div data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true "  class="col-1-4">
+						<div data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true "  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/Dishant.jpg" alt="Dishant" style="width:100px;height:100px;">
@@ -383,7 +402,7 @@
 								</div>
 							</div>
 						</div>
-						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-1-4">
+						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/booty.jpg" alt="Selvendran Sudar" style="width:100px;height:100px;">
@@ -395,7 +414,7 @@
 								</div>
 							</div>
 						</div>
-						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-1-4">
+						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/Rohan.jpg" alt="Nirvik Ghosh"  style="width:100px;height:100px;">
@@ -407,7 +426,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/vasu.jpg" alt="Ananth Natarajan" style="width:100px;height:100px;">
@@ -419,7 +438,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true "  class="col-1-4">
+						<div data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true "  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/sujay.jpg" alt="Prasanna Mouli" style="width:100px;height:100px;">
@@ -431,7 +450,7 @@
 								</div>
 							</div>
 						</div>
-						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-1-4">
+						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/vignesh.jpg" alt="Sriram Sundarraj" style="width:100px;height:100px;">
@@ -443,7 +462,7 @@
 								</div>
 							</div>
 						</div>
-						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-1-4">
+						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/Abhi.jpg" alt="Abhishek Kaushik"  style="width:100px;height:100px;">
@@ -455,7 +474,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/mohit.jpg" alt="MOhit Goyal" style="width:100px;height:100px;">
@@ -467,7 +486,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true "  class="col-1-4">
+						<div data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true "  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/pck.jpg" alt="Prasanna Mouli" style="width:100px;height:100px;">
@@ -479,7 +498,7 @@
 								</div>
 							</div>
 						</div>
-						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-1-4">
+						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/john.jpg" alt="John Mathai" style="width:100px;height:100px;">
@@ -491,7 +510,7 @@
 								</div>
 							</div>
 						</div>
-						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-1-4">
+						<div  data-sr="move 16px scale up 20%, over 0.5s,mobile true,reset true" class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/Juan.jpg" alt="Nirvik Ghosh"  style="width:100px;height:100px;">
@@ -503,7 +522,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/ashu.jpg" alt="Ananth Natarajan" style="width:100px;height:100px;">
@@ -515,7 +534,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/suraj.jpg" alt="Ananth Natarajan" style="width:100px;height:100px;">
@@ -527,7 +546,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/siva.jpg" alt="Ananth Natarajan" style="width:100px;height:100px;">
@@ -539,7 +558,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/Afreen.jpg" alt="Ananth Natarajan" style="width:100px;height:100px;">
@@ -551,7 +570,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/pankaj.jpg" alt="Pankaj" style="width:100px;height:100px;">
@@ -563,7 +582,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/tush.jpg" alt="Tushar" style="width:100px;height:100px;">
@@ -575,7 +594,7 @@
 								</div>
 							</div>
 						</div>
-						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-1-4">
+						<div data-sr="enter bottom, roll 45deg, over 1s,mobile true,reset true"  class="col-2-4">
 							<div class="wrap-col">
 								<div class="box maxheight">
 									<img src="images/sam.jpg" alt="Ananth Natarajan" style="width:100px;height:100px;">
