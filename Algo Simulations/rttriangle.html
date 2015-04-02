@@ -16,12 +16,13 @@
         position:absolute;
         top:20%;
         right:5%;
-        width:500px;
-        height:400px;
+        width:800px;
+        height:600px;
+        margin-top:-100px;
         background:black;
       }
       #oCanvas{
-
+        margin-top:-10px;
       }
       body{
         background:gray;
@@ -42,7 +43,7 @@
       <input type="submit" value="check" onclick="hypo();" />
     </div>
     <div class="output">
-      <canvas id="oCanvas" width="500px;" height="400px" >
+      <canvas id="oCanvas" width="800px;" height="600px;" >
         Your browser does not support the HTML5 canvas tag.
       </canvas>
     </div>
@@ -61,7 +62,7 @@
         }
       );
     }();
-    var b,h,bgFlag,x=0,y=0,flag=0,anim;
+    var b,h,bgFlag,x=0,y=0,flag=0,anim,rt=true,xx2=0,xx1=0,xx3=0,yy2=0,yy3=0,yy1=0,s1=true,s2=false;
     var x1,x2,x3,y1,y2,y3
     var c = document.getElementById("oCanvas");
     var ctx = c.getContext("2d");
@@ -78,9 +79,9 @@
         var n2=Math.sqrt(Math.pow(x2-x3,2)+Math.pow(y2-y3,2));
         var n3=Math.sqrt(Math.pow(x3-x1,2)+Math.pow(y3-y1,2));
 
-        //console.log(n1+" "+n2+" "+n3);
+        console.log(n1+" "+n2+" "+n3);
 
-        var i;var num=[n1,n2,n3]; var pytha=false; var chk;
+        var i, num=[n1,n2,n3], pytha=false,chk;
 
         for (i=0;i< num.length;i++){
 
@@ -89,13 +90,13 @@
           if(chk)
           {
             pytha=true;
-            drawTriangle(i,num); // num[i] is hypotenuse
+            drawTriangle(true,i,num); // num[i] is hypotenuse
             break;
           }
         }
 
         if(!pytha)
-        drawTriangle(false,num);
+          drawTriangle(false,i,num);
 
 
       }
@@ -137,55 +138,48 @@
 
       }
 
-      function drawTriangle(pos,num){
+      function drawTriangle(booly,pos,num){
 
-
-
-        if(pos){
+        if(booly){
             switch(pos){
               case 0:
-                      b=num[1];h=num[2];break;
+                      b=num[1];h=num[2];console.log("b is "+b+"h is "+h );break;
               case 1:
-                      b=num[0];h=num[2];break;
+                      b=num[0];h=num[2];console.log("b is "+b+"h is "+h );break;
               case 2:
-                      b=num[0];h=num[1];break;
+                      b=num[0];h=num[1];console.log("b is "+b+"h is "+h );break;
             }
-
-          animate();
+            rt=true;flag=0;
+            animate();
 
 
           }
 
           else{
-            ctx.clearRect(0,0,500,400);
-            ctx.font = "30px Arial";
-            ctx.fillStyle="red";
-            ctx.textAlign="center";
-            ctx.fillText("Not Pythagoras triplets!Try again!",250,350);
-			         cancelAnimationFrame(anim);
-               ctx.beginPath();
-               ctx.moveTo(100+x1*15,200+y1*15);
-               ctx.lineTo(100+x2*15,200+y2*15);
-               ctx.lineTo(100+x3*15,200+y3*15);
-               ctx.strokeStyle = "blue";
-               ctx.closePath();
-              ctx.stroke();
+              rt=false;flag=0;
+              animate();
+
               // console.log(x1+" "+x2+" "+x3+" "+y1+" "+y2+" "+y3)
 
           }
 
       }
       function animate(){
+        if(rt){
+          if(!(flag%3))
+          {
 
-        if(!(flag%3))
-        {
 
-          ctx.clearRect(0,0,500,400);
+          ctx.clearRect(0,0,800,600);
+          ctx.font = "30px Arial";
+          ctx.fillStyle="green";
+          ctx.textAlign="center";
+          ctx.fillText("Pythagoran triplets!!",350,570);
           ctx.beginPath();
 
-          ctx.moveTo(100,200);
-          ctx.lineTo(100+x*35,200);
-          ctx.lineTo(100+x*35,200-y*35);
+          ctx.moveTo(100,500);
+          ctx.lineTo(100+x*35,500);
+          ctx.lineTo(100+x*35,500-y*35);
 
           if(x<b && y==0)
           x+=0.1;
@@ -198,13 +192,81 @@
 
           ctx.stroke();
           flag=1;
+          }
         }
-        //}
-         anim=requestAnimFrame(animate);
+        else{
 
-        flag++;
+                if(!(flag%4))
+                {
+                    rt=false
+
+                    ctx.clearRect(0,0,800,600);
+                    ctx.font = "30px Arial";
+                    ctx.fillStyle="red";
+                    ctx.textAlign="center";
+                    ctx.fillText("Not Pythagoran triplets!Try again!",350,570);
+                    //cancelAnimationFrame(anim);
+                    ctx.beginPath();
+                    ctx.strokeStyle = "blue";
+                    ctx.moveTo(100+x1*15,200+y1*15);
+                    ctx.lineTo(100+x1*15+xx2*15,200+y1*15+yy2*15);
+                      if(s1){
+                        if(Math.abs(xx2)< Math.abs(x2-x1)){
+                          stepX=(x2-x1)/30;
+                          xx2+=stepX;
+
+                        }
+                        if(Math.abs(yy2)<Math.abs((y2-y1))){
+                          stepY=(y2-y1)/30;
+                          yy2+=stepY;
+                        }
+                        if(Math.abs(xx2)>=Math.abs((x2-x1)) && Math.abs(yy2)>=Math.abs((y2-y1))){
+                          s2=true;
+                          s1=false;
+                        }
+                        console.log("xx2:"+xx2+"yy2"+yy2+"|x2-x1|"+Math.abs(x2-x1)+"|y2-y1| "+Math.abs(y2-y1)+"s1 and s2"+s1+" "+s2)
+                      }
+                    if(s2)
+                      {
+                        console.log("hey")
+                        if(Math.abs(xx3)<Math.abs(x3-x2)){
+                          stepX=(x3-x2)/30;
+                          xx3+=stepX;
+                        }
+                        if(Math.abs(yy3)<Math.abs(y3-y2)){
+                          stepY=(y3-y2)/30;
+                          yy3+=stepY;
+                        }
+                        if(Math.abs(xx3)>=Math.abs(x3-x2) && Math.abs(yy3)>=Math.abs(y3-y2)){
+                          s1=false;
+                          s2=false;
+
+                        }
+                        console.log("xx3:"+xx3+"yy3"+yy3+"|x3-x2| "+Math.abs(x3-x2)+"|y3-y2| "+Math.abs(y3-y2)+"s1 and s2"+s1+" "+s2)
+
+
+                      }
+
+                    ctx.lineTo(100+x1*15+xx2*15+xx3*15,200+y1*15+yy2*15+yy3*15);
+
+
+                    if(!s1 && !s2)
+                      ctx.closePath();
+
+                    ctx.stroke();
+                    flag=0;
+
+              }
+              //console.log("flag is "+flag)
+
+
+        }
+
+         anim=requestAnimFrame(animate);
+         flag++;
 
       }
+
 
     </script>
 
