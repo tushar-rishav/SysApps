@@ -34,12 +34,12 @@
   <body>
     <header style="font-size:18px;">Check for Pythagoran triplets!</header>
     <div class="numbers" >
-      <span>A&nbsp;</span><input type="text" onkeypress="return isNumber(event)" placeholder="x 1" id="x1" />&nbsp;
-      <input type="text" onkeypress="return isNumber(event)" placeholder="y 1" id="y1" /><br/>
-      <span>B&nbsp;</span><input type="text" onkeypress="return isNumber(event)" placeholder="x 2" id="x2" />&nbsp;
-      <input type="text" onkeypress="return isNumber(event)" placeholder="y 2" id="y2" /><br/>
-      <span>C&nbsp;</span><input type="text" onkeypress="return isNumber(event)" placeholder="x 3" id="x3" />&nbsp;
-      <input type="text" onkeypress="return isNumber(event)" placeholder="y 3" id="y3" /><br/><br/>
+      <span>A&nbsp;</span><input type="number"  placeholder="x 1" id="x1" />&nbsp;
+      <input type="number"  placeholder="y 1" id="y1" /><br/>
+      <span>B&nbsp;</span><input type="number"  placeholder="x 2" id="x2" />&nbsp;
+      <input type="number"  placeholder="y 2" id="y2" /><br/>
+      <span>C&nbsp;</span><input type="number"  placeholder="x 3" id="x3" />&nbsp;
+      <input type="number"  placeholder="y 3" id="y3" /><br/><br/>
       <input type="submit" value="check" onclick="hypo();" />
     </div>
     <div class="output">
@@ -143,11 +143,11 @@
         if(booly){
             switch(pos){
               case 0:
-                      b=num[1];h=num[2];console.log("b is "+b+"h is "+h );break;
+                      b=num[1];h=num[2];break;
               case 1:
-                      b=num[0];h=num[2];console.log("b is "+b+"h is "+h );break;
+                      b=num[0];h=num[2];break;
               case 2:
-                      b=num[0];h=num[1];console.log("b is "+b+"h is "+h );break;
+                      b=num[0];h=num[1];break;
             }
             rt=true;flag=0;
             animate();
@@ -221,7 +221,7 @@
                           s2=false;
 
                         }
-                        console.log("xx3:"+xx3+"yy3"+yy3+"|x3-x2| "+Math.abs(x3-x2)+"|y3-y2| "+Math.abs(y3-y2)+"s1 and s2"+s1+" "+s2)
+
 
 
                       }
@@ -252,15 +252,6 @@
 
 
 
-    <script>
-    var isNumber= function(evt) {
-      evt = (evt) ? evt : window.event;
-      var charCode = (evt.which) ? evt.which : evt.keyCode;
-      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
-      }
-      return true;
-    };
-    </script>
+
   </body>
 </html>
