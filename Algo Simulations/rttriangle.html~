@@ -22,7 +22,7 @@
        
       }
       #oCanvas{
-        margin-top:-10px; background:black;
+        margin:0px; background:black;
       }
       body{
         background:gray;
@@ -33,6 +33,7 @@
 
   <body>
     <header style="font-size:18px;">Check for Pythagoran triplets!</header>
+    <h2 style="color:brown;">Range of Inputs 0<=X<=50 and 0<=Y<=39 </h2>
     <div class="numbers" >
       <span>A&nbsp;</span><input type="number"  placeholder="x 1" id="x1" />&nbsp;
       <input type="number"  placeholder="y 1" id="y1" /><br/>
@@ -255,3 +256,5 @@
 
   </body>
 </html>
+
+
