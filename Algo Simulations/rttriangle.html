@@ -19,7 +19,7 @@
         width:800px;
         height:600px;
         margin-top:-100px;
-       
+
       }
       #oCanvas{
         margin:0px; background:black;
@@ -182,14 +182,14 @@
 
 
                     }
-                    ctx.fillText("A("+x1+","+y1+")",x1*15,600-y1*15);
-                    ctx.fillText("B("+x2+","+y2+")",x2*15,600-y2*15);
-                    ctx.fillText("C("+x3+","+y3+")",x3*15,600-y3*15);
+                    ctx.fillText("A("+x1+","+y1+")",1+x1*15,599-y1*15);
+                    ctx.fillText("B("+x2+","+y2+")",1+x2*15,599-y2*15);
+                    ctx.fillText("C("+x3+","+y3+")",1+x3*15,599-y3*15);
                     //cancelAnimationFrame(anim);
                     ctx.beginPath();
                     ctx.strokeStyle = "blue";
-                    ctx.moveTo(x1*15,600-y1*15);
-                    ctx.lineTo(x1*15+xx2*15,600-y1*15-yy2*15);
+                    ctx.moveTo(1+x1*15,599-y1*15);
+                    ctx.lineTo(1+x1*15+xx2*15,599-y1*15-yy2*15);
                       if(s1){
                         if(Math.abs(xx2)< Math.abs(x2-x1)){
                           stepX=(x2-x1)/30;
@@ -227,7 +227,7 @@
 
                       }
 
-                    ctx.lineTo(x1*15+xx2*15+xx3*15,600-y1*15-yy2*15-yy3*15);
+                    ctx.lineTo(1+x1*15+xx2*15+xx3*15,599-y1*15-yy2*15-yy3*15);
 
 
                     if(!s1 && !s2)
@@ -256,5 +256,3 @@
 
   </body>
 </html>
-
-

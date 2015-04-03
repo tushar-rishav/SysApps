@@ -33,7 +33,7 @@
 
   <body>
     <header style="font-size:18px;">Check for Pythagoran triplets!</header>
-    <h2 style="color:brown;">Range of Inputs 0<=X<=50 and 0<=Y<=39 </h2>
+    <h3 style="color:brown;">Range of Inputs 0<=X<=50 and 0<=Y<=39 </h3>
     <div class="numbers" >
       <span>A&nbsp;</span><input type="number"  placeholder="x 1" id="x1" />&nbsp;
       <input type="number"  placeholder="y 1" id="y1" /><br/>
@@ -218,8 +218,8 @@
                           yy3+=stepY;
                         }
                         if(Math.abs(xx3)>=Math.abs(x3-x2) && Math.abs(yy3)>=Math.abs(y3-y2)){
-                          s1=false;
-                          s2=false;
+                          s1=true;
+                          s2=true;
 
                         }
 
@@ -230,7 +230,7 @@
                     ctx.lineTo(x1*15+xx2*15+xx3*15,600-y1*15-yy2*15-yy3*15);
 
 
-                    if(!s1 && !s2)
+                    if(s1 &&s2)
                       ctx.closePath();
 
                     ctx.stroke();
