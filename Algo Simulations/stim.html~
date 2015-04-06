@@ -90,7 +90,7 @@ var dom=function(id){
 		 <i id= "plus" class="fa fa-plus fa-3x" style="margin:5px;position:relative;"></i>
 		 <i id= "minus" class="fa fa-minus fa-3x" style="margin:5px;position:relative;" ></i>
 		 <i id= "multi" class="fa fa-asterisk fa-3x" style="margin:5px;position:relative;" ></i> 
-		 <i id= "none" class="fa fa-circle fa-1x" style="margin:5px;position:relative;"></i><span>(null operator)</sapn>
+		 <i id= "none" class="fa fa-circle fa-1x" style="margin:5px;position:relative;"></i><span>(Null)</sapn>
 	</div>
 <footer style="position:absolute;bottom:0%;padding:5%;text-align:center;left:0%;background-color:rgb(46, 131, 157);color:black;width:90%;height:5%;">Stimulation to show if i get 'b' from 'a' if set of operators +,-,* are given.<br>
 Enter 10<=a<=999 and 10<=b<=999.<br>
