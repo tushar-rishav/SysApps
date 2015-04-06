@@ -77,7 +77,7 @@ var dom=function(id){
 		<span id="d2"  style="font-size:80px;" ></span>
 		<span  style="" id="result" >
 			<i id= "tick"  class="fa fa-check fa-4x" style="margin:5px;position:relative;color:green;display:none;"></i>
-			<i id= "cross"  class="fa fa-close fa-4x" style="margin:5px;position:relative;color:green;display:none;"></i>
+			<i id= "cross"  class="fa fa-close fa-4x" style="margin:5px;position:relative;color:red;display:none;"></i>
 		</span>
 		</div>
 	</div>
