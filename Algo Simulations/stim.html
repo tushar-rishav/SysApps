@@ -59,6 +59,7 @@ var dom=function(id){
 
 <body>
 	<div id="canvas" style="background-color:#D75873;position:relative;left:30%; width:50%;height:300px;text-align:center;" >
+		<div style="position:relative;top:30%;align:center;text-align:center;">
 		<span id="d0" style="font-size:80px;" ></span>
 		<span style="" id="op1" >
 			<i id= "o1" style="display:inline-block;" class="fa fa-plus fa-3x" style="margin:5px;position:relative;"></i>
@@ -76,8 +77,9 @@ var dom=function(id){
 		<span id="d2"  style="font-size:80px;" ></span>
 		<span  style="" id="result" >
 			<i id= "tick"  class="fa fa-check fa-4x" style="margin:5px;position:relative;color:green;display:none;"></i>
+			<i id= "cross"  class="fa fa-close fa-4x" style="margin:5px;position:relative;color:red;display:none;"></i>
 		</span>
-		
+		</div>
 	</div>
  	<div style="z-index:999;position:absolute;top:4%;left:5%;" >
  		<input type="number" class="times" id='a' value="" autofocus placeholder="A" min='10' max='999' maxlength='3' ><br>
@@ -102,7 +104,7 @@ Enter 10<=a<=999 and 10<=b<=999.<br>
 	var opa1=[1,0,0,0],opa2=[1,0,0,0],inter;
 	
 	function show(){
-	
+		d=0;
 		var input= dom("a");
 		var digits = (""+input.value).split(""); // exploded
 		
@@ -118,6 +120,7 @@ Enter 10<=a<=999 and 10<=b<=999.<br>
 			dom("d"+i).innerHTML=digits[i];
 		
 		 inter=  setInterval(animate,500);
+		 
 		
 	
 		
@@ -125,7 +128,8 @@ Enter 10<=a<=999 and 10<=b<=999.<br>
 	}
 	
 	function animate(){
-	
+	d++;
+		console.log(d);
 	if(!(flag1 %4)){
 		
 		
@@ -147,7 +151,7 @@ Enter 10<=a<=999 and 10<=b<=999.<br>
 			flag2++;
 		else
 			flag2=1;
-		console.log("opa1 is"+opa1);			
+		//console.log("opa1 is"+opa1);			
 		
 	}
 	
@@ -168,7 +172,7 @@ Enter 10<=a<=999 and 10<=b<=999.<br>
 						opa2[j-1]=0;
 					}	
 			}
-		console.log("opa2 is"+opa2);
+		//console.log("opa2 is"+opa2);
 		var bool=check();
 		
 		
@@ -181,6 +185,13 @@ Enter 10<=a<=999 and 10<=b<=999.<br>
 			flag3++;
 		else
 			flag3=1;	
+	if(d>16)
+			{
+			 	clearInterval(inter);
+		 		alert("There is no way to obtain B from given A");
+		 		var cross=dom("cross");
+		 		cross.style.display="inline-block";
+		 	}
 	
 	}
 	
@@ -206,15 +217,15 @@ Enter 10<=a<=999 and 10<=b<=999.<br>
 		}		
 		switch(pos1){
 		case 0:
-				sum1=digits[0]+digits[1];console.log("+ "+sum1);
+				sum1=digits[0]+digits[1];//console.log("+ "+sum1);
 		break;
-		case 1:sum1=digits[0]-digits[1];console.log("- "+sum1)
+		case 1:sum1=digits[0]-digits[1];//console.log("- "+sum1)
 		break;
-		case 2:sum1=digits[0]*digits[1];console.log("* "+sum1)
+		case 2:sum1=digits[0]*digits[1];//console.log("* "+sum1)
 		break;
 		case 3:sum1=""+digits[0]+digits[1];
 				sum1=parseInt(sum1);
-				console.log("dot "+sum1)
+				//console.log("dot "+sum1)
 		break;
 		
 		}
@@ -223,13 +234,13 @@ Enter 10<=a<=999 and 10<=b<=999.<br>
 		{		
 		
 		switch(pos2){
-		case 0:sum1+=digits[2]; console.log("@+ "+sum1)
+		case 0:sum1+=digits[2]; //console.log("@+ "+sum1)
 		break;
-		case 1:sum1-=digits[2]; console.log("@- "+sum1)
+		case 1:sum1-=digits[2]; //console.log("@- "+sum1)
 		break;
-		case 2:sum1*=digits[2];console.log("@* "+sum1)
+		case 2:sum1*=digits[2];//console.log("@* "+sum1)
 		break;
-		case 3:sum1+=digits[2]+""; console.log("@dot "+sum1)
+		case 3:sum1+=digits[2]+""; //console.log("@dot "+sum1)
 				sum1=parseInt(sum1);
 		break;
 		
