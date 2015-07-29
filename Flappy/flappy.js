@@ -44,7 +44,7 @@
     birdChoosen=false,fStyle="darkgreen";
      obstacle=[], gameWidth=canvy[1].width, gameHeight=canvy[1].height,bgDrawX1 = 0,bgDrawX2 = 2400,colorCode=[],bg_speed=7,first_time=true,bg1X=0,bg2X=2400;
       isPlaying=true,flag=1,divd=3;
-     document.getElementById("score").style.top=-(100*sHeight/744)+"px";
+     skore.style.top=-(100*sHeight/744)+"px";
 
 
     })();
@@ -104,7 +104,7 @@
 
 
         default:alert("no bird chosen");
-      }
+      }	
       birdChoosen=true;
 
           if(birdChoosen)
@@ -622,27 +622,28 @@
       var xmlhttp;
         function sbSk(sky)
         {    
-          if (window.XMLHttpRequest)
-            xmlhttp=new XMLHttpRequest();
+          skore.innerHTML="Score: "+sky;
+          // if (window.XMLHttpRequest)
+          //   xmlhttp=new XMLHttpRequest();
             
-          else
-            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); //for older IEs
+          // else
+          //   xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); //for older IEs
 
 
 
-           xmlhttp.onreadystatechange=function()
-              {
-              if (xmlhttp.readyState==4 && xmlhttp.status==200) //requst finished nd response is ready
-                   document.getElementById("score").innerHTML="Score: "+xmlhttp.responseText;
+          //  xmlhttp.onreadystatechange=function()
+          //     {
+          //     if (xmlhttp.readyState==4 && xmlhttp.status==200) //requst finished nd response is ready
+          //          skore.innerHTML="Score: "+xmlhttp.responseText;
                         
                
               
 
-              }
+          //     }
 
-            xmlhttp.open("POST","sky.php",true);
-            xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            xmlhttp.send("submitData="+sky);
+          //   xmlhttp.open("POST","sky.php",true);
+          //   xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+          //   xmlhttp.send("submitData="+sky);
               
 
 
